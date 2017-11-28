@@ -22,6 +22,8 @@ public class FollowController : MonoBehaviour {
 	private float y = 0.0f;
 	private float obstacleZoomSpeed = 0.1f;
 	private float playerTopOffset = 1.0f;
+	private float oldDistance = 0f;
+	private bool distanceSaved = false;
 
 	private Vector3 playerPos;
 	private Quaternion cameraRotation;
@@ -65,7 +67,15 @@ public class FollowController : MonoBehaviour {
 		
 		RaycastHit hit;
 		if (Physics.Linecast(playerPos, transform.position, out hit)) {
+			if (!distanceSaved) {
+				oldDistance = Mathf.Clamp(distance, distanceMin + .5f, distanceMax - .5f);
+				distanceSaved = true;
+			}
 			distance -= hit.distance * obstacleZoomSpeed;
+		} else if (oldDistance >= distance && distanceSaved == true) {
+			distance += obstacleZoomSpeed;
+		} else {
+			distanceSaved = false;
 		}
 
 		Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
