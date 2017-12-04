@@ -5,15 +5,26 @@ using UnityEngine.AI;
 
 public class Interactable : MonoBehaviour
 {
+	// TODO Scriptable ?
+	public enum Interactables
+	{
+		GroundEnemy,
+		FlyingEnemy,
+		Object,
+		NPC
+	}
+
+	public Interactables interactableType;
 	[HideInInspector]
 	public NavMeshAgent movingNavMeshAgent;
+
 	private bool hasInteracted;
-	private float interactableRadius;
+	private float deffaultStoppingRadius;
 	private float movingAgentRadius;
 
 	private void Start()
 	{
-		interactableRadius = GetComponent<NavMeshAgent>().radius;
+		deffaultStoppingRadius = GetComponent<NavMeshAgent>().radius;
 	}
 
 	public virtual void MoveToInteract(NavMeshAgent playerNavMeshAgent)
@@ -28,11 +39,10 @@ public class Interactable : MonoBehaviour
 		// TODO Calculate stopping distance or remaining distance depending on target object
 		if (!hasInteracted && movingNavMeshAgent != null && !movingNavMeshAgent.pathPending) {
 			movingNavMeshAgent.destination = transform.position;
+			
+			float remainingDistance = movingNavMeshAgent.remainingDistance - deffaultStoppingRadius;
 
-			movingNavMeshAgent.stoppingDistance = movingAgentRadius*3 + interactableRadius*3;
-			float remainingDistance = movingNavMeshAgent.remainingDistance - interactableRadius;
-			Debug.Log("remaining : " + remainingDistance + " stopping : " + movingNavMeshAgent.stoppingDistance);
-			if (remainingDistance <= movingNavMeshAgent.stoppingDistance) {
+			if (remainingDistance <= GetStoppingDistance()) {
 				// Reset the given path to stop the navmeshagent from trying to move again.
 				movingNavMeshAgent.ResetPath();
 				hasInteracted = true;
@@ -59,4 +69,28 @@ public class Interactable : MonoBehaviour
 		hasInteracted = false;
 	}
 
+	float GetStoppingDistance()
+	{
+		float additionalStoppingDistance;
+
+		switch (interactableType) {
+			case Interactables.GroundEnemy:
+				additionalStoppingDistance = 0;
+				break;
+			case Interactables.FlyingEnemy:
+				additionalStoppingDistance = 0.5f;
+				break;
+			case Interactables.Object:
+				additionalStoppingDistance = 0.5f;
+				break;
+			case Interactables.NPC:
+				additionalStoppingDistance = 0.5f;
+				break;
+			default:
+				additionalStoppingDistance = 0;
+				break;
+		}
+
+		return movingNavMeshAgent.stoppingDistance = movingAgentRadius * 3 + deffaultStoppingRadius * 3 + additionalStoppingDistance;
+	}
 }

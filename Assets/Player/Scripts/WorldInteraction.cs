@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class WorldInteraction : MonoBehaviour
 {
 	NavMeshAgent playerNavMeshAgent;
+	RaycastHit interactionHit;
 
 	void Start()
 	{
@@ -23,7 +24,6 @@ public class WorldInteraction : MonoBehaviour
 	void GetInteraction()
 	{
 		Ray interactionRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit interactionHit;
 
 		if (Physics.Raycast(interactionRay, out interactionHit)) {
 			GameObject interactedObject = interactionHit.collider.gameObject;
@@ -34,5 +34,12 @@ public class WorldInteraction : MonoBehaviour
 				playerNavMeshAgent.destination = interactionHit.point;
 			}
 		}
+	}
+
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = Color.red;
+		Gizmos.DrawLine(playerNavMeshAgent.transform.position, playerNavMeshAgent.destination);
+		Gizmos.DrawSphere(interactionHit.point, .1f);
 	}
 }

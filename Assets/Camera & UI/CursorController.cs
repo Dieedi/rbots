@@ -15,13 +15,12 @@ public class CursorController : MonoBehaviour
 	void Start()
 	{
 		raycaster = GetComponent<CameraRaycaster>();
-		//Cursor.SetCursor(walkCursor, cursorHotspot, CursorMode.Auto);
-		raycaster.O_LayerChange += OnLayerChange;
 	}
 
-	void OnLayerChange(Layer layerHit)
+	// Called by GameEvent
+	public void OnLayerChange()
 	{
-		switch (layerHit) {
+		switch (raycaster.LayerHit) {
 			case Layer.Enemy:
 				Cursor.SetCursor(combatCursor, cursorHotspot, CursorMode.Auto);
 				break;

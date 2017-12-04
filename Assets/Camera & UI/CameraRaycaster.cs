@@ -22,8 +22,8 @@ public class CameraRaycaster : MonoBehaviour
 		get { return layerHit; }
 	}
 
-	public delegate void OnLayerChange(Layer newLayer); // declare delegate
-	public event OnLayerChange O_LayerChange; // instantiate observers
+	// Add GameEvent Raiser
+	public GameEvent eventToRaise;
 
 	void Start() // TODO Awake?
 	{
@@ -39,7 +39,8 @@ public class CameraRaycaster : MonoBehaviour
 				m_hit = hit.Value;
 				if (layerHit != layer) {
 					layerHit = layer;
-					O_LayerChange(layer); // call delegate
+					// Raise GameEvent
+					eventToRaise.Raise();
 				}
 				layerHit = layer;
 				return;

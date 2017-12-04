@@ -699,6 +699,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d804be7184a6a546a383c19dc000deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: {fileID: 11400000, guid: e17071a04e4b7534ca26a54a394b185d, type: 2}
+  ResetHP: 1
+  StartingHP: {fileID: 11400000, guid: 53291f5915c8188428085d7b3676a8b9, type: 2}
+  RegenRate: {fileID: 11400000, guid: d76bc4b19a41d52458d427644b926dac, type: 2}
 --- !u!114 &114567692921441958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -716,7 +720,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268661932239292}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 6f6d5414101a9ad41bcc2e3adcc6b158, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.7529373
@@ -853,5 +857,5 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 3
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
