@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95d3fb6492b3fc349931adc160af0e7c, type: 3}
-  m_Name: HP
+  m_Name: PlayerHP
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 0
+  DeveloperDescription: Current HP value for Player
+  Value: 48.33

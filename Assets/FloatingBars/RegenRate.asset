@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d3fb6492b3fc349931adc160af0e7c, type: 3}
   m_Name: RegenRate
   m_EditorClassIdentifier: 
-  DeveloperDescription: Amount of HP regenerating each seconds
-  Value: 0.1
+  DeveloperDescription: 
+  Value: 1

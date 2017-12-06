@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d3fb6492b3fc349931adc160af0e7c, type: 3}
   m_Name: PlayerStartingHP
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 0
+  DeveloperDescription: Maximum Player HP
+  Value: 100

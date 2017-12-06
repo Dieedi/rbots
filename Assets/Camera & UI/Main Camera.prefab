@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114114112010547064}
   - component: {fileID: 114250090398242958}
   - component: {fileID: 114347079619008028}
+  - component: {fileID: 114133121846567788}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -106,6 +107,34 @@ MonoBehaviour:
   yMaxLimit: 80
   distanceMin: 3
   distanceMax: 10
+--- !u!114 &114133121846567788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1058062261940512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaea11c3dc90fdb4c87524bb353cde67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 44dac35b01bdf274fb826c0da108793f, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114347079619008028}
+        m_MethodName: OnLayerChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114250090398242958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerPriorities: 0900000008000000
   distanceToBackground: 100
+  eventToRaise: {fileID: 11400000, guid: 44dac35b01bdf274fb826c0da108793f, type: 2}
 --- !u!114 &114347079619008028
 MonoBehaviour:
   m_ObjectHideFlags: 1
