@@ -1,0 +1,1922 @@
+fileFormatVersion: 2
+guid: 12ebccd0f7333e74488e087507297dac
+timeCreated: 1512643635
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Mesh1 Group3 Group2 Group1 Walle1 Model.001
+    100002: Mesh10 Group7 Group2 Group1 Walle1 Model.001
+    100004: Mesh100 gusenica4 Group17 Group16 Group1 Walle1 Model.001
+    100006: Mesh101 gusenica4 Group17 Group16 Group1 Walle1 Model.001
+    100008: Mesh102 gusenica5 Group17 Group16 Group1 Walle1 Model.001
+    100010: Mesh103 gusenica5 Group17 Group16 Group1 Walle1 Model.001
+    100012: Mesh104 gusenica6 Group17 Group16 Group1 Walle1 Model.001
+    100014: Mesh105 gusenica6 Group17 Group16 Group1 Walle1 Model.001
+    100016: Mesh106 gusenica7 Group17 Group16 Group1 Walle1 Model.001
+    100018: Mesh107 gusenica7 Group17 Group16 Group1 Walle1 Model.001
+    100020: Mesh108 gusenica8 Group17 Group16 Group1 Walle1 Model.001
+    100022: Mesh109 gusenica8 Group17 Group16 Group1 Walle1 Model.001
+    100024: Mesh11 Group7 Group2 Group1 Walle1 Model.001
+    100026: Mesh110 gusenica9 Group17 Group16 Group1 Walle1 Model.001
+    100028: Mesh111 gusenica9 Group17 Group16 Group1 Walle1 Model.001
+    100030: Mesh112 gusenica10 Group17 Group16 Group1 Walle1 Model.001
+    100032: Mesh113 gusenica10 Group17 Group16 Group1 Walle1 Model.001
+    100034: Mesh114 gusenica11 Group17 Group16 Group1 Walle1 Model.001
+    100036: Mesh115 gusenica11 Group17 Group16 Group1 Walle1 Model.001
+    100038: Mesh116 gusenica12 Group17 Group16 Group1 Walle1 Model.001
+    100040: Mesh117 gusenica12 Group17 Group16 Group1 Walle1 Model.001
+    100042: Mesh118 gusenica13 Group17 Group16 Group1 Walle1 Model.001
+    100044: Mesh119 gusenica13 Group17 Group16 Group1 Walle1 Model.001
+    100046: Mesh12 Group7 Group2 Group1 Walle1 Model.001
+    100048: Mesh120 gusenica14 Group17 Group16 Group1 Walle1 Model.001
+    100050: Mesh121 gusenica14 Group17 Group16 Group1 Walle1 Model.001
+    100052: Mesh122 gusenica15 Group17 Group16 Group1 Walle1 Model.001
+    100054: Mesh123 gusenica15 Group17 Group16 Group1 Walle1 Model.001
+    100056: Mesh124 gusenica16 Group17 Group16 Group1 Walle1 Model.001
+    100058: Mesh125 gusenica16 Group17 Group16 Group1 Walle1 Model.001
+    100060: Mesh126 gusenica17 Group17 Group16 Group1 Walle1 Model.001
+    100062: Mesh127 gusenica17 Group17 Group16 Group1 Walle1 Model.001
+    100064: Mesh128 gusenica18 Group17 Group16 Group1 Walle1 Model.001
+    100066: Mesh129 gusenica18 Group17 Group16 Group1 Walle1 Model.001
+    100068: Mesh13 Group7 Group2 Group1 Walle1 Model.001
+    100070: Mesh130 gusenica19 Group17 Group16 Group1 Walle1 Model.001
+    100072: Mesh131 gusenica19 Group17 Group16 Group1 Walle1 Model.001
+    100074: Mesh132 gusenica20 Group17 Group16 Group1 Walle1 Model.001
+    100076: Mesh133 gusenica20 Group17 Group16 Group1 Walle1 Model.001
+    100078: Mesh134 gusenica21 Group17 Group16 Group1 Walle1 Model.001
+    100080: Mesh135 gusenica21 Group17 Group16 Group1 Walle1 Model.001
+    100082: Mesh136 gusenica22 Group17 Group16 Group1 Walle1 Model.001
+    100084: Mesh137 gusenica22 Group17 Group16 Group1 Walle1 Model.001
+    100086: Mesh138 gusenica23 Group17 Group16 Group1 Walle1 Model.001
+    100088: Mesh139 gusenica23 Group17 Group16 Group1 Walle1 Model.001
+    100090: Mesh14 Group7 Group2 Group1 Walle1 Model.001
+    100092: Mesh140 gusenica24 Group17 Group16 Group1 Walle1 Model.001
+    100094: Mesh141 gusenica24 Group17 Group16 Group1 Walle1 Model.001
+    100096: Mesh142 gusenica25 Group17 Group16 Group1 Walle1 Model.001
+    100098: Mesh143 gusenica25 Group17 Group16 Group1 Walle1 Model.001
+    100100: Mesh144 gusenica26 Group17 Group16 Group1 Walle1 Model.001
+    100102: Mesh145 gusenica26 Group17 Group16 Group1 Walle1 Model.001
+    100104: Mesh146 gusenica27 Group17 Group16 Group1 Walle1 Model.001
+    100106: Mesh147 gusenica27 Group17 Group16 Group1 Walle1 Model.001
+    100108: Mesh148 gusenica28 Group17 Group16 Group1 Walle1 Model.001
+    100110: Mesh149 gusenica28 Group17 Group16 Group1 Walle1 Model.001
+    100112: Mesh15 Group7 Group2 Group1 Walle1 Model.001
+    100114: Mesh150 gusenica29 Group17 Group16 Group1 Walle1 Model.001
+    100116: Mesh151 gusenica29 Group17 Group16 Group1 Walle1 Model.001
+    100118: Mesh152 gusenica30 Group17 Group16 Group1 Walle1 Model.001
+    100120: Mesh153 gusenica30 Group17 Group16 Group1 Walle1 Model.001
+    100122: Mesh154 gusenica31 Group17 Group16 Group1 Walle1 Model.001
+    100124: Mesh155 gusenica31 Group17 Group16 Group1 Walle1 Model.001
+    100126: Mesh156 gusenica32 Group17 Group16 Group1 Walle1 Model.001
+    100128: Mesh157 gusenica32 Group17 Group16 Group1 Walle1 Model.001
+    100130: Mesh158 gusenica33 Group17 Group16 Group1 Walle1 Model.001
+    100132: Mesh159 gusenica33 Group17 Group16 Group1 Walle1 Model.001
+    100134: Mesh16 Group7 Group2 Group1 Walle1 Model.001
+    100136: Mesh160 gusenica34 Group17 Group16 Group1 Walle1 Model.001
+    100138: Mesh161 gusenica34 Group17 Group16 Group1 Walle1 Model.001
+    100140: Mesh162 gusenica35 Group17 Group16 Group1 Walle1 Model.001
+    100142: Mesh163 gusenica35 Group17 Group16 Group1 Walle1 Model.001
+    100144: Mesh164 gusenica36 Group17 Group16 Group1 Walle1 Model.001
+    100146: Mesh165 gusenica36 Group17 Group16 Group1 Walle1 Model.001
+    100148: Mesh166 gusenica37 Group17 Group16 Group1 Walle1 Model.001
+    100150: Mesh167 gusenica37 Group17 Group16 Group1 Walle1 Model.001
+    100152: Mesh168 gusenica38 Group17 Group16 Group1 Walle1 Model.001
+    100154: Mesh169 gusenica38 Group17 Group16 Group1 Walle1 Model.001
+    100156: Mesh17 Group7 Group2 Group1 Walle1 Model.001
+    100158: Mesh170 gusenica39 Group17 Group16 Group1 Walle1 Model.001
+    100160: Mesh171 gusenica39 Group17 Group16 Group1 Walle1 Model.001
+    100162: Mesh172 gusenica40 Group17 Group16 Group1 Walle1 Model.001
+    100164: Mesh173 gusenica40 Group17 Group16 Group1 Walle1 Model.001
+    100166: Mesh174 gusenica41 Group17 Group16 Group1 Walle1 Model.001
+    100168: Mesh175 gusenica41 Group17 Group16 Group1 Walle1 Model.001
+    100170: Mesh176 ks3 Group18 Group16 Group1 Walle1 Model.001
+    100172: Mesh177 ks4 Group18 Group16 Group1 Walle1 Model.001
+    100174: Mesh178 Group21 Group20 Group19 Group16 Group1 Walle1 Model.001
+    100176: Mesh179 Group21 Group20 Group19 Group16 Group1 Walle1 Model.001
+    100178: Mesh18 Group8 Group2 Group1 Walle1 Model.001
+    100180: Mesh180 Group20 Group19 Group16 Group1 Walle1 Model.001
+    100182: Mesh181 Group20 Group19 Group16 Group1 Walle1 Model.001
+    100184: Mesh182 Group20 Group19 Group16 Group1 Walle1 Model.001
+    100186: Mesh183 Group19 Group16 Group1 Walle1 Model.001
+    100188: Mesh184 gusenica42 Group22 Group16 Group1 Walle1 Model.001
+    100190: Mesh185 gusenica42 Group22 Group16 Group1 Walle1 Model.001
+    100192: Mesh186 gusenica43 Group22 Group16 Group1 Walle1 Model.001
+    100194: Mesh187 gusenica43 Group22 Group16 Group1 Walle1 Model.001
+    100196: Mesh188 gusenica44 Group22 Group16 Group1 Walle1 Model.001
+    100198: Mesh189 gusenica44 Group22 Group16 Group1 Walle1 Model.001
+    100200: Mesh19 Group8 Group2 Group1 Walle1 Model.001
+    100202: Mesh190 gusenica45 Group22 Group16 Group1 Walle1 Model.001
+    100204: Mesh191 gusenica45 Group22 Group16 Group1 Walle1 Model.001
+    100206: Mesh192 gusenica46 Group22 Group16 Group1 Walle1 Model.001
+    100208: Mesh193 gusenica46 Group22 Group16 Group1 Walle1 Model.001
+    100210: Mesh194 gusenica47 Group22 Group16 Group1 Walle1 Model.001
+    100212: Mesh195 gusenica47 Group22 Group16 Group1 Walle1 Model.001
+    100214: Mesh196 gusenica48 Group22 Group16 Group1 Walle1 Model.001
+    100216: Mesh197 gusenica48 Group22 Group16 Group1 Walle1 Model.001
+    100218: Mesh198 gusenica49 Group22 Group16 Group1 Walle1 Model.001
+    100220: Mesh199 gusenica49 Group22 Group16 Group1 Walle1 Model.001
+    100222: Mesh2 Group4 Group2 Group1 Walle1 Model.001
+    100224: Mesh20 Group8 Group2 Group1 Walle1 Model.001
+    100226: Mesh200 gusenica50 Group22 Group16 Group1 Walle1 Model.001
+    100228: Mesh201 gusenica50 Group22 Group16 Group1 Walle1 Model.001
+    100230: Mesh202 gusenica51 Group22 Group16 Group1 Walle1 Model.001
+    100232: Mesh203 gusenica51 Group22 Group16 Group1 Walle1 Model.001
+    100234: Mesh204 gusenica52 Group22 Group16 Group1 Walle1 Model.001
+    100236: Mesh205 gusenica52 Group22 Group16 Group1 Walle1 Model.001
+    100238: Mesh206 gusenica53 Group22 Group16 Group1 Walle1 Model.001
+    100240: Mesh207 gusenica53 Group22 Group16 Group1 Walle1 Model.001
+    100242: Mesh208 gusenica54 Group22 Group16 Group1 Walle1 Model.001
+    100244: Mesh209 gusenica54 Group22 Group16 Group1 Walle1 Model.001
+    100246: Mesh21 Group8 Group2 Group1 Walle1 Model.001
+    100248: Mesh210 gusenica55 Group22 Group16 Group1 Walle1 Model.001
+    100250: Mesh211 gusenica55 Group22 Group16 Group1 Walle1 Model.001
+    100252: Mesh212 gusenica56 Group22 Group16 Group1 Walle1 Model.001
+    100254: Mesh213 gusenica56 Group22 Group16 Group1 Walle1 Model.001
+    100256: Mesh214 gusenica57 Group22 Group16 Group1 Walle1 Model.001
+    100258: Mesh215 gusenica57 Group22 Group16 Group1 Walle1 Model.001
+    100260: Mesh216 gusenica58 Group22 Group16 Group1 Walle1 Model.001
+    100262: Mesh217 gusenica58 Group22 Group16 Group1 Walle1 Model.001
+    100264: Mesh218 gusenica59 Group22 Group16 Group1 Walle1 Model.001
+    100266: Mesh219 gusenica59 Group22 Group16 Group1 Walle1 Model.001
+    100268: Mesh22 Group8 Group2 Group1 Walle1 Model.001
+    100270: Mesh220 gusenica60 Group22 Group16 Group1 Walle1 Model.001
+    100272: Mesh221 gusenica60 Group22 Group16 Group1 Walle1 Model.001
+    100274: Mesh222 gusenica61 Group22 Group16 Group1 Walle1 Model.001
+    100276: Mesh223 gusenica61 Group22 Group16 Group1 Walle1 Model.001
+    100278: Mesh224 gusenica62 Group22 Group16 Group1 Walle1 Model.001
+    100280: Mesh225 gusenica62 Group22 Group16 Group1 Walle1 Model.001
+    100282: Mesh226 gusenica63 Group22 Group16 Group1 Walle1 Model.001
+    100284: Mesh227 gusenica63 Group22 Group16 Group1 Walle1 Model.001
+    100286: Mesh228 gusenica64 Group22 Group16 Group1 Walle1 Model.001
+    100288: Mesh229 gusenica64 Group22 Group16 Group1 Walle1 Model.001
+    100290: Mesh23 Group8 Group2 Group1 Walle1 Model.001
+    100292: Mesh230 gusenica65 Group22 Group16 Group1 Walle1 Model.001
+    100294: Mesh231 gusenica65 Group22 Group16 Group1 Walle1 Model.001
+    100296: Mesh232 gusenica66 Group22 Group16 Group1 Walle1 Model.001
+    100298: Mesh233 gusenica66 Group22 Group16 Group1 Walle1 Model.001
+    100300: Mesh234 gusenica67 Group22 Group16 Group1 Walle1 Model.001
+    100302: Mesh235 gusenica67 Group22 Group16 Group1 Walle1 Model.001
+    100304: Mesh236 gusenica68 Group22 Group16 Group1 Walle1 Model.001
+    100306: Mesh237 gusenica68 Group22 Group16 Group1 Walle1 Model.001
+    100308: Mesh238 gusenica69 Group22 Group16 Group1 Walle1 Model.001
+    100310: Mesh239 gusenica69 Group22 Group16 Group1 Walle1 Model.001
+    100312: Mesh24 Group8 Group2 Group1 Walle1 Model.001
+    100314: Mesh240 gusenica70 Group22 Group16 Group1 Walle1 Model.001
+    100316: Mesh241 gusenica70 Group22 Group16 Group1 Walle1 Model.001
+    100318: Mesh242 gusenica71 Group22 Group16 Group1 Walle1 Model.001
+    100320: Mesh243 gusenica71 Group22 Group16 Group1 Walle1 Model.001
+    100322: Mesh244 gusenica72 Group22 Group16 Group1 Walle1 Model.001
+    100324: Mesh245 gusenica72 Group22 Group16 Group1 Walle1 Model.001
+    100326: Mesh246 gusenica73 Group22 Group16 Group1 Walle1 Model.001
+    100328: Mesh247 gusenica73 Group22 Group16 Group1 Walle1 Model.001
+    100330: Mesh248 gusenica74 Group22 Group16 Group1 Walle1 Model.001
+    100332: Mesh249 gusenica74 Group22 Group16 Group1 Walle1 Model.001
+    100334: Mesh25 Group8 Group2 Group1 Walle1 Model.001
+    100336: Mesh250 gusenica75 Group22 Group16 Group1 Walle1 Model.001
+    100338: Mesh251 gusenica75 Group22 Group16 Group1 Walle1 Model.001
+    100340: Mesh252 gusenica76 Group22 Group16 Group1 Walle1 Model.001
+    100342: Mesh253 gusenica76 Group22 Group16 Group1 Walle1 Model.001
+    100344: Mesh254 gusenica77 Group22 Group16 Group1 Walle1 Model.001
+    100346: Mesh255 gusenica77 Group22 Group16 Group1 Walle1 Model.001
+    100348: Mesh256 gusenica78 Group22 Group16 Group1 Walle1 Model.001
+    100350: Mesh257 gusenica78 Group22 Group16 Group1 Walle1 Model.001
+    100352: Mesh258 gusenica79 Group22 Group16 Group1 Walle1 Model.001
+    100354: Mesh259 gusenica79 Group22 Group16 Group1 Walle1 Model.001
+    100356: Mesh26 Group8 Group2 Group1 Walle1 Model.001
+    100358: Mesh260 gusenica80 Group22 Group16 Group1 Walle1 Model.001
+    100360: Mesh261 gusenica80 Group22 Group16 Group1 Walle1 Model.001
+    100362: Mesh262 gusenica81 Group22 Group16 Group1 Walle1 Model.001
+    100364: Mesh263 gusenica81 Group22 Group16 Group1 Walle1 Model.001
+    100366: Mesh264 gusenica82 Group22 Group16 Group1 Walle1 Model.001
+    100368: Mesh265 gusenica82 Group22 Group16 Group1 Walle1 Model.001
+    100370: Mesh266 km3 Group16 Group1 Walle1 Model.001
+    100372: Mesh267 km3 Group16 Group1 Walle1 Model.001
+    100374: Mesh268 km4 Group16 Group1 Walle1 Model.001
+    100376: Mesh269 km4 Group16 Group1 Walle1 Model.001
+    100378: Mesh27 Group8 Group2 Group1 Walle1 Model.001
+    100380: Mesh270 zub49 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100382: Mesh271 zub50 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100384: Mesh272 zub51 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100386: Mesh273 zub52 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100388: Mesh274 zub53 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100390: Mesh275 zub54 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100392: Mesh276 zub55 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100394: Mesh277 zub56 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100396: Mesh278 zub57 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100398: Mesh279 zub58 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100400: Mesh28 Group8 Group2 Group1 Walle1 Model.001
+    100402: Mesh280 zub59 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100404: Mesh281 zub60 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100406: Mesh282 zub61 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100408: Mesh283 zub62 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100410: Mesh284 zub63 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100412: Mesh285 zub64 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100414: Mesh286 zub65 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100416: Mesh287 zub66 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100418: Mesh288 zub67 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100420: Mesh289 zub68 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100422: Mesh29 Group2 Group1 Walle1 Model.001
+    100424: Mesh290 zub69 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100426: Mesh291 zub70 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100428: Mesh292 zub71 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100430: Mesh293 zub72 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100432: Mesh294 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    100434: Mesh295 zub73 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100436: Mesh296 zub74 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100438: Mesh297 zub75 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100440: Mesh298 zub76 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100442: Mesh299 zub77 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100444: Mesh3 box Group5 Group2 Group1 Walle1 Model.001
+    100446: Mesh30 Group2 Group1 Walle1 Model.001
+    100448: Mesh300 zub78 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100450: Mesh301 zub79 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100452: Mesh302 zub80 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100454: Mesh303 zub81 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100456: Mesh304 zub82 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100458: Mesh305 zub83 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100460: Mesh306 zub84 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100462: Mesh307 zub85 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100464: Mesh308 zub86 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100466: Mesh309 zub87 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100468: Mesh31 Group2 Group1 Walle1 Model.001
+    100470: Mesh310 zub88 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100472: Mesh311 zub89 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100474: Mesh312 zub90 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100476: Mesh313 zub91 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100478: Mesh314 zub92 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100480: Mesh315 zub93 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100482: Mesh316 zub94 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100484: Mesh317 zub95 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100486: Mesh318 zub96 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100488: Mesh319 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    100490: Mesh32 ks1 Group10 Group9 Group1 Walle1 Model.001
+    100492: Mesh320 cylinder Group25 Group1 Walle1 Model.001
+    100494: Mesh321 Group28 Group27 Group26 Group25 Group1 Walle1 Model.001
+    100496: Mesh322 Group28 Group27 Group26 Group25 Group1 Walle1 Model.001
+    100498: Mesh323 Group29 glaz1 Group27 Group26 Group25 Group1 Walle1.000
+    100500: Mesh324 glaz1 Group27 Group26 Group25 Group1 Walle1 Model.001
+    100502: Mesh325 Group27 Group26 Group25 Group1 Walle1 Model.001
+    100504: Mesh326 sphere Group26 Group25 Group1 Walle1 Model.001
+    100506: Mesh327 Group31 Group30 Group26 Group25 Group1 Walle1 Model.001
+    100508: Mesh328 Group31 Group30 Group26 Group25 Group1 Walle1 Model.001
+    100510: Mesh329 Group32 glaz2 Group30 Group26 Group25 Group1 Walle1.000
+    100512: Mesh33 ks2 Group10 Group9 Group1 Walle1 Model.001
+    100514: Mesh330 glaz2 Group30 Group26 Group25 Group1 Walle1 Model.001
+    100516: Mesh331 Group26 Group25 Group1 Walle1 Model.001
+    100518: Mesh332 Group26 Group25 Group1 Walle1 Model.001
+    100520: Mesh333 Group34 Group33 Group1 Walle1 Model.001
+    100522: Mesh334 Group34 Group33 Group1 Walle1 Model.001
+    100524: Mesh335 Group34 Group33 Group1 Walle1 Model.001
+    100526: Mesh336 Group35 Group33 Group1 Walle1 Model.001
+    100528: Mesh337 Group35 Group33 Group1 Walle1 Model.001
+    100530: Mesh338 Group35 Group33 Group1 Walle1 Model.001
+    100532: Mesh339 hend1 Group1 Walle1 Model.001
+    100534: Mesh34 Group13 Group12 Group11 Group9 Group1 Walle1 Model.001
+    100536: Mesh340 hend1 Group1 Walle1 Model.001
+    100538: Mesh341 hend1 Group1 Walle1 Model.001
+    100540: Mesh342 hend2 Group1 Walle1 Model.001
+    100542: Mesh343 hend2 Group1 Walle1 Model.001
+    100544: Mesh344 hend2 Group1 Walle1 Model.001
+    100546: Mesh345 _ALL_E1 Group1 Walle1 Model.001
+    100548: Mesh346 _ALL_E1 Group1 Walle1 Model.001
+    100550: Mesh347 _ALL_E1 Group1 Walle1 Model.001
+    100552: Mesh348 _ALL_E1 Group1 Walle1 Model.001
+    100554: Mesh349 _ALL_E1 Group1 Walle1 Model.001
+    100556: Mesh35 Group13 Group12 Group11 Group9 Group1 Walle1 Model.001
+    100558: Mesh350 Group1 Walle1 Model.001
+    100560: Mesh36 Group12 Group11 Group9 Group1 Walle1 Model.001
+    100562: Mesh37 Group12 Group11 Group9 Group1 Walle1 Model.001
+    100564: Mesh38 Group12 Group11 Group9 Group1 Walle1 Model.001
+    100566: Mesh39 Group11 Group9 Group1 Walle1 Model.001
+    100568: Mesh4 Group5 Group2 Group1 Walle1 Model.001
+    100570: Mesh40 km1 Group9 Group1 Walle1 Model.001
+    100572: Mesh41 km1 Group9 Group1 Walle1 Model.001
+    100574: Mesh42 km2 Group9 Group1 Walle1 Model.001
+    100576: Mesh43 km2 Group9 Group1 Walle1 Model.001
+    100578: Mesh44 zub1 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100580: Mesh45 zub2 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100582: Mesh46 zub3 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100584: Mesh47 zub4 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100586: Mesh48 zub5 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100588: Mesh49 zub6 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100590: Mesh5 Group5 Group2 Group1 Walle1 Model.001
+    100592: Mesh50 zub7 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100594: Mesh51 zub8 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100596: Mesh52 zub9 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100598: Mesh53 zub10 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100600: Mesh54 zub11 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100602: Mesh55 zub12 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100604: Mesh56 zub13 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100606: Mesh57 zub14 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100608: Mesh58 zub15 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100610: Mesh59 zub16 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100612: Mesh6 Group6 Group2 Group1 Walle1 Model.001
+    100614: Mesh60 zub17 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100616: Mesh61 zub18 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100618: Mesh62 zub19 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100620: Mesh63 zub20 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100622: Mesh64 zub21 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100624: Mesh65 zub22 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100626: Mesh66 zub23 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100628: Mesh67 zub24 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100630: Mesh68 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    100632: Mesh69 zub25 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100634: Mesh7 Group7 Group2 Group1 Walle1 Model.001
+    100636: Mesh70 zub26 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100638: Mesh71 zub27 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100640: Mesh72 zub28 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100642: Mesh73 zub29 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100644: Mesh74 zub30 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100646: Mesh75 zub31 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100648: Mesh76 zub32 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100650: Mesh77 zub33 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100652: Mesh78 zub34 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100654: Mesh79 zub35 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100656: Mesh8 Group7 Group2 Group1 Walle1 Model.001
+    100658: Mesh80 zub36 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100660: Mesh81 zub37 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100662: Mesh82 zub38 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100664: Mesh83 zub39 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100666: Mesh84 zub40 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100668: Mesh85 zub41 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100670: Mesh86 zub42 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100672: Mesh87 zub43 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100674: Mesh88 zub44 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100676: Mesh89 zub45 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100678: Mesh9 Group7 Group2 Group1 Walle1 Model.001
+    100680: Mesh90 zub46 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100682: Mesh91 zub47 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100684: Mesh92 zub48 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100686: Mesh93 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    100688: Mesh94 gusenica1 Group17 Group16 Group1 Walle1 Model.001
+    100690: Mesh95 gusenica1 Group17 Group16 Group1 Walle1 Model.001
+    100692: Mesh96 gusenica2 Group17 Group16 Group1 Walle1 Model.001
+    100694: Mesh97 gusenica2 Group17 Group16 Group1 Walle1 Model.001
+    100696: Mesh98 gusenica3 Group17 Group16 Group1 Walle1 Model.001
+    100698: Mesh99 gusenica3 Group17 Group16 Group1 Walle1 Model.001
+    100700: //RootNode
+    400000: Mesh1 Group3 Group2 Group1 Walle1 Model.001
+    400002: Mesh10 Group7 Group2 Group1 Walle1 Model.001
+    400004: Mesh100 gusenica4 Group17 Group16 Group1 Walle1 Model.001
+    400006: Mesh101 gusenica4 Group17 Group16 Group1 Walle1 Model.001
+    400008: Mesh102 gusenica5 Group17 Group16 Group1 Walle1 Model.001
+    400010: Mesh103 gusenica5 Group17 Group16 Group1 Walle1 Model.001
+    400012: Mesh104 gusenica6 Group17 Group16 Group1 Walle1 Model.001
+    400014: Mesh105 gusenica6 Group17 Group16 Group1 Walle1 Model.001
+    400016: Mesh106 gusenica7 Group17 Group16 Group1 Walle1 Model.001
+    400018: Mesh107 gusenica7 Group17 Group16 Group1 Walle1 Model.001
+    400020: Mesh108 gusenica8 Group17 Group16 Group1 Walle1 Model.001
+    400022: Mesh109 gusenica8 Group17 Group16 Group1 Walle1 Model.001
+    400024: Mesh11 Group7 Group2 Group1 Walle1 Model.001
+    400026: Mesh110 gusenica9 Group17 Group16 Group1 Walle1 Model.001
+    400028: Mesh111 gusenica9 Group17 Group16 Group1 Walle1 Model.001
+    400030: Mesh112 gusenica10 Group17 Group16 Group1 Walle1 Model.001
+    400032: Mesh113 gusenica10 Group17 Group16 Group1 Walle1 Model.001
+    400034: Mesh114 gusenica11 Group17 Group16 Group1 Walle1 Model.001
+    400036: Mesh115 gusenica11 Group17 Group16 Group1 Walle1 Model.001
+    400038: Mesh116 gusenica12 Group17 Group16 Group1 Walle1 Model.001
+    400040: Mesh117 gusenica12 Group17 Group16 Group1 Walle1 Model.001
+    400042: Mesh118 gusenica13 Group17 Group16 Group1 Walle1 Model.001
+    400044: Mesh119 gusenica13 Group17 Group16 Group1 Walle1 Model.001
+    400046: Mesh12 Group7 Group2 Group1 Walle1 Model.001
+    400048: Mesh120 gusenica14 Group17 Group16 Group1 Walle1 Model.001
+    400050: Mesh121 gusenica14 Group17 Group16 Group1 Walle1 Model.001
+    400052: Mesh122 gusenica15 Group17 Group16 Group1 Walle1 Model.001
+    400054: Mesh123 gusenica15 Group17 Group16 Group1 Walle1 Model.001
+    400056: Mesh124 gusenica16 Group17 Group16 Group1 Walle1 Model.001
+    400058: Mesh125 gusenica16 Group17 Group16 Group1 Walle1 Model.001
+    400060: Mesh126 gusenica17 Group17 Group16 Group1 Walle1 Model.001
+    400062: Mesh127 gusenica17 Group17 Group16 Group1 Walle1 Model.001
+    400064: Mesh128 gusenica18 Group17 Group16 Group1 Walle1 Model.001
+    400066: Mesh129 gusenica18 Group17 Group16 Group1 Walle1 Model.001
+    400068: Mesh13 Group7 Group2 Group1 Walle1 Model.001
+    400070: Mesh130 gusenica19 Group17 Group16 Group1 Walle1 Model.001
+    400072: Mesh131 gusenica19 Group17 Group16 Group1 Walle1 Model.001
+    400074: Mesh132 gusenica20 Group17 Group16 Group1 Walle1 Model.001
+    400076: Mesh133 gusenica20 Group17 Group16 Group1 Walle1 Model.001
+    400078: Mesh134 gusenica21 Group17 Group16 Group1 Walle1 Model.001
+    400080: Mesh135 gusenica21 Group17 Group16 Group1 Walle1 Model.001
+    400082: Mesh136 gusenica22 Group17 Group16 Group1 Walle1 Model.001
+    400084: Mesh137 gusenica22 Group17 Group16 Group1 Walle1 Model.001
+    400086: Mesh138 gusenica23 Group17 Group16 Group1 Walle1 Model.001
+    400088: Mesh139 gusenica23 Group17 Group16 Group1 Walle1 Model.001
+    400090: Mesh14 Group7 Group2 Group1 Walle1 Model.001
+    400092: Mesh140 gusenica24 Group17 Group16 Group1 Walle1 Model.001
+    400094: Mesh141 gusenica24 Group17 Group16 Group1 Walle1 Model.001
+    400096: Mesh142 gusenica25 Group17 Group16 Group1 Walle1 Model.001
+    400098: Mesh143 gusenica25 Group17 Group16 Group1 Walle1 Model.001
+    400100: Mesh144 gusenica26 Group17 Group16 Group1 Walle1 Model.001
+    400102: Mesh145 gusenica26 Group17 Group16 Group1 Walle1 Model.001
+    400104: Mesh146 gusenica27 Group17 Group16 Group1 Walle1 Model.001
+    400106: Mesh147 gusenica27 Group17 Group16 Group1 Walle1 Model.001
+    400108: Mesh148 gusenica28 Group17 Group16 Group1 Walle1 Model.001
+    400110: Mesh149 gusenica28 Group17 Group16 Group1 Walle1 Model.001
+    400112: Mesh15 Group7 Group2 Group1 Walle1 Model.001
+    400114: Mesh150 gusenica29 Group17 Group16 Group1 Walle1 Model.001
+    400116: Mesh151 gusenica29 Group17 Group16 Group1 Walle1 Model.001
+    400118: Mesh152 gusenica30 Group17 Group16 Group1 Walle1 Model.001
+    400120: Mesh153 gusenica30 Group17 Group16 Group1 Walle1 Model.001
+    400122: Mesh154 gusenica31 Group17 Group16 Group1 Walle1 Model.001
+    400124: Mesh155 gusenica31 Group17 Group16 Group1 Walle1 Model.001
+    400126: Mesh156 gusenica32 Group17 Group16 Group1 Walle1 Model.001
+    400128: Mesh157 gusenica32 Group17 Group16 Group1 Walle1 Model.001
+    400130: Mesh158 gusenica33 Group17 Group16 Group1 Walle1 Model.001
+    400132: Mesh159 gusenica33 Group17 Group16 Group1 Walle1 Model.001
+    400134: Mesh16 Group7 Group2 Group1 Walle1 Model.001
+    400136: Mesh160 gusenica34 Group17 Group16 Group1 Walle1 Model.001
+    400138: Mesh161 gusenica34 Group17 Group16 Group1 Walle1 Model.001
+    400140: Mesh162 gusenica35 Group17 Group16 Group1 Walle1 Model.001
+    400142: Mesh163 gusenica35 Group17 Group16 Group1 Walle1 Model.001
+    400144: Mesh164 gusenica36 Group17 Group16 Group1 Walle1 Model.001
+    400146: Mesh165 gusenica36 Group17 Group16 Group1 Walle1 Model.001
+    400148: Mesh166 gusenica37 Group17 Group16 Group1 Walle1 Model.001
+    400150: Mesh167 gusenica37 Group17 Group16 Group1 Walle1 Model.001
+    400152: Mesh168 gusenica38 Group17 Group16 Group1 Walle1 Model.001
+    400154: Mesh169 gusenica38 Group17 Group16 Group1 Walle1 Model.001
+    400156: Mesh17 Group7 Group2 Group1 Walle1 Model.001
+    400158: Mesh170 gusenica39 Group17 Group16 Group1 Walle1 Model.001
+    400160: Mesh171 gusenica39 Group17 Group16 Group1 Walle1 Model.001
+    400162: Mesh172 gusenica40 Group17 Group16 Group1 Walle1 Model.001
+    400164: Mesh173 gusenica40 Group17 Group16 Group1 Walle1 Model.001
+    400166: Mesh174 gusenica41 Group17 Group16 Group1 Walle1 Model.001
+    400168: Mesh175 gusenica41 Group17 Group16 Group1 Walle1 Model.001
+    400170: Mesh176 ks3 Group18 Group16 Group1 Walle1 Model.001
+    400172: Mesh177 ks4 Group18 Group16 Group1 Walle1 Model.001
+    400174: Mesh178 Group21 Group20 Group19 Group16 Group1 Walle1 Model.001
+    400176: Mesh179 Group21 Group20 Group19 Group16 Group1 Walle1 Model.001
+    400178: Mesh18 Group8 Group2 Group1 Walle1 Model.001
+    400180: Mesh180 Group20 Group19 Group16 Group1 Walle1 Model.001
+    400182: Mesh181 Group20 Group19 Group16 Group1 Walle1 Model.001
+    400184: Mesh182 Group20 Group19 Group16 Group1 Walle1 Model.001
+    400186: Mesh183 Group19 Group16 Group1 Walle1 Model.001
+    400188: Mesh184 gusenica42 Group22 Group16 Group1 Walle1 Model.001
+    400190: Mesh185 gusenica42 Group22 Group16 Group1 Walle1 Model.001
+    400192: Mesh186 gusenica43 Group22 Group16 Group1 Walle1 Model.001
+    400194: Mesh187 gusenica43 Group22 Group16 Group1 Walle1 Model.001
+    400196: Mesh188 gusenica44 Group22 Group16 Group1 Walle1 Model.001
+    400198: Mesh189 gusenica44 Group22 Group16 Group1 Walle1 Model.001
+    400200: Mesh19 Group8 Group2 Group1 Walle1 Model.001
+    400202: Mesh190 gusenica45 Group22 Group16 Group1 Walle1 Model.001
+    400204: Mesh191 gusenica45 Group22 Group16 Group1 Walle1 Model.001
+    400206: Mesh192 gusenica46 Group22 Group16 Group1 Walle1 Model.001
+    400208: Mesh193 gusenica46 Group22 Group16 Group1 Walle1 Model.001
+    400210: Mesh194 gusenica47 Group22 Group16 Group1 Walle1 Model.001
+    400212: Mesh195 gusenica47 Group22 Group16 Group1 Walle1 Model.001
+    400214: Mesh196 gusenica48 Group22 Group16 Group1 Walle1 Model.001
+    400216: Mesh197 gusenica48 Group22 Group16 Group1 Walle1 Model.001
+    400218: Mesh198 gusenica49 Group22 Group16 Group1 Walle1 Model.001
+    400220: Mesh199 gusenica49 Group22 Group16 Group1 Walle1 Model.001
+    400222: Mesh2 Group4 Group2 Group1 Walle1 Model.001
+    400224: Mesh20 Group8 Group2 Group1 Walle1 Model.001
+    400226: Mesh200 gusenica50 Group22 Group16 Group1 Walle1 Model.001
+    400228: Mesh201 gusenica50 Group22 Group16 Group1 Walle1 Model.001
+    400230: Mesh202 gusenica51 Group22 Group16 Group1 Walle1 Model.001
+    400232: Mesh203 gusenica51 Group22 Group16 Group1 Walle1 Model.001
+    400234: Mesh204 gusenica52 Group22 Group16 Group1 Walle1 Model.001
+    400236: Mesh205 gusenica52 Group22 Group16 Group1 Walle1 Model.001
+    400238: Mesh206 gusenica53 Group22 Group16 Group1 Walle1 Model.001
+    400240: Mesh207 gusenica53 Group22 Group16 Group1 Walle1 Model.001
+    400242: Mesh208 gusenica54 Group22 Group16 Group1 Walle1 Model.001
+    400244: Mesh209 gusenica54 Group22 Group16 Group1 Walle1 Model.001
+    400246: Mesh21 Group8 Group2 Group1 Walle1 Model.001
+    400248: Mesh210 gusenica55 Group22 Group16 Group1 Walle1 Model.001
+    400250: Mesh211 gusenica55 Group22 Group16 Group1 Walle1 Model.001
+    400252: Mesh212 gusenica56 Group22 Group16 Group1 Walle1 Model.001
+    400254: Mesh213 gusenica56 Group22 Group16 Group1 Walle1 Model.001
+    400256: Mesh214 gusenica57 Group22 Group16 Group1 Walle1 Model.001
+    400258: Mesh215 gusenica57 Group22 Group16 Group1 Walle1 Model.001
+    400260: Mesh216 gusenica58 Group22 Group16 Group1 Walle1 Model.001
+    400262: Mesh217 gusenica58 Group22 Group16 Group1 Walle1 Model.001
+    400264: Mesh218 gusenica59 Group22 Group16 Group1 Walle1 Model.001
+    400266: Mesh219 gusenica59 Group22 Group16 Group1 Walle1 Model.001
+    400268: Mesh22 Group8 Group2 Group1 Walle1 Model.001
+    400270: Mesh220 gusenica60 Group22 Group16 Group1 Walle1 Model.001
+    400272: Mesh221 gusenica60 Group22 Group16 Group1 Walle1 Model.001
+    400274: Mesh222 gusenica61 Group22 Group16 Group1 Walle1 Model.001
+    400276: Mesh223 gusenica61 Group22 Group16 Group1 Walle1 Model.001
+    400278: Mesh224 gusenica62 Group22 Group16 Group1 Walle1 Model.001
+    400280: Mesh225 gusenica62 Group22 Group16 Group1 Walle1 Model.001
+    400282: Mesh226 gusenica63 Group22 Group16 Group1 Walle1 Model.001
+    400284: Mesh227 gusenica63 Group22 Group16 Group1 Walle1 Model.001
+    400286: Mesh228 gusenica64 Group22 Group16 Group1 Walle1 Model.001
+    400288: Mesh229 gusenica64 Group22 Group16 Group1 Walle1 Model.001
+    400290: Mesh23 Group8 Group2 Group1 Walle1 Model.001
+    400292: Mesh230 gusenica65 Group22 Group16 Group1 Walle1 Model.001
+    400294: Mesh231 gusenica65 Group22 Group16 Group1 Walle1 Model.001
+    400296: Mesh232 gusenica66 Group22 Group16 Group1 Walle1 Model.001
+    400298: Mesh233 gusenica66 Group22 Group16 Group1 Walle1 Model.001
+    400300: Mesh234 gusenica67 Group22 Group16 Group1 Walle1 Model.001
+    400302: Mesh235 gusenica67 Group22 Group16 Group1 Walle1 Model.001
+    400304: Mesh236 gusenica68 Group22 Group16 Group1 Walle1 Model.001
+    400306: Mesh237 gusenica68 Group22 Group16 Group1 Walle1 Model.001
+    400308: Mesh238 gusenica69 Group22 Group16 Group1 Walle1 Model.001
+    400310: Mesh239 gusenica69 Group22 Group16 Group1 Walle1 Model.001
+    400312: Mesh24 Group8 Group2 Group1 Walle1 Model.001
+    400314: Mesh240 gusenica70 Group22 Group16 Group1 Walle1 Model.001
+    400316: Mesh241 gusenica70 Group22 Group16 Group1 Walle1 Model.001
+    400318: Mesh242 gusenica71 Group22 Group16 Group1 Walle1 Model.001
+    400320: Mesh243 gusenica71 Group22 Group16 Group1 Walle1 Model.001
+    400322: Mesh244 gusenica72 Group22 Group16 Group1 Walle1 Model.001
+    400324: Mesh245 gusenica72 Group22 Group16 Group1 Walle1 Model.001
+    400326: Mesh246 gusenica73 Group22 Group16 Group1 Walle1 Model.001
+    400328: Mesh247 gusenica73 Group22 Group16 Group1 Walle1 Model.001
+    400330: Mesh248 gusenica74 Group22 Group16 Group1 Walle1 Model.001
+    400332: Mesh249 gusenica74 Group22 Group16 Group1 Walle1 Model.001
+    400334: Mesh25 Group8 Group2 Group1 Walle1 Model.001
+    400336: Mesh250 gusenica75 Group22 Group16 Group1 Walle1 Model.001
+    400338: Mesh251 gusenica75 Group22 Group16 Group1 Walle1 Model.001
+    400340: Mesh252 gusenica76 Group22 Group16 Group1 Walle1 Model.001
+    400342: Mesh253 gusenica76 Group22 Group16 Group1 Walle1 Model.001
+    400344: Mesh254 gusenica77 Group22 Group16 Group1 Walle1 Model.001
+    400346: Mesh255 gusenica77 Group22 Group16 Group1 Walle1 Model.001
+    400348: Mesh256 gusenica78 Group22 Group16 Group1 Walle1 Model.001
+    400350: Mesh257 gusenica78 Group22 Group16 Group1 Walle1 Model.001
+    400352: Mesh258 gusenica79 Group22 Group16 Group1 Walle1 Model.001
+    400354: Mesh259 gusenica79 Group22 Group16 Group1 Walle1 Model.001
+    400356: Mesh26 Group8 Group2 Group1 Walle1 Model.001
+    400358: Mesh260 gusenica80 Group22 Group16 Group1 Walle1 Model.001
+    400360: Mesh261 gusenica80 Group22 Group16 Group1 Walle1 Model.001
+    400362: Mesh262 gusenica81 Group22 Group16 Group1 Walle1 Model.001
+    400364: Mesh263 gusenica81 Group22 Group16 Group1 Walle1 Model.001
+    400366: Mesh264 gusenica82 Group22 Group16 Group1 Walle1 Model.001
+    400368: Mesh265 gusenica82 Group22 Group16 Group1 Walle1 Model.001
+    400370: Mesh266 km3 Group16 Group1 Walle1 Model.001
+    400372: Mesh267 km3 Group16 Group1 Walle1 Model.001
+    400374: Mesh268 km4 Group16 Group1 Walle1 Model.001
+    400376: Mesh269 km4 Group16 Group1 Walle1 Model.001
+    400378: Mesh27 Group8 Group2 Group1 Walle1 Model.001
+    400380: Mesh270 zub49 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400382: Mesh271 zub50 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400384: Mesh272 zub51 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400386: Mesh273 zub52 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400388: Mesh274 zub53 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400390: Mesh275 zub54 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400392: Mesh276 zub55 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400394: Mesh277 zub56 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400396: Mesh278 zub57 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400398: Mesh279 zub58 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400400: Mesh28 Group8 Group2 Group1 Walle1 Model.001
+    400402: Mesh280 zub59 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400404: Mesh281 zub60 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400406: Mesh282 zub61 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400408: Mesh283 zub62 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400410: Mesh284 zub63 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400412: Mesh285 zub64 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400414: Mesh286 zub65 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400416: Mesh287 zub66 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400418: Mesh288 zub67 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400420: Mesh289 zub68 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400422: Mesh29 Group2 Group1 Walle1 Model.001
+    400424: Mesh290 zub69 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400426: Mesh291 zub70 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400428: Mesh292 zub71 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400430: Mesh293 zub72 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400432: Mesh294 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    400434: Mesh295 zub73 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400436: Mesh296 zub74 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400438: Mesh297 zub75 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400440: Mesh298 zub76 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400442: Mesh299 zub77 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400444: Mesh3 box Group5 Group2 Group1 Walle1 Model.001
+    400446: Mesh30 Group2 Group1 Walle1 Model.001
+    400448: Mesh300 zub78 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400450: Mesh301 zub79 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400452: Mesh302 zub80 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400454: Mesh303 zub81 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400456: Mesh304 zub82 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400458: Mesh305 zub83 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400460: Mesh306 zub84 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400462: Mesh307 zub85 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400464: Mesh308 zub86 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400466: Mesh309 zub87 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400468: Mesh31 Group2 Group1 Walle1 Model.001
+    400470: Mesh310 zub88 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400472: Mesh311 zub89 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400474: Mesh312 zub90 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400476: Mesh313 zub91 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400478: Mesh314 zub92 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400480: Mesh315 zub93 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400482: Mesh316 zub94 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400484: Mesh317 zub95 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400486: Mesh318 zub96 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400488: Mesh319 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    400490: Mesh32 ks1 Group10 Group9 Group1 Walle1 Model.001
+    400492: Mesh320 cylinder Group25 Group1 Walle1 Model.001
+    400494: Mesh321 Group28 Group27 Group26 Group25 Group1 Walle1 Model.001
+    400496: Mesh322 Group28 Group27 Group26 Group25 Group1 Walle1 Model.001
+    400498: Mesh323 Group29 glaz1 Group27 Group26 Group25 Group1 Walle1.000
+    400500: Mesh324 glaz1 Group27 Group26 Group25 Group1 Walle1 Model.001
+    400502: Mesh325 Group27 Group26 Group25 Group1 Walle1 Model.001
+    400504: Mesh326 sphere Group26 Group25 Group1 Walle1 Model.001
+    400506: Mesh327 Group31 Group30 Group26 Group25 Group1 Walle1 Model.001
+    400508: Mesh328 Group31 Group30 Group26 Group25 Group1 Walle1 Model.001
+    400510: Mesh329 Group32 glaz2 Group30 Group26 Group25 Group1 Walle1.000
+    400512: Mesh33 ks2 Group10 Group9 Group1 Walle1 Model.001
+    400514: Mesh330 glaz2 Group30 Group26 Group25 Group1 Walle1 Model.001
+    400516: Mesh331 Group26 Group25 Group1 Walle1 Model.001
+    400518: Mesh332 Group26 Group25 Group1 Walle1 Model.001
+    400520: Mesh333 Group34 Group33 Group1 Walle1 Model.001
+    400522: Mesh334 Group34 Group33 Group1 Walle1 Model.001
+    400524: Mesh335 Group34 Group33 Group1 Walle1 Model.001
+    400526: Mesh336 Group35 Group33 Group1 Walle1 Model.001
+    400528: Mesh337 Group35 Group33 Group1 Walle1 Model.001
+    400530: Mesh338 Group35 Group33 Group1 Walle1 Model.001
+    400532: Mesh339 hend1 Group1 Walle1 Model.001
+    400534: Mesh34 Group13 Group12 Group11 Group9 Group1 Walle1 Model.001
+    400536: Mesh340 hend1 Group1 Walle1 Model.001
+    400538: Mesh341 hend1 Group1 Walle1 Model.001
+    400540: Mesh342 hend2 Group1 Walle1 Model.001
+    400542: Mesh343 hend2 Group1 Walle1 Model.001
+    400544: Mesh344 hend2 Group1 Walle1 Model.001
+    400546: Mesh345 _ALL_E1 Group1 Walle1 Model.001
+    400548: Mesh346 _ALL_E1 Group1 Walle1 Model.001
+    400550: Mesh347 _ALL_E1 Group1 Walle1 Model.001
+    400552: Mesh348 _ALL_E1 Group1 Walle1 Model.001
+    400554: Mesh349 _ALL_E1 Group1 Walle1 Model.001
+    400556: Mesh35 Group13 Group12 Group11 Group9 Group1 Walle1 Model.001
+    400558: Mesh350 Group1 Walle1 Model.001
+    400560: Mesh36 Group12 Group11 Group9 Group1 Walle1 Model.001
+    400562: Mesh37 Group12 Group11 Group9 Group1 Walle1 Model.001
+    400564: Mesh38 Group12 Group11 Group9 Group1 Walle1 Model.001
+    400566: Mesh39 Group11 Group9 Group1 Walle1 Model.001
+    400568: Mesh4 Group5 Group2 Group1 Walle1 Model.001
+    400570: Mesh40 km1 Group9 Group1 Walle1 Model.001
+    400572: Mesh41 km1 Group9 Group1 Walle1 Model.001
+    400574: Mesh42 km2 Group9 Group1 Walle1 Model.001
+    400576: Mesh43 km2 Group9 Group1 Walle1 Model.001
+    400578: Mesh44 zub1 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400580: Mesh45 zub2 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400582: Mesh46 zub3 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400584: Mesh47 zub4 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400586: Mesh48 zub5 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400588: Mesh49 zub6 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400590: Mesh5 Group5 Group2 Group1 Walle1 Model.001
+    400592: Mesh50 zub7 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400594: Mesh51 zub8 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400596: Mesh52 zub9 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400598: Mesh53 zub10 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400600: Mesh54 zub11 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400602: Mesh55 zub12 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400604: Mesh56 zub13 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400606: Mesh57 zub14 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400608: Mesh58 zub15 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400610: Mesh59 zub16 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400612: Mesh6 Group6 Group2 Group1 Walle1 Model.001
+    400614: Mesh60 zub17 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400616: Mesh61 zub18 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400618: Mesh62 zub19 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400620: Mesh63 zub20 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400622: Mesh64 zub21 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400624: Mesh65 zub22 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400626: Mesh66 zub23 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400628: Mesh67 zub24 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400630: Mesh68 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    400632: Mesh69 zub25 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400634: Mesh7 Group7 Group2 Group1 Walle1 Model.001
+    400636: Mesh70 zub26 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400638: Mesh71 zub27 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400640: Mesh72 zub28 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400642: Mesh73 zub29 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400644: Mesh74 zub30 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400646: Mesh75 zub31 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400648: Mesh76 zub32 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400650: Mesh77 zub33 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400652: Mesh78 zub34 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400654: Mesh79 zub35 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400656: Mesh8 Group7 Group2 Group1 Walle1 Model.001
+    400658: Mesh80 zub36 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400660: Mesh81 zub37 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400662: Mesh82 zub38 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400664: Mesh83 zub39 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400666: Mesh84 zub40 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400668: Mesh85 zub41 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400670: Mesh86 zub42 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400672: Mesh87 zub43 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400674: Mesh88 zub44 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400676: Mesh89 zub45 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400678: Mesh9 Group7 Group2 Group1 Walle1 Model.001
+    400680: Mesh90 zub46 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400682: Mesh91 zub47 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400684: Mesh92 zub48 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400686: Mesh93 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    400688: Mesh94 gusenica1 Group17 Group16 Group1 Walle1 Model.001
+    400690: Mesh95 gusenica1 Group17 Group16 Group1 Walle1 Model.001
+    400692: Mesh96 gusenica2 Group17 Group16 Group1 Walle1 Model.001
+    400694: Mesh97 gusenica2 Group17 Group16 Group1 Walle1 Model.001
+    400696: Mesh98 gusenica3 Group17 Group16 Group1 Walle1 Model.001
+    400698: Mesh99 gusenica3 Group17 Group16 Group1 Walle1 Model.001
+    400700: //RootNode
+    2300000: Mesh1 Group3 Group2 Group1 Walle1 Model.001
+    2300002: Mesh10 Group7 Group2 Group1 Walle1 Model.001
+    2300004: Mesh100 gusenica4 Group17 Group16 Group1 Walle1 Model.001
+    2300006: Mesh101 gusenica4 Group17 Group16 Group1 Walle1 Model.001
+    2300008: Mesh102 gusenica5 Group17 Group16 Group1 Walle1 Model.001
+    2300010: Mesh103 gusenica5 Group17 Group16 Group1 Walle1 Model.001
+    2300012: Mesh104 gusenica6 Group17 Group16 Group1 Walle1 Model.001
+    2300014: Mesh105 gusenica6 Group17 Group16 Group1 Walle1 Model.001
+    2300016: Mesh106 gusenica7 Group17 Group16 Group1 Walle1 Model.001
+    2300018: Mesh107 gusenica7 Group17 Group16 Group1 Walle1 Model.001
+    2300020: Mesh108 gusenica8 Group17 Group16 Group1 Walle1 Model.001
+    2300022: Mesh109 gusenica8 Group17 Group16 Group1 Walle1 Model.001
+    2300024: Mesh11 Group7 Group2 Group1 Walle1 Model.001
+    2300026: Mesh110 gusenica9 Group17 Group16 Group1 Walle1 Model.001
+    2300028: Mesh111 gusenica9 Group17 Group16 Group1 Walle1 Model.001
+    2300030: Mesh112 gusenica10 Group17 Group16 Group1 Walle1 Model.001
+    2300032: Mesh113 gusenica10 Group17 Group16 Group1 Walle1 Model.001
+    2300034: Mesh114 gusenica11 Group17 Group16 Group1 Walle1 Model.001
+    2300036: Mesh115 gusenica11 Group17 Group16 Group1 Walle1 Model.001
+    2300038: Mesh116 gusenica12 Group17 Group16 Group1 Walle1 Model.001
+    2300040: Mesh117 gusenica12 Group17 Group16 Group1 Walle1 Model.001
+    2300042: Mesh118 gusenica13 Group17 Group16 Group1 Walle1 Model.001
+    2300044: Mesh119 gusenica13 Group17 Group16 Group1 Walle1 Model.001
+    2300046: Mesh12 Group7 Group2 Group1 Walle1 Model.001
+    2300048: Mesh120 gusenica14 Group17 Group16 Group1 Walle1 Model.001
+    2300050: Mesh121 gusenica14 Group17 Group16 Group1 Walle1 Model.001
+    2300052: Mesh122 gusenica15 Group17 Group16 Group1 Walle1 Model.001
+    2300054: Mesh123 gusenica15 Group17 Group16 Group1 Walle1 Model.001
+    2300056: Mesh124 gusenica16 Group17 Group16 Group1 Walle1 Model.001
+    2300058: Mesh125 gusenica16 Group17 Group16 Group1 Walle1 Model.001
+    2300060: Mesh126 gusenica17 Group17 Group16 Group1 Walle1 Model.001
+    2300062: Mesh127 gusenica17 Group17 Group16 Group1 Walle1 Model.001
+    2300064: Mesh128 gusenica18 Group17 Group16 Group1 Walle1 Model.001
+    2300066: Mesh129 gusenica18 Group17 Group16 Group1 Walle1 Model.001
+    2300068: Mesh13 Group7 Group2 Group1 Walle1 Model.001
+    2300070: Mesh130 gusenica19 Group17 Group16 Group1 Walle1 Model.001
+    2300072: Mesh131 gusenica19 Group17 Group16 Group1 Walle1 Model.001
+    2300074: Mesh132 gusenica20 Group17 Group16 Group1 Walle1 Model.001
+    2300076: Mesh133 gusenica20 Group17 Group16 Group1 Walle1 Model.001
+    2300078: Mesh134 gusenica21 Group17 Group16 Group1 Walle1 Model.001
+    2300080: Mesh135 gusenica21 Group17 Group16 Group1 Walle1 Model.001
+    2300082: Mesh136 gusenica22 Group17 Group16 Group1 Walle1 Model.001
+    2300084: Mesh137 gusenica22 Group17 Group16 Group1 Walle1 Model.001
+    2300086: Mesh138 gusenica23 Group17 Group16 Group1 Walle1 Model.001
+    2300088: Mesh139 gusenica23 Group17 Group16 Group1 Walle1 Model.001
+    2300090: Mesh14 Group7 Group2 Group1 Walle1 Model.001
+    2300092: Mesh140 gusenica24 Group17 Group16 Group1 Walle1 Model.001
+    2300094: Mesh141 gusenica24 Group17 Group16 Group1 Walle1 Model.001
+    2300096: Mesh142 gusenica25 Group17 Group16 Group1 Walle1 Model.001
+    2300098: Mesh143 gusenica25 Group17 Group16 Group1 Walle1 Model.001
+    2300100: Mesh144 gusenica26 Group17 Group16 Group1 Walle1 Model.001
+    2300102: Mesh145 gusenica26 Group17 Group16 Group1 Walle1 Model.001
+    2300104: Mesh146 gusenica27 Group17 Group16 Group1 Walle1 Model.001
+    2300106: Mesh147 gusenica27 Group17 Group16 Group1 Walle1 Model.001
+    2300108: Mesh148 gusenica28 Group17 Group16 Group1 Walle1 Model.001
+    2300110: Mesh149 gusenica28 Group17 Group16 Group1 Walle1 Model.001
+    2300112: Mesh15 Group7 Group2 Group1 Walle1 Model.001
+    2300114: Mesh150 gusenica29 Group17 Group16 Group1 Walle1 Model.001
+    2300116: Mesh151 gusenica29 Group17 Group16 Group1 Walle1 Model.001
+    2300118: Mesh152 gusenica30 Group17 Group16 Group1 Walle1 Model.001
+    2300120: Mesh153 gusenica30 Group17 Group16 Group1 Walle1 Model.001
+    2300122: Mesh154 gusenica31 Group17 Group16 Group1 Walle1 Model.001
+    2300124: Mesh155 gusenica31 Group17 Group16 Group1 Walle1 Model.001
+    2300126: Mesh156 gusenica32 Group17 Group16 Group1 Walle1 Model.001
+    2300128: Mesh157 gusenica32 Group17 Group16 Group1 Walle1 Model.001
+    2300130: Mesh158 gusenica33 Group17 Group16 Group1 Walle1 Model.001
+    2300132: Mesh159 gusenica33 Group17 Group16 Group1 Walle1 Model.001
+    2300134: Mesh16 Group7 Group2 Group1 Walle1 Model.001
+    2300136: Mesh160 gusenica34 Group17 Group16 Group1 Walle1 Model.001
+    2300138: Mesh161 gusenica34 Group17 Group16 Group1 Walle1 Model.001
+    2300140: Mesh162 gusenica35 Group17 Group16 Group1 Walle1 Model.001
+    2300142: Mesh163 gusenica35 Group17 Group16 Group1 Walle1 Model.001
+    2300144: Mesh164 gusenica36 Group17 Group16 Group1 Walle1 Model.001
+    2300146: Mesh165 gusenica36 Group17 Group16 Group1 Walle1 Model.001
+    2300148: Mesh166 gusenica37 Group17 Group16 Group1 Walle1 Model.001
+    2300150: Mesh167 gusenica37 Group17 Group16 Group1 Walle1 Model.001
+    2300152: Mesh168 gusenica38 Group17 Group16 Group1 Walle1 Model.001
+    2300154: Mesh169 gusenica38 Group17 Group16 Group1 Walle1 Model.001
+    2300156: Mesh17 Group7 Group2 Group1 Walle1 Model.001
+    2300158: Mesh170 gusenica39 Group17 Group16 Group1 Walle1 Model.001
+    2300160: Mesh171 gusenica39 Group17 Group16 Group1 Walle1 Model.001
+    2300162: Mesh172 gusenica40 Group17 Group16 Group1 Walle1 Model.001
+    2300164: Mesh173 gusenica40 Group17 Group16 Group1 Walle1 Model.001
+    2300166: Mesh174 gusenica41 Group17 Group16 Group1 Walle1 Model.001
+    2300168: Mesh175 gusenica41 Group17 Group16 Group1 Walle1 Model.001
+    2300170: Mesh176 ks3 Group18 Group16 Group1 Walle1 Model.001
+    2300172: Mesh177 ks4 Group18 Group16 Group1 Walle1 Model.001
+    2300174: Mesh178 Group21 Group20 Group19 Group16 Group1 Walle1 Model.001
+    2300176: Mesh179 Group21 Group20 Group19 Group16 Group1 Walle1 Model.001
+    2300178: Mesh18 Group8 Group2 Group1 Walle1 Model.001
+    2300180: Mesh180 Group20 Group19 Group16 Group1 Walle1 Model.001
+    2300182: Mesh181 Group20 Group19 Group16 Group1 Walle1 Model.001
+    2300184: Mesh182 Group20 Group19 Group16 Group1 Walle1 Model.001
+    2300186: Mesh183 Group19 Group16 Group1 Walle1 Model.001
+    2300188: Mesh184 gusenica42 Group22 Group16 Group1 Walle1 Model.001
+    2300190: Mesh185 gusenica42 Group22 Group16 Group1 Walle1 Model.001
+    2300192: Mesh186 gusenica43 Group22 Group16 Group1 Walle1 Model.001
+    2300194: Mesh187 gusenica43 Group22 Group16 Group1 Walle1 Model.001
+    2300196: Mesh188 gusenica44 Group22 Group16 Group1 Walle1 Model.001
+    2300198: Mesh189 gusenica44 Group22 Group16 Group1 Walle1 Model.001
+    2300200: Mesh19 Group8 Group2 Group1 Walle1 Model.001
+    2300202: Mesh190 gusenica45 Group22 Group16 Group1 Walle1 Model.001
+    2300204: Mesh191 gusenica45 Group22 Group16 Group1 Walle1 Model.001
+    2300206: Mesh192 gusenica46 Group22 Group16 Group1 Walle1 Model.001
+    2300208: Mesh193 gusenica46 Group22 Group16 Group1 Walle1 Model.001
+    2300210: Mesh194 gusenica47 Group22 Group16 Group1 Walle1 Model.001
+    2300212: Mesh195 gusenica47 Group22 Group16 Group1 Walle1 Model.001
+    2300214: Mesh196 gusenica48 Group22 Group16 Group1 Walle1 Model.001
+    2300216: Mesh197 gusenica48 Group22 Group16 Group1 Walle1 Model.001
+    2300218: Mesh198 gusenica49 Group22 Group16 Group1 Walle1 Model.001
+    2300220: Mesh199 gusenica49 Group22 Group16 Group1 Walle1 Model.001
+    2300222: Mesh2 Group4 Group2 Group1 Walle1 Model.001
+    2300224: Mesh20 Group8 Group2 Group1 Walle1 Model.001
+    2300226: Mesh200 gusenica50 Group22 Group16 Group1 Walle1 Model.001
+    2300228: Mesh201 gusenica50 Group22 Group16 Group1 Walle1 Model.001
+    2300230: Mesh202 gusenica51 Group22 Group16 Group1 Walle1 Model.001
+    2300232: Mesh203 gusenica51 Group22 Group16 Group1 Walle1 Model.001
+    2300234: Mesh204 gusenica52 Group22 Group16 Group1 Walle1 Model.001
+    2300236: Mesh205 gusenica52 Group22 Group16 Group1 Walle1 Model.001
+    2300238: Mesh206 gusenica53 Group22 Group16 Group1 Walle1 Model.001
+    2300240: Mesh207 gusenica53 Group22 Group16 Group1 Walle1 Model.001
+    2300242: Mesh208 gusenica54 Group22 Group16 Group1 Walle1 Model.001
+    2300244: Mesh209 gusenica54 Group22 Group16 Group1 Walle1 Model.001
+    2300246: Mesh21 Group8 Group2 Group1 Walle1 Model.001
+    2300248: Mesh210 gusenica55 Group22 Group16 Group1 Walle1 Model.001
+    2300250: Mesh211 gusenica55 Group22 Group16 Group1 Walle1 Model.001
+    2300252: Mesh212 gusenica56 Group22 Group16 Group1 Walle1 Model.001
+    2300254: Mesh213 gusenica56 Group22 Group16 Group1 Walle1 Model.001
+    2300256: Mesh214 gusenica57 Group22 Group16 Group1 Walle1 Model.001
+    2300258: Mesh215 gusenica57 Group22 Group16 Group1 Walle1 Model.001
+    2300260: Mesh216 gusenica58 Group22 Group16 Group1 Walle1 Model.001
+    2300262: Mesh217 gusenica58 Group22 Group16 Group1 Walle1 Model.001
+    2300264: Mesh218 gusenica59 Group22 Group16 Group1 Walle1 Model.001
+    2300266: Mesh219 gusenica59 Group22 Group16 Group1 Walle1 Model.001
+    2300268: Mesh22 Group8 Group2 Group1 Walle1 Model.001
+    2300270: Mesh220 gusenica60 Group22 Group16 Group1 Walle1 Model.001
+    2300272: Mesh221 gusenica60 Group22 Group16 Group1 Walle1 Model.001
+    2300274: Mesh222 gusenica61 Group22 Group16 Group1 Walle1 Model.001
+    2300276: Mesh223 gusenica61 Group22 Group16 Group1 Walle1 Model.001
+    2300278: Mesh224 gusenica62 Group22 Group16 Group1 Walle1 Model.001
+    2300280: Mesh225 gusenica62 Group22 Group16 Group1 Walle1 Model.001
+    2300282: Mesh226 gusenica63 Group22 Group16 Group1 Walle1 Model.001
+    2300284: Mesh227 gusenica63 Group22 Group16 Group1 Walle1 Model.001
+    2300286: Mesh228 gusenica64 Group22 Group16 Group1 Walle1 Model.001
+    2300288: Mesh229 gusenica64 Group22 Group16 Group1 Walle1 Model.001
+    2300290: Mesh23 Group8 Group2 Group1 Walle1 Model.001
+    2300292: Mesh230 gusenica65 Group22 Group16 Group1 Walle1 Model.001
+    2300294: Mesh231 gusenica65 Group22 Group16 Group1 Walle1 Model.001
+    2300296: Mesh232 gusenica66 Group22 Group16 Group1 Walle1 Model.001
+    2300298: Mesh233 gusenica66 Group22 Group16 Group1 Walle1 Model.001
+    2300300: Mesh234 gusenica67 Group22 Group16 Group1 Walle1 Model.001
+    2300302: Mesh235 gusenica67 Group22 Group16 Group1 Walle1 Model.001
+    2300304: Mesh236 gusenica68 Group22 Group16 Group1 Walle1 Model.001
+    2300306: Mesh237 gusenica68 Group22 Group16 Group1 Walle1 Model.001
+    2300308: Mesh238 gusenica69 Group22 Group16 Group1 Walle1 Model.001
+    2300310: Mesh239 gusenica69 Group22 Group16 Group1 Walle1 Model.001
+    2300312: Mesh24 Group8 Group2 Group1 Walle1 Model.001
+    2300314: Mesh240 gusenica70 Group22 Group16 Group1 Walle1 Model.001
+    2300316: Mesh241 gusenica70 Group22 Group16 Group1 Walle1 Model.001
+    2300318: Mesh242 gusenica71 Group22 Group16 Group1 Walle1 Model.001
+    2300320: Mesh243 gusenica71 Group22 Group16 Group1 Walle1 Model.001
+    2300322: Mesh244 gusenica72 Group22 Group16 Group1 Walle1 Model.001
+    2300324: Mesh245 gusenica72 Group22 Group16 Group1 Walle1 Model.001
+    2300326: Mesh246 gusenica73 Group22 Group16 Group1 Walle1 Model.001
+    2300328: Mesh247 gusenica73 Group22 Group16 Group1 Walle1 Model.001
+    2300330: Mesh248 gusenica74 Group22 Group16 Group1 Walle1 Model.001
+    2300332: Mesh249 gusenica74 Group22 Group16 Group1 Walle1 Model.001
+    2300334: Mesh25 Group8 Group2 Group1 Walle1 Model.001
+    2300336: Mesh250 gusenica75 Group22 Group16 Group1 Walle1 Model.001
+    2300338: Mesh251 gusenica75 Group22 Group16 Group1 Walle1 Model.001
+    2300340: Mesh252 gusenica76 Group22 Group16 Group1 Walle1 Model.001
+    2300342: Mesh253 gusenica76 Group22 Group16 Group1 Walle1 Model.001
+    2300344: Mesh254 gusenica77 Group22 Group16 Group1 Walle1 Model.001
+    2300346: Mesh255 gusenica77 Group22 Group16 Group1 Walle1 Model.001
+    2300348: Mesh256 gusenica78 Group22 Group16 Group1 Walle1 Model.001
+    2300350: Mesh257 gusenica78 Group22 Group16 Group1 Walle1 Model.001
+    2300352: Mesh258 gusenica79 Group22 Group16 Group1 Walle1 Model.001
+    2300354: Mesh259 gusenica79 Group22 Group16 Group1 Walle1 Model.001
+    2300356: Mesh26 Group8 Group2 Group1 Walle1 Model.001
+    2300358: Mesh260 gusenica80 Group22 Group16 Group1 Walle1 Model.001
+    2300360: Mesh261 gusenica80 Group22 Group16 Group1 Walle1 Model.001
+    2300362: Mesh262 gusenica81 Group22 Group16 Group1 Walle1 Model.001
+    2300364: Mesh263 gusenica81 Group22 Group16 Group1 Walle1 Model.001
+    2300366: Mesh264 gusenica82 Group22 Group16 Group1 Walle1 Model.001
+    2300368: Mesh265 gusenica82 Group22 Group16 Group1 Walle1 Model.001
+    2300370: Mesh266 km3 Group16 Group1 Walle1 Model.001
+    2300372: Mesh267 km3 Group16 Group1 Walle1 Model.001
+    2300374: Mesh268 km4 Group16 Group1 Walle1 Model.001
+    2300376: Mesh269 km4 Group16 Group1 Walle1 Model.001
+    2300378: Mesh27 Group8 Group2 Group1 Walle1 Model.001
+    2300380: Mesh270 zub49 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300382: Mesh271 zub50 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300384: Mesh272 zub51 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300386: Mesh273 zub52 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300388: Mesh274 zub53 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300390: Mesh275 zub54 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300392: Mesh276 zub55 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300394: Mesh277 zub56 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300396: Mesh278 zub57 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300398: Mesh279 zub58 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300400: Mesh28 Group8 Group2 Group1 Walle1 Model.001
+    2300402: Mesh280 zub59 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300404: Mesh281 zub60 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300406: Mesh282 zub61 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300408: Mesh283 zub62 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300410: Mesh284 zub63 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300412: Mesh285 zub64 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300414: Mesh286 zub65 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300416: Mesh287 zub66 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300418: Mesh288 zub67 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300420: Mesh289 zub68 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300422: Mesh29 Group2 Group1 Walle1 Model.001
+    2300424: Mesh290 zub69 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300426: Mesh291 zub70 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300428: Mesh292 zub71 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300430: Mesh293 zub72 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300432: Mesh294 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    2300434: Mesh295 zub73 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300436: Mesh296 zub74 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300438: Mesh297 zub75 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300440: Mesh298 zub76 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300442: Mesh299 zub77 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300444: Mesh3 box Group5 Group2 Group1 Walle1 Model.001
+    2300446: Mesh30 Group2 Group1 Walle1 Model.001
+    2300448: Mesh300 zub78 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300450: Mesh301 zub79 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300452: Mesh302 zub80 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300454: Mesh303 zub81 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300456: Mesh304 zub82 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300458: Mesh305 zub83 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300460: Mesh306 zub84 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300462: Mesh307 zub85 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300464: Mesh308 zub86 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300466: Mesh309 zub87 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300468: Mesh31 Group2 Group1 Walle1 Model.001
+    2300470: Mesh310 zub88 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300472: Mesh311 zub89 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300474: Mesh312 zub90 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300476: Mesh313 zub91 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300478: Mesh314 zub92 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300480: Mesh315 zub93 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300482: Mesh316 zub94 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300484: Mesh317 zub95 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300486: Mesh318 zub96 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300488: Mesh319 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    2300490: Mesh32 ks1 Group10 Group9 Group1 Walle1 Model.001
+    2300492: Mesh320 cylinder Group25 Group1 Walle1 Model.001
+    2300494: Mesh321 Group28 Group27 Group26 Group25 Group1 Walle1 Model.001
+    2300496: Mesh322 Group28 Group27 Group26 Group25 Group1 Walle1 Model.001
+    2300498: Mesh323 Group29 glaz1 Group27 Group26 Group25 Group1 Walle1.000
+    2300500: Mesh324 glaz1 Group27 Group26 Group25 Group1 Walle1 Model.001
+    2300502: Mesh325 Group27 Group26 Group25 Group1 Walle1 Model.001
+    2300504: Mesh326 sphere Group26 Group25 Group1 Walle1 Model.001
+    2300506: Mesh327 Group31 Group30 Group26 Group25 Group1 Walle1 Model.001
+    2300508: Mesh328 Group31 Group30 Group26 Group25 Group1 Walle1 Model.001
+    2300510: Mesh329 Group32 glaz2 Group30 Group26 Group25 Group1 Walle1.000
+    2300512: Mesh33 ks2 Group10 Group9 Group1 Walle1 Model.001
+    2300514: Mesh330 glaz2 Group30 Group26 Group25 Group1 Walle1 Model.001
+    2300516: Mesh331 Group26 Group25 Group1 Walle1 Model.001
+    2300518: Mesh332 Group26 Group25 Group1 Walle1 Model.001
+    2300520: Mesh333 Group34 Group33 Group1 Walle1 Model.001
+    2300522: Mesh334 Group34 Group33 Group1 Walle1 Model.001
+    2300524: Mesh335 Group34 Group33 Group1 Walle1 Model.001
+    2300526: Mesh336 Group35 Group33 Group1 Walle1 Model.001
+    2300528: Mesh337 Group35 Group33 Group1 Walle1 Model.001
+    2300530: Mesh338 Group35 Group33 Group1 Walle1 Model.001
+    2300532: Mesh339 hend1 Group1 Walle1 Model.001
+    2300534: Mesh34 Group13 Group12 Group11 Group9 Group1 Walle1 Model.001
+    2300536: Mesh340 hend1 Group1 Walle1 Model.001
+    2300538: Mesh341 hend1 Group1 Walle1 Model.001
+    2300540: Mesh342 hend2 Group1 Walle1 Model.001
+    2300542: Mesh343 hend2 Group1 Walle1 Model.001
+    2300544: Mesh344 hend2 Group1 Walle1 Model.001
+    2300546: Mesh345 _ALL_E1 Group1 Walle1 Model.001
+    2300548: Mesh346 _ALL_E1 Group1 Walle1 Model.001
+    2300550: Mesh347 _ALL_E1 Group1 Walle1 Model.001
+    2300552: Mesh348 _ALL_E1 Group1 Walle1 Model.001
+    2300554: Mesh349 _ALL_E1 Group1 Walle1 Model.001
+    2300556: Mesh35 Group13 Group12 Group11 Group9 Group1 Walle1 Model.001
+    2300558: Mesh350 Group1 Walle1 Model.001
+    2300560: Mesh36 Group12 Group11 Group9 Group1 Walle1 Model.001
+    2300562: Mesh37 Group12 Group11 Group9 Group1 Walle1 Model.001
+    2300564: Mesh38 Group12 Group11 Group9 Group1 Walle1 Model.001
+    2300566: Mesh39 Group11 Group9 Group1 Walle1 Model.001
+    2300568: Mesh4 Group5 Group2 Group1 Walle1 Model.001
+    2300570: Mesh40 km1 Group9 Group1 Walle1 Model.001
+    2300572: Mesh41 km1 Group9 Group1 Walle1 Model.001
+    2300574: Mesh42 km2 Group9 Group1 Walle1 Model.001
+    2300576: Mesh43 km2 Group9 Group1 Walle1 Model.001
+    2300578: Mesh44 zub1 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300580: Mesh45 zub2 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300582: Mesh46 zub3 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300584: Mesh47 zub4 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300586: Mesh48 zub5 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300588: Mesh49 zub6 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300590: Mesh5 Group5 Group2 Group1 Walle1 Model.001
+    2300592: Mesh50 zub7 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300594: Mesh51 zub8 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300596: Mesh52 zub9 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300598: Mesh53 zub10 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300600: Mesh54 zub11 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300602: Mesh55 zub12 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300604: Mesh56 zub13 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300606: Mesh57 zub14 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300608: Mesh58 zub15 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300610: Mesh59 zub16 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300612: Mesh6 Group6 Group2 Group1 Walle1 Model.001
+    2300614: Mesh60 zub17 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300616: Mesh61 zub18 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300618: Mesh62 zub19 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300620: Mesh63 zub20 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300622: Mesh64 zub21 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300624: Mesh65 zub22 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300626: Mesh66 zub23 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300628: Mesh67 zub24 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300630: Mesh68 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    2300632: Mesh69 zub25 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300634: Mesh7 Group7 Group2 Group1 Walle1 Model.001
+    2300636: Mesh70 zub26 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300638: Mesh71 zub27 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300640: Mesh72 zub28 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300642: Mesh73 zub29 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300644: Mesh74 zub30 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300646: Mesh75 zub31 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300648: Mesh76 zub32 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300650: Mesh77 zub33 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300652: Mesh78 zub34 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300654: Mesh79 zub35 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300656: Mesh8 Group7 Group2 Group1 Walle1 Model.001
+    2300658: Mesh80 zub36 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300660: Mesh81 zub37 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300662: Mesh82 zub38 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300664: Mesh83 zub39 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300666: Mesh84 zub40 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300668: Mesh85 zub41 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300670: Mesh86 zub42 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300672: Mesh87 zub43 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300674: Mesh88 zub44 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300676: Mesh89 zub45 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300678: Mesh9 Group7 Group2 Group1 Walle1 Model.001
+    2300680: Mesh90 zub46 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300682: Mesh91 zub47 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300684: Mesh92 zub48 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300686: Mesh93 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    2300688: Mesh94 gusenica1 Group17 Group16 Group1 Walle1 Model.001
+    2300690: Mesh95 gusenica1 Group17 Group16 Group1 Walle1 Model.001
+    2300692: Mesh96 gusenica2 Group17 Group16 Group1 Walle1 Model.001
+    2300694: Mesh97 gusenica2 Group17 Group16 Group1 Walle1 Model.001
+    2300696: Mesh98 gusenica3 Group17 Group16 Group1 Walle1 Model.001
+    2300698: Mesh99 gusenica3 Group17 Group16 Group1 Walle1 Model.001
+    3300000: Mesh1 Group3 Group2 Group1 Walle1 Model.001
+    3300002: Mesh10 Group7 Group2 Group1 Walle1 Model.001
+    3300004: Mesh100 gusenica4 Group17 Group16 Group1 Walle1 Model.001
+    3300006: Mesh101 gusenica4 Group17 Group16 Group1 Walle1 Model.001
+    3300008: Mesh102 gusenica5 Group17 Group16 Group1 Walle1 Model.001
+    3300010: Mesh103 gusenica5 Group17 Group16 Group1 Walle1 Model.001
+    3300012: Mesh104 gusenica6 Group17 Group16 Group1 Walle1 Model.001
+    3300014: Mesh105 gusenica6 Group17 Group16 Group1 Walle1 Model.001
+    3300016: Mesh106 gusenica7 Group17 Group16 Group1 Walle1 Model.001
+    3300018: Mesh107 gusenica7 Group17 Group16 Group1 Walle1 Model.001
+    3300020: Mesh108 gusenica8 Group17 Group16 Group1 Walle1 Model.001
+    3300022: Mesh109 gusenica8 Group17 Group16 Group1 Walle1 Model.001
+    3300024: Mesh11 Group7 Group2 Group1 Walle1 Model.001
+    3300026: Mesh110 gusenica9 Group17 Group16 Group1 Walle1 Model.001
+    3300028: Mesh111 gusenica9 Group17 Group16 Group1 Walle1 Model.001
+    3300030: Mesh112 gusenica10 Group17 Group16 Group1 Walle1 Model.001
+    3300032: Mesh113 gusenica10 Group17 Group16 Group1 Walle1 Model.001
+    3300034: Mesh114 gusenica11 Group17 Group16 Group1 Walle1 Model.001
+    3300036: Mesh115 gusenica11 Group17 Group16 Group1 Walle1 Model.001
+    3300038: Mesh116 gusenica12 Group17 Group16 Group1 Walle1 Model.001
+    3300040: Mesh117 gusenica12 Group17 Group16 Group1 Walle1 Model.001
+    3300042: Mesh118 gusenica13 Group17 Group16 Group1 Walle1 Model.001
+    3300044: Mesh119 gusenica13 Group17 Group16 Group1 Walle1 Model.001
+    3300046: Mesh12 Group7 Group2 Group1 Walle1 Model.001
+    3300048: Mesh120 gusenica14 Group17 Group16 Group1 Walle1 Model.001
+    3300050: Mesh121 gusenica14 Group17 Group16 Group1 Walle1 Model.001
+    3300052: Mesh122 gusenica15 Group17 Group16 Group1 Walle1 Model.001
+    3300054: Mesh123 gusenica15 Group17 Group16 Group1 Walle1 Model.001
+    3300056: Mesh124 gusenica16 Group17 Group16 Group1 Walle1 Model.001
+    3300058: Mesh125 gusenica16 Group17 Group16 Group1 Walle1 Model.001
+    3300060: Mesh126 gusenica17 Group17 Group16 Group1 Walle1 Model.001
+    3300062: Mesh127 gusenica17 Group17 Group16 Group1 Walle1 Model.001
+    3300064: Mesh128 gusenica18 Group17 Group16 Group1 Walle1 Model.001
+    3300066: Mesh129 gusenica18 Group17 Group16 Group1 Walle1 Model.001
+    3300068: Mesh13 Group7 Group2 Group1 Walle1 Model.001
+    3300070: Mesh130 gusenica19 Group17 Group16 Group1 Walle1 Model.001
+    3300072: Mesh131 gusenica19 Group17 Group16 Group1 Walle1 Model.001
+    3300074: Mesh132 gusenica20 Group17 Group16 Group1 Walle1 Model.001
+    3300076: Mesh133 gusenica20 Group17 Group16 Group1 Walle1 Model.001
+    3300078: Mesh134 gusenica21 Group17 Group16 Group1 Walle1 Model.001
+    3300080: Mesh135 gusenica21 Group17 Group16 Group1 Walle1 Model.001
+    3300082: Mesh136 gusenica22 Group17 Group16 Group1 Walle1 Model.001
+    3300084: Mesh137 gusenica22 Group17 Group16 Group1 Walle1 Model.001
+    3300086: Mesh138 gusenica23 Group17 Group16 Group1 Walle1 Model.001
+    3300088: Mesh139 gusenica23 Group17 Group16 Group1 Walle1 Model.001
+    3300090: Mesh14 Group7 Group2 Group1 Walle1 Model.001
+    3300092: Mesh140 gusenica24 Group17 Group16 Group1 Walle1 Model.001
+    3300094: Mesh141 gusenica24 Group17 Group16 Group1 Walle1 Model.001
+    3300096: Mesh142 gusenica25 Group17 Group16 Group1 Walle1 Model.001
+    3300098: Mesh143 gusenica25 Group17 Group16 Group1 Walle1 Model.001
+    3300100: Mesh144 gusenica26 Group17 Group16 Group1 Walle1 Model.001
+    3300102: Mesh145 gusenica26 Group17 Group16 Group1 Walle1 Model.001
+    3300104: Mesh146 gusenica27 Group17 Group16 Group1 Walle1 Model.001
+    3300106: Mesh147 gusenica27 Group17 Group16 Group1 Walle1 Model.001
+    3300108: Mesh148 gusenica28 Group17 Group16 Group1 Walle1 Model.001
+    3300110: Mesh149 gusenica28 Group17 Group16 Group1 Walle1 Model.001
+    3300112: Mesh15 Group7 Group2 Group1 Walle1 Model.001
+    3300114: Mesh150 gusenica29 Group17 Group16 Group1 Walle1 Model.001
+    3300116: Mesh151 gusenica29 Group17 Group16 Group1 Walle1 Model.001
+    3300118: Mesh152 gusenica30 Group17 Group16 Group1 Walle1 Model.001
+    3300120: Mesh153 gusenica30 Group17 Group16 Group1 Walle1 Model.001
+    3300122: Mesh154 gusenica31 Group17 Group16 Group1 Walle1 Model.001
+    3300124: Mesh155 gusenica31 Group17 Group16 Group1 Walle1 Model.001
+    3300126: Mesh156 gusenica32 Group17 Group16 Group1 Walle1 Model.001
+    3300128: Mesh157 gusenica32 Group17 Group16 Group1 Walle1 Model.001
+    3300130: Mesh158 gusenica33 Group17 Group16 Group1 Walle1 Model.001
+    3300132: Mesh159 gusenica33 Group17 Group16 Group1 Walle1 Model.001
+    3300134: Mesh16 Group7 Group2 Group1 Walle1 Model.001
+    3300136: Mesh160 gusenica34 Group17 Group16 Group1 Walle1 Model.001
+    3300138: Mesh161 gusenica34 Group17 Group16 Group1 Walle1 Model.001
+    3300140: Mesh162 gusenica35 Group17 Group16 Group1 Walle1 Model.001
+    3300142: Mesh163 gusenica35 Group17 Group16 Group1 Walle1 Model.001
+    3300144: Mesh164 gusenica36 Group17 Group16 Group1 Walle1 Model.001
+    3300146: Mesh165 gusenica36 Group17 Group16 Group1 Walle1 Model.001
+    3300148: Mesh166 gusenica37 Group17 Group16 Group1 Walle1 Model.001
+    3300150: Mesh167 gusenica37 Group17 Group16 Group1 Walle1 Model.001
+    3300152: Mesh168 gusenica38 Group17 Group16 Group1 Walle1 Model.001
+    3300154: Mesh169 gusenica38 Group17 Group16 Group1 Walle1 Model.001
+    3300156: Mesh17 Group7 Group2 Group1 Walle1 Model.001
+    3300158: Mesh170 gusenica39 Group17 Group16 Group1 Walle1 Model.001
+    3300160: Mesh171 gusenica39 Group17 Group16 Group1 Walle1 Model.001
+    3300162: Mesh172 gusenica40 Group17 Group16 Group1 Walle1 Model.001
+    3300164: Mesh173 gusenica40 Group17 Group16 Group1 Walle1 Model.001
+    3300166: Mesh174 gusenica41 Group17 Group16 Group1 Walle1 Model.001
+    3300168: Mesh175 gusenica41 Group17 Group16 Group1 Walle1 Model.001
+    3300170: Mesh176 ks3 Group18 Group16 Group1 Walle1 Model.001
+    3300172: Mesh177 ks4 Group18 Group16 Group1 Walle1 Model.001
+    3300174: Mesh178 Group21 Group20 Group19 Group16 Group1 Walle1 Model.001
+    3300176: Mesh179 Group21 Group20 Group19 Group16 Group1 Walle1 Model.001
+    3300178: Mesh18 Group8 Group2 Group1 Walle1 Model.001
+    3300180: Mesh180 Group20 Group19 Group16 Group1 Walle1 Model.001
+    3300182: Mesh181 Group20 Group19 Group16 Group1 Walle1 Model.001
+    3300184: Mesh182 Group20 Group19 Group16 Group1 Walle1 Model.001
+    3300186: Mesh183 Group19 Group16 Group1 Walle1 Model.001
+    3300188: Mesh184 gusenica42 Group22 Group16 Group1 Walle1 Model.001
+    3300190: Mesh185 gusenica42 Group22 Group16 Group1 Walle1 Model.001
+    3300192: Mesh186 gusenica43 Group22 Group16 Group1 Walle1 Model.001
+    3300194: Mesh187 gusenica43 Group22 Group16 Group1 Walle1 Model.001
+    3300196: Mesh188 gusenica44 Group22 Group16 Group1 Walle1 Model.001
+    3300198: Mesh189 gusenica44 Group22 Group16 Group1 Walle1 Model.001
+    3300200: Mesh19 Group8 Group2 Group1 Walle1 Model.001
+    3300202: Mesh190 gusenica45 Group22 Group16 Group1 Walle1 Model.001
+    3300204: Mesh191 gusenica45 Group22 Group16 Group1 Walle1 Model.001
+    3300206: Mesh192 gusenica46 Group22 Group16 Group1 Walle1 Model.001
+    3300208: Mesh193 gusenica46 Group22 Group16 Group1 Walle1 Model.001
+    3300210: Mesh194 gusenica47 Group22 Group16 Group1 Walle1 Model.001
+    3300212: Mesh195 gusenica47 Group22 Group16 Group1 Walle1 Model.001
+    3300214: Mesh196 gusenica48 Group22 Group16 Group1 Walle1 Model.001
+    3300216: Mesh197 gusenica48 Group22 Group16 Group1 Walle1 Model.001
+    3300218: Mesh198 gusenica49 Group22 Group16 Group1 Walle1 Model.001
+    3300220: Mesh199 gusenica49 Group22 Group16 Group1 Walle1 Model.001
+    3300222: Mesh2 Group4 Group2 Group1 Walle1 Model.001
+    3300224: Mesh20 Group8 Group2 Group1 Walle1 Model.001
+    3300226: Mesh200 gusenica50 Group22 Group16 Group1 Walle1 Model.001
+    3300228: Mesh201 gusenica50 Group22 Group16 Group1 Walle1 Model.001
+    3300230: Mesh202 gusenica51 Group22 Group16 Group1 Walle1 Model.001
+    3300232: Mesh203 gusenica51 Group22 Group16 Group1 Walle1 Model.001
+    3300234: Mesh204 gusenica52 Group22 Group16 Group1 Walle1 Model.001
+    3300236: Mesh205 gusenica52 Group22 Group16 Group1 Walle1 Model.001
+    3300238: Mesh206 gusenica53 Group22 Group16 Group1 Walle1 Model.001
+    3300240: Mesh207 gusenica53 Group22 Group16 Group1 Walle1 Model.001
+    3300242: Mesh208 gusenica54 Group22 Group16 Group1 Walle1 Model.001
+    3300244: Mesh209 gusenica54 Group22 Group16 Group1 Walle1 Model.001
+    3300246: Mesh21 Group8 Group2 Group1 Walle1 Model.001
+    3300248: Mesh210 gusenica55 Group22 Group16 Group1 Walle1 Model.001
+    3300250: Mesh211 gusenica55 Group22 Group16 Group1 Walle1 Model.001
+    3300252: Mesh212 gusenica56 Group22 Group16 Group1 Walle1 Model.001
+    3300254: Mesh213 gusenica56 Group22 Group16 Group1 Walle1 Model.001
+    3300256: Mesh214 gusenica57 Group22 Group16 Group1 Walle1 Model.001
+    3300258: Mesh215 gusenica57 Group22 Group16 Group1 Walle1 Model.001
+    3300260: Mesh216 gusenica58 Group22 Group16 Group1 Walle1 Model.001
+    3300262: Mesh217 gusenica58 Group22 Group16 Group1 Walle1 Model.001
+    3300264: Mesh218 gusenica59 Group22 Group16 Group1 Walle1 Model.001
+    3300266: Mesh219 gusenica59 Group22 Group16 Group1 Walle1 Model.001
+    3300268: Mesh22 Group8 Group2 Group1 Walle1 Model.001
+    3300270: Mesh220 gusenica60 Group22 Group16 Group1 Walle1 Model.001
+    3300272: Mesh221 gusenica60 Group22 Group16 Group1 Walle1 Model.001
+    3300274: Mesh222 gusenica61 Group22 Group16 Group1 Walle1 Model.001
+    3300276: Mesh223 gusenica61 Group22 Group16 Group1 Walle1 Model.001
+    3300278: Mesh224 gusenica62 Group22 Group16 Group1 Walle1 Model.001
+    3300280: Mesh225 gusenica62 Group22 Group16 Group1 Walle1 Model.001
+    3300282: Mesh226 gusenica63 Group22 Group16 Group1 Walle1 Model.001
+    3300284: Mesh227 gusenica63 Group22 Group16 Group1 Walle1 Model.001
+    3300286: Mesh228 gusenica64 Group22 Group16 Group1 Walle1 Model.001
+    3300288: Mesh229 gusenica64 Group22 Group16 Group1 Walle1 Model.001
+    3300290: Mesh23 Group8 Group2 Group1 Walle1 Model.001
+    3300292: Mesh230 gusenica65 Group22 Group16 Group1 Walle1 Model.001
+    3300294: Mesh231 gusenica65 Group22 Group16 Group1 Walle1 Model.001
+    3300296: Mesh232 gusenica66 Group22 Group16 Group1 Walle1 Model.001
+    3300298: Mesh233 gusenica66 Group22 Group16 Group1 Walle1 Model.001
+    3300300: Mesh234 gusenica67 Group22 Group16 Group1 Walle1 Model.001
+    3300302: Mesh235 gusenica67 Group22 Group16 Group1 Walle1 Model.001
+    3300304: Mesh236 gusenica68 Group22 Group16 Group1 Walle1 Model.001
+    3300306: Mesh237 gusenica68 Group22 Group16 Group1 Walle1 Model.001
+    3300308: Mesh238 gusenica69 Group22 Group16 Group1 Walle1 Model.001
+    3300310: Mesh239 gusenica69 Group22 Group16 Group1 Walle1 Model.001
+    3300312: Mesh24 Group8 Group2 Group1 Walle1 Model.001
+    3300314: Mesh240 gusenica70 Group22 Group16 Group1 Walle1 Model.001
+    3300316: Mesh241 gusenica70 Group22 Group16 Group1 Walle1 Model.001
+    3300318: Mesh242 gusenica71 Group22 Group16 Group1 Walle1 Model.001
+    3300320: Mesh243 gusenica71 Group22 Group16 Group1 Walle1 Model.001
+    3300322: Mesh244 gusenica72 Group22 Group16 Group1 Walle1 Model.001
+    3300324: Mesh245 gusenica72 Group22 Group16 Group1 Walle1 Model.001
+    3300326: Mesh246 gusenica73 Group22 Group16 Group1 Walle1 Model.001
+    3300328: Mesh247 gusenica73 Group22 Group16 Group1 Walle1 Model.001
+    3300330: Mesh248 gusenica74 Group22 Group16 Group1 Walle1 Model.001
+    3300332: Mesh249 gusenica74 Group22 Group16 Group1 Walle1 Model.001
+    3300334: Mesh25 Group8 Group2 Group1 Walle1 Model.001
+    3300336: Mesh250 gusenica75 Group22 Group16 Group1 Walle1 Model.001
+    3300338: Mesh251 gusenica75 Group22 Group16 Group1 Walle1 Model.001
+    3300340: Mesh252 gusenica76 Group22 Group16 Group1 Walle1 Model.001
+    3300342: Mesh253 gusenica76 Group22 Group16 Group1 Walle1 Model.001
+    3300344: Mesh254 gusenica77 Group22 Group16 Group1 Walle1 Model.001
+    3300346: Mesh255 gusenica77 Group22 Group16 Group1 Walle1 Model.001
+    3300348: Mesh256 gusenica78 Group22 Group16 Group1 Walle1 Model.001
+    3300350: Mesh257 gusenica78 Group22 Group16 Group1 Walle1 Model.001
+    3300352: Mesh258 gusenica79 Group22 Group16 Group1 Walle1 Model.001
+    3300354: Mesh259 gusenica79 Group22 Group16 Group1 Walle1 Model.001
+    3300356: Mesh26 Group8 Group2 Group1 Walle1 Model.001
+    3300358: Mesh260 gusenica80 Group22 Group16 Group1 Walle1 Model.001
+    3300360: Mesh261 gusenica80 Group22 Group16 Group1 Walle1 Model.001
+    3300362: Mesh262 gusenica81 Group22 Group16 Group1 Walle1 Model.001
+    3300364: Mesh263 gusenica81 Group22 Group16 Group1 Walle1 Model.001
+    3300366: Mesh264 gusenica82 Group22 Group16 Group1 Walle1 Model.001
+    3300368: Mesh265 gusenica82 Group22 Group16 Group1 Walle1 Model.001
+    3300370: Mesh266 km3 Group16 Group1 Walle1 Model.001
+    3300372: Mesh267 km3 Group16 Group1 Walle1 Model.001
+    3300374: Mesh268 km4 Group16 Group1 Walle1 Model.001
+    3300376: Mesh269 km4 Group16 Group1 Walle1 Model.001
+    3300378: Mesh27 Group8 Group2 Group1 Walle1 Model.001
+    3300380: Mesh270 zub49 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300382: Mesh271 zub50 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300384: Mesh272 zub51 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300386: Mesh273 zub52 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300388: Mesh274 zub53 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300390: Mesh275 zub54 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300392: Mesh276 zub55 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300394: Mesh277 zub56 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300396: Mesh278 zub57 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300398: Mesh279 zub58 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300400: Mesh28 Group8 Group2 Group1 Walle1 Model.001
+    3300402: Mesh280 zub59 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300404: Mesh281 zub60 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300406: Mesh282 zub61 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300408: Mesh283 zub62 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300410: Mesh284 zub63 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300412: Mesh285 zub64 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300414: Mesh286 zub65 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300416: Mesh287 zub66 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300418: Mesh288 zub67 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300420: Mesh289 zub68 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300422: Mesh29 Group2 Group1 Walle1 Model.001
+    3300424: Mesh290 zub69 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300426: Mesh291 zub70 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300428: Mesh292 zub71 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300430: Mesh293 zub72 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300432: Mesh294 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    3300434: Mesh295 zub73 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300436: Mesh296 zub74 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300438: Mesh297 zub75 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300440: Mesh298 zub76 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300442: Mesh299 zub77 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300444: Mesh3 box Group5 Group2 Group1 Walle1 Model.001
+    3300446: Mesh30 Group2 Group1 Walle1 Model.001
+    3300448: Mesh300 zub78 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300450: Mesh301 zub79 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300452: Mesh302 zub80 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300454: Mesh303 zub81 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300456: Mesh304 zub82 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300458: Mesh305 zub83 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300460: Mesh306 zub84 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300462: Mesh307 zub85 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300464: Mesh308 zub86 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300466: Mesh309 zub87 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300468: Mesh31 Group2 Group1 Walle1 Model.001
+    3300470: Mesh310 zub88 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300472: Mesh311 zub89 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300474: Mesh312 zub90 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300476: Mesh313 zub91 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300478: Mesh314 zub92 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300480: Mesh315 zub93 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300482: Mesh316 zub94 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300484: Mesh317 zub95 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300486: Mesh318 zub96 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300488: Mesh319 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    3300490: Mesh32 ks1 Group10 Group9 Group1 Walle1 Model.001
+    3300492: Mesh320 cylinder Group25 Group1 Walle1 Model.001
+    3300494: Mesh321 Group28 Group27 Group26 Group25 Group1 Walle1 Model.001
+    3300496: Mesh322 Group28 Group27 Group26 Group25 Group1 Walle1 Model.001
+    3300498: Mesh323 Group29 glaz1 Group27 Group26 Group25 Group1 Walle1.000
+    3300500: Mesh324 glaz1 Group27 Group26 Group25 Group1 Walle1 Model.001
+    3300502: Mesh325 Group27 Group26 Group25 Group1 Walle1 Model.001
+    3300504: Mesh326 sphere Group26 Group25 Group1 Walle1 Model.001
+    3300506: Mesh327 Group31 Group30 Group26 Group25 Group1 Walle1 Model.001
+    3300508: Mesh328 Group31 Group30 Group26 Group25 Group1 Walle1 Model.001
+    3300510: Mesh329 Group32 glaz2 Group30 Group26 Group25 Group1 Walle1.000
+    3300512: Mesh33 ks2 Group10 Group9 Group1 Walle1 Model.001
+    3300514: Mesh330 glaz2 Group30 Group26 Group25 Group1 Walle1 Model.001
+    3300516: Mesh331 Group26 Group25 Group1 Walle1 Model.001
+    3300518: Mesh332 Group26 Group25 Group1 Walle1 Model.001
+    3300520: Mesh333 Group34 Group33 Group1 Walle1 Model.001
+    3300522: Mesh334 Group34 Group33 Group1 Walle1 Model.001
+    3300524: Mesh335 Group34 Group33 Group1 Walle1 Model.001
+    3300526: Mesh336 Group35 Group33 Group1 Walle1 Model.001
+    3300528: Mesh337 Group35 Group33 Group1 Walle1 Model.001
+    3300530: Mesh338 Group35 Group33 Group1 Walle1 Model.001
+    3300532: Mesh339 hend1 Group1 Walle1 Model.001
+    3300534: Mesh34 Group13 Group12 Group11 Group9 Group1 Walle1 Model.001
+    3300536: Mesh340 hend1 Group1 Walle1 Model.001
+    3300538: Mesh341 hend1 Group1 Walle1 Model.001
+    3300540: Mesh342 hend2 Group1 Walle1 Model.001
+    3300542: Mesh343 hend2 Group1 Walle1 Model.001
+    3300544: Mesh344 hend2 Group1 Walle1 Model.001
+    3300546: Mesh345 _ALL_E1 Group1 Walle1 Model.001
+    3300548: Mesh346 _ALL_E1 Group1 Walle1 Model.001
+    3300550: Mesh347 _ALL_E1 Group1 Walle1 Model.001
+    3300552: Mesh348 _ALL_E1 Group1 Walle1 Model.001
+    3300554: Mesh349 _ALL_E1 Group1 Walle1 Model.001
+    3300556: Mesh35 Group13 Group12 Group11 Group9 Group1 Walle1 Model.001
+    3300558: Mesh350 Group1 Walle1 Model.001
+    3300560: Mesh36 Group12 Group11 Group9 Group1 Walle1 Model.001
+    3300562: Mesh37 Group12 Group11 Group9 Group1 Walle1 Model.001
+    3300564: Mesh38 Group12 Group11 Group9 Group1 Walle1 Model.001
+    3300566: Mesh39 Group11 Group9 Group1 Walle1 Model.001
+    3300568: Mesh4 Group5 Group2 Group1 Walle1 Model.001
+    3300570: Mesh40 km1 Group9 Group1 Walle1 Model.001
+    3300572: Mesh41 km1 Group9 Group1 Walle1 Model.001
+    3300574: Mesh42 km2 Group9 Group1 Walle1 Model.001
+    3300576: Mesh43 km2 Group9 Group1 Walle1 Model.001
+    3300578: Mesh44 zub1 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300580: Mesh45 zub2 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300582: Mesh46 zub3 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300584: Mesh47 zub4 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300586: Mesh48 zub5 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300588: Mesh49 zub6 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300590: Mesh5 Group5 Group2 Group1 Walle1 Model.001
+    3300592: Mesh50 zub7 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300594: Mesh51 zub8 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300596: Mesh52 zub9 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300598: Mesh53 zub10 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300600: Mesh54 zub11 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300602: Mesh55 zub12 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300604: Mesh56 zub13 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300606: Mesh57 zub14 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300608: Mesh58 zub15 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300610: Mesh59 zub16 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300612: Mesh6 Group6 Group2 Group1 Walle1 Model.001
+    3300614: Mesh60 zub17 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300616: Mesh61 zub18 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300618: Mesh62 zub19 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300620: Mesh63 zub20 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300622: Mesh64 zub21 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300624: Mesh65 zub22 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300626: Mesh66 zub23 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300628: Mesh67 zub24 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300630: Mesh68 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    3300632: Mesh69 zub25 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300634: Mesh7 Group7 Group2 Group1 Walle1 Model.001
+    3300636: Mesh70 zub26 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300638: Mesh71 zub27 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300640: Mesh72 zub28 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300642: Mesh73 zub29 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300644: Mesh74 zub30 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300646: Mesh75 zub31 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300648: Mesh76 zub32 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300650: Mesh77 zub33 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300652: Mesh78 zub34 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300654: Mesh79 zub35 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300656: Mesh8 Group7 Group2 Group1 Walle1 Model.001
+    3300658: Mesh80 zub36 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300660: Mesh81 zub37 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300662: Mesh82 zub38 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300664: Mesh83 zub39 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300666: Mesh84 zub40 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300668: Mesh85 zub41 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300670: Mesh86 zub42 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300672: Mesh87 zub43 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300674: Mesh88 zub44 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300676: Mesh89 zub45 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300678: Mesh9 Group7 Group2 Group1 Walle1 Model.001
+    3300680: Mesh90 zub46 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300682: Mesh91 zub47 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300684: Mesh92 zub48 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300686: Mesh93 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    3300688: Mesh94 gusenica1 Group17 Group16 Group1 Walle1 Model.001
+    3300690: Mesh95 gusenica1 Group17 Group16 Group1 Walle1 Model.001
+    3300692: Mesh96 gusenica2 Group17 Group16 Group1 Walle1 Model.001
+    3300694: Mesh97 gusenica2 Group17 Group16 Group1 Walle1 Model.001
+    3300696: Mesh98 gusenica3 Group17 Group16 Group1 Walle1 Model.001
+    3300698: Mesh99 gusenica3 Group17 Group16 Group1 Walle1 Model.001
+    4300000: Mesh41 km1 Group9 Group1 Walle1 Model.001
+    4300002: Mesh230 gusenica65 Group22 Group16 Group1 Walle1 Model.001
+    4300004: Mesh104 gusenica6 Group17 Group16 Group1 Walle1 Model.001
+    4300006: Mesh219 gusenica59 Group22 Group16 Group1 Walle1 Model.001
+    4300008: Mesh165 gusenica36 Group17 Group16 Group1 Walle1 Model.001
+    4300010: Mesh322 Group28 Group27 Group26 Group25 Group1 Walle1 Model.001
+    4300012: Mesh56 zub13 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300014: Mesh321 Group28 Group27 Group26 Group25 Group1 Walle1 Model.001
+    4300016: Mesh330 glaz2 Group30 Group26 Group25 Group1 Walle1 Model.001
+    4300018: Mesh20 Group8 Group2 Group1 Walle1 Model.001
+    4300020: Mesh308 zub86 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300022: Mesh113 gusenica10 Group17 Group16 Group1 Walle1 Model.001
+    4300024: Mesh332 Group26 Group25 Group1 Walle1 Model.001
+    4300026: Mesh229 gusenica64 Group22 Group16 Group1 Walle1 Model.001
+    4300028: Mesh320 cylinder Group25 Group1 Walle1 Model.001
+    4300030: Mesh32 ks1 Group10 Group9 Group1 Walle1 Model.001
+    4300032: Mesh285 zub64 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300034: Mesh202 gusenica51 Group22 Group16 Group1 Walle1 Model.001
+    4300036: Mesh70 zub26 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300038: Mesh141 gusenica24 Group17 Group16 Group1 Walle1 Model.001
+    4300040: Mesh227 gusenica63 Group22 Group16 Group1 Walle1 Model.001
+    4300042: Mesh217 gusenica58 Group22 Group16 Group1 Walle1 Model.001
+    4300044: Mesh209 gusenica54 Group22 Group16 Group1 Walle1 Model.001
+    4300046: Mesh155 gusenica31 Group17 Group16 Group1 Walle1 Model.001
+    4300048: Mesh133 gusenica20 Group17 Group16 Group1 Walle1 Model.001
+    4300050: Mesh239 gusenica69 Group22 Group16 Group1 Walle1 Model.001
+    4300052: Mesh94 gusenica1 Group17 Group16 Group1 Walle1 Model.001
+    4300054: Mesh119 gusenica13 Group17 Group16 Group1 Walle1 Model.001
+    4300056: Mesh2 Group4 Group2 Group1 Walle1 Model.001
+    4300058: Mesh283 zub62 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300060: Mesh182 Group20 Group19 Group16 Group1 Walle1 Model.001
+    4300062: Mesh269 km4 Group16 Group1 Walle1 Model.001
+    4300064: Mesh73 zub29 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300066: Mesh242 gusenica71 Group22 Group16 Group1 Walle1 Model.001
+    4300068: Mesh117 gusenica12 Group17 Group16 Group1 Walle1 Model.001
+    4300070: Mesh336 Group35 Group33 Group1 Walle1 Model.001
+    4300072: Mesh181 Group20 Group19 Group16 Group1 Walle1 Model.001
+    4300074: Mesh60 zub17 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300076: Mesh112 gusenica10 Group17 Group16 Group1 Walle1 Model.001
+    4300078: Mesh190 gusenica45 Group22 Group16 Group1 Walle1 Model.001
+    4300080: Mesh324 glaz1 Group27 Group26 Group25 Group1 Walle1 Model.001
+    4300082: Mesh256 gusenica78 Group22 Group16 Group1 Walle1 Model.001
+    4300084: Mesh196 gusenica48 Group22 Group16 Group1 Walle1 Model.001
+    4300086: Mesh257 gusenica78 Group22 Group16 Group1 Walle1 Model.001
+    4300088: Mesh317 zub95 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300090: Mesh311 zub89 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300092: Mesh39 Group11 Group9 Group1 Walle1 Model.001
+    4300094: Mesh195 gusenica47 Group22 Group16 Group1 Walle1 Model.001
+    4300096: Mesh214 gusenica57 Group22 Group16 Group1 Walle1 Model.001
+    4300098: Mesh300 zub78 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300100: Mesh225 gusenica62 Group22 Group16 Group1 Walle1 Model.001
+    4300102: Mesh158 gusenica33 Group17 Group16 Group1 Walle1 Model.001
+    4300104: Mesh207 gusenica53 Group22 Group16 Group1 Walle1 Model.001
+    4300106: Mesh170 gusenica39 Group17 Group16 Group1 Walle1 Model.001
+    4300108: Mesh244 gusenica72 Group22 Group16 Group1 Walle1 Model.001
+    4300110: Mesh114 gusenica11 Group17 Group16 Group1 Walle1 Model.001
+    4300112: Mesh154 gusenica31 Group17 Group16 Group1 Walle1 Model.001
+    4300114: Mesh58 zub15 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300116: Mesh69 zub25 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300118: Mesh87 zub43 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300120: Mesh68 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300122: Mesh188 gusenica44 Group22 Group16 Group1 Walle1 Model.001
+    4300124: Mesh260 gusenica80 Group22 Group16 Group1 Walle1 Model.001
+    4300126: Mesh200 gusenica50 Group22 Group16 Group1 Walle1 Model.001
+    4300128: Mesh26 Group8 Group2 Group1 Walle1 Model.001
+    4300130: Mesh299 zub77 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300132: Mesh120 gusenica14 Group17 Group16 Group1 Walle1 Model.001
+    4300134: Mesh267 km3 Group16 Group1 Walle1 Model.001
+    4300136: Mesh282 zub61 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300138: Mesh10 Group7 Group2 Group1 Walle1 Model.001
+    4300140: Mesh101 gusenica4 Group17 Group16 Group1 Walle1 Model.001
+    4300142: Mesh216 gusenica58 Group22 Group16 Group1 Walle1 Model.001
+    4300144: Mesh345 _ALL_E1 Group1 Walle1 Model.001
+    4300146: Mesh50 zub7 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300148: Mesh136 gusenica22 Group17 Group16 Group1 Walle1 Model.001
+    4300150: Mesh245 gusenica72 Group22 Group16 Group1 Walle1 Model.001
+    4300152: Mesh79 zub35 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300154: Mesh211 gusenica55 Group22 Group16 Group1 Walle1 Model.001
+    4300156: Mesh12 Group7 Group2 Group1 Walle1 Model.001
+    4300158: Mesh327 Group31 Group30 Group26 Group25 Group1 Walle1 Model.001
+    4300160: Mesh13 Group7 Group2 Group1 Walle1 Model.001
+    4300162: Mesh241 gusenica70 Group22 Group16 Group1 Walle1 Model.001
+    4300164: Mesh95 gusenica1 Group17 Group16 Group1 Walle1 Model.001
+    4300166: Mesh206 gusenica53 Group22 Group16 Group1 Walle1 Model.001
+    4300168: Mesh298 zub76 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300170: Mesh346 _ALL_E1 Group1 Walle1 Model.001
+    4300172: Mesh312 zub90 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300174: Mesh162 gusenica35 Group17 Group16 Group1 Walle1 Model.001
+    4300176: Mesh251 gusenica75 Group22 Group16 Group1 Walle1 Model.001
+    4300178: Mesh139 gusenica23 Group17 Group16 Group1 Walle1 Model.001
+    4300180: Mesh309 zub87 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300182: Mesh88 zub44 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300184: Mesh140 gusenica24 Group17 Group16 Group1 Walle1 Model.001
+    4300186: Mesh213 gusenica56 Group22 Group16 Group1 Walle1 Model.001
+    4300188: Mesh284 zub63 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300190: Mesh153 gusenica30 Group17 Group16 Group1 Walle1 Model.001
+    4300192: Mesh297 zub75 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300194: Mesh91 zub47 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300196: Mesh142 gusenica25 Group17 Group16 Group1 Walle1 Model.001
+    4300198: Mesh315 zub93 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300200: Mesh49 zub6 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300202: Mesh221 gusenica60 Group22 Group16 Group1 Walle1 Model.001
+    4300204: Mesh75 zub31 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300206: Mesh116 gusenica12 Group17 Group16 Group1 Walle1 Model.001
+    4300208: Mesh72 zub28 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300210: Mesh223 gusenica61 Group22 Group16 Group1 Walle1 Model.001
+    4300212: Mesh270 zub49 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300214: Mesh150 gusenica29 Group17 Group16 Group1 Walle1 Model.001
+    4300216: Mesh294 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300218: Mesh102 gusenica5 Group17 Group16 Group1 Walle1 Model.001
+    4300220: Mesh273 zub52 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300222: Mesh16 Group7 Group2 Group1 Walle1 Model.001
+    4300224: Mesh138 gusenica23 Group17 Group16 Group1 Walle1 Model.001
+    4300226: Mesh166 gusenica37 Group17 Group16 Group1 Walle1 Model.001
+    4300228: Mesh55 zub12 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300230: Mesh34 Group13 Group12 Group11 Group9 Group1 Walle1 Model.001
+    4300232: Mesh318 zub96 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300234: Mesh286 zub65 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300236: Mesh27 Group8 Group2 Group1 Walle1 Model.001
+    4300238: Mesh148 gusenica28 Group17 Group16 Group1 Walle1 Model.001
+    4300240: Mesh288 zub67 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300242: Mesh35 Group13 Group12 Group11 Group9 Group1 Walle1 Model.001
+    4300244: Mesh129 gusenica18 Group17 Group16 Group1 Walle1 Model.001
+    4300246: Mesh292 zub71 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300248: Mesh147 gusenica27 Group17 Group16 Group1 Walle1 Model.001
+    4300250: Mesh1 Group3 Group2 Group1 Walle1 Model.001
+    4300252: Mesh76 zub32 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300254: Mesh89 zub45 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300256: Mesh11 Group7 Group2 Group1 Walle1 Model.001
+    4300258: Mesh238 gusenica69 Group22 Group16 Group1 Walle1 Model.001
+    4300260: Mesh338 Group35 Group33 Group1 Walle1 Model.001
+    4300262: Mesh191 gusenica45 Group22 Group16 Group1 Walle1 Model.001
+    4300264: Mesh29 Group2 Group1 Walle1 Model.001
+    4300266: Mesh303 zub81 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300268: Mesh23 Group8 Group2 Group1 Walle1 Model.001
+    4300270: Mesh31 Group2 Group1 Walle1 Model.001
+    4300272: Mesh194 gusenica47 Group22 Group16 Group1 Walle1 Model.001
+    4300274: Mesh175 gusenica41 Group17 Group16 Group1 Walle1 Model.001
+    4300276: Mesh14 Group7 Group2 Group1 Walle1 Model.001
+    4300278: Mesh151 gusenica29 Group17 Group16 Group1 Walle1 Model.001
+    4300280: Mesh36 Group12 Group11 Group9 Group1 Walle1 Model.001
+    4300282: Mesh57 zub14 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300284: Mesh172 gusenica40 Group17 Group16 Group1 Walle1 Model.001
+    4300286: Mesh266 km3 Group16 Group1 Walle1 Model.001
+    4300288: Mesh83 zub39 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300290: Mesh226 gusenica63 Group22 Group16 Group1 Walle1 Model.001
+    4300292: Mesh341 hend1 Group1 Walle1 Model.001
+    4300294: Mesh123 gusenica15 Group17 Group16 Group1 Walle1 Model.001
+    4300296: Mesh124 gusenica16 Group17 Group16 Group1 Walle1 Model.001
+    4300298: Mesh163 gusenica35 Group17 Group16 Group1 Walle1 Model.001
+    4300300: Mesh144 gusenica26 Group17 Group16 Group1 Walle1 Model.001
+    4300302: Mesh186 gusenica43 Group22 Group16 Group1 Walle1 Model.001
+    4300304: Mesh157 gusenica32 Group17 Group16 Group1 Walle1 Model.001
+    4300306: Mesh197 gusenica48 Group22 Group16 Group1 Walle1 Model.001
+    4300308: Mesh169 gusenica38 Group17 Group16 Group1 Walle1 Model.001
+    4300310: Mesh43 km2 Group9 Group1 Walle1 Model.001
+    4300312: Mesh343 hend2 Group1 Walle1 Model.001
+    4300314: Mesh97 gusenica2 Group17 Group16 Group1 Walle1 Model.001
+    4300316: Mesh328 Group31 Group30 Group26 Group25 Group1 Walle1 Model.001
+    4300318: Mesh329 Group32 glaz2 Group30 Group26 Group25 Group1 Walle1.000
+    4300320: Mesh77 zub33 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300322: Mesh204 gusenica52 Group22 Group16 Group1 Walle1 Model.001
+    4300324: Mesh296 zub74 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300326: Mesh159 gusenica33 Group17 Group16 Group1 Walle1 Model.001
+    4300328: Mesh272 zub51 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300330: Mesh96 gusenica2 Group17 Group16 Group1 Walle1 Model.001
+    4300332: Mesh38 Group12 Group11 Group9 Group1 Walle1 Model.001
+    4300334: Mesh258 gusenica79 Group22 Group16 Group1 Walle1 Model.001
+    4300336: Mesh100 gusenica4 Group17 Group16 Group1 Walle1 Model.001
+    4300338: Mesh295 zub73 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300340: Mesh344 hend2 Group1 Walle1 Model.001
+    4300342: Mesh53 zub10 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300344: Mesh66 zub23 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300346: Mesh179 Group21 Group20 Group19 Group16 Group1 Walle1 Model.001
+    4300348: Mesh313 zub91 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300350: Mesh339 hend1 Group1 Walle1 Model.001
+    4300352: Mesh167 gusenica37 Group17 Group16 Group1 Walle1 Model.001
+    4300354: Mesh185 gusenica42 Group22 Group16 Group1 Walle1 Model.001
+    4300356: Mesh125 gusenica16 Group17 Group16 Group1 Walle1 Model.001
+    4300358: Mesh210 gusenica55 Group22 Group16 Group1 Walle1 Model.001
+    4300360: Mesh235 gusenica67 Group22 Group16 Group1 Walle1 Model.001
+    4300362: Mesh265 gusenica82 Group22 Group16 Group1 Walle1 Model.001
+    4300364: Mesh92 zub48 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300366: Mesh161 gusenica34 Group17 Group16 Group1 Walle1 Model.001
+    4300368: Mesh252 gusenica76 Group22 Group16 Group1 Walle1 Model.001
+    4300370: Mesh137 gusenica22 Group17 Group16 Group1 Walle1 Model.001
+    4300372: Mesh301 zub79 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300374: Mesh220 gusenica60 Group22 Group16 Group1 Walle1 Model.001
+    4300376: Mesh5 Group5 Group2 Group1 Walle1 Model.001
+    4300378: Mesh237 gusenica68 Group22 Group16 Group1 Walle1 Model.001
+    4300380: Mesh323 Group29 glaz1 Group27 Group26 Group25 Group1 Walle1.000
+    4300382: Mesh212 gusenica56 Group22 Group16 Group1 Walle1 Model.001
+    4300384: Mesh42 km2 Group9 Group1 Walle1 Model.001
+    4300386: Mesh314 zub92 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300388: Mesh278 zub57 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300390: Mesh333 Group34 Group33 Group1 Walle1 Model.001
+    4300392: Mesh121 gusenica14 Group17 Group16 Group1 Walle1 Model.001
+    4300394: Mesh156 gusenica32 Group17 Group16 Group1 Walle1 Model.001
+    4300396: Mesh271 zub50 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300398: Mesh17 Group7 Group2 Group1 Walle1 Model.001
+    4300400: Mesh22 Group8 Group2 Group1 Walle1 Model.001
+    4300402: Mesh98 gusenica3 Group17 Group16 Group1 Walle1 Model.001
+    4300404: Mesh334 Group34 Group33 Group1 Walle1 Model.001
+    4300406: Mesh51 zub8 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300408: Mesh174 gusenica41 Group17 Group16 Group1 Walle1 Model.001
+    4300410: Mesh325 Group27 Group26 Group25 Group1 Walle1 Model.001
+    4300412: Mesh6 Group6 Group2 Group1 Walle1 Model.001
+    4300414: Mesh348 _ALL_E1 Group1 Walle1 Model.001
+    4300416: Mesh180 Group20 Group19 Group16 Group1 Walle1 Model.001
+    4300418: Mesh110 gusenica9 Group17 Group16 Group1 Walle1 Model.001
+    4300420: Mesh193 gusenica46 Group22 Group16 Group1 Walle1 Model.001
+    4300422: Mesh201 gusenica50 Group22 Group16 Group1 Walle1 Model.001
+    4300424: Mesh33 ks2 Group10 Group9 Group1 Walle1 Model.001
+    4300426: Mesh178 Group21 Group20 Group19 Group16 Group1 Walle1 Model.001
+    4300428: Mesh4 Group5 Group2 Group1 Walle1 Model.001
+    4300430: Mesh3 box Group5 Group2 Group1 Walle1 Model.001
+    4300432: Mesh126 gusenica17 Group17 Group16 Group1 Walle1 Model.001
+    4300434: Mesh248 gusenica74 Group22 Group16 Group1 Walle1 Model.001
+    4300436: Mesh259 gusenica79 Group22 Group16 Group1 Walle1 Model.001
+    4300438: Mesh132 gusenica20 Group17 Group16 Group1 Walle1 Model.001
+    4300440: Mesh152 gusenica30 Group17 Group16 Group1 Walle1 Model.001
+    4300442: Mesh45 zub2 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300444: Mesh231 gusenica65 Group22 Group16 Group1 Walle1 Model.001
+    4300446: Mesh316 zub94 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300448: Mesh82 zub38 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300450: Mesh15 Group7 Group2 Group1 Walle1 Model.001
+    4300452: Mesh184 gusenica42 Group22 Group16 Group1 Walle1 Model.001
+    4300454: Mesh233 gusenica66 Group22 Group16 Group1 Walle1 Model.001
+    4300456: Mesh173 gusenica40 Group17 Group16 Group1 Walle1 Model.001
+    4300458: Mesh280 zub59 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300460: Mesh335 Group34 Group33 Group1 Walle1 Model.001
+    4300462: Mesh304 zub82 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300464: Mesh54 zub11 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300466: Mesh192 gusenica46 Group22 Group16 Group1 Walle1 Model.001
+    4300468: Mesh59 zub16 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300470: Mesh40 km1 Group9 Group1 Walle1 Model.001
+    4300472: Mesh349 _ALL_E1 Group1 Walle1 Model.001
+    4300474: Mesh331 Group26 Group25 Group1 Walle1 Model.001
+    4300476: Mesh263 gusenica81 Group22 Group16 Group1 Walle1 Model.001
+    4300478: Mesh340 hend1 Group1 Walle1 Model.001
+    4300480: Mesh187 gusenica43 Group22 Group16 Group1 Walle1 Model.001
+    4300482: Mesh253 gusenica76 Group22 Group16 Group1 Walle1 Model.001
+    4300484: Mesh131 gusenica19 Group17 Group16 Group1 Walle1 Model.001
+    4300486: Mesh160 gusenica34 Group17 Group16 Group1 Walle1 Model.001
+    4300488: Mesh135 gusenica21 Group17 Group16 Group1 Walle1 Model.001
+    4300490: Mesh84 zub40 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300492: Mesh306 zub84 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300494: Mesh228 gusenica64 Group22 Group16 Group1 Walle1 Model.001
+    4300496: Mesh218 gusenica59 Group22 Group16 Group1 Walle1 Model.001
+    4300498: Mesh199 gusenica49 Group22 Group16 Group1 Walle1 Model.001
+    4300500: Mesh81 zub37 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300502: Mesh277 zub56 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300504: Mesh279 zub58 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300506: Mesh350 Group1 Walle1 Model.001
+    4300508: Mesh78 zub34 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300510: Mesh107 gusenica7 Group17 Group16 Group1 Walle1 Model.001
+    4300512: Mesh326 sphere Group26 Group25 Group1 Walle1 Model.001
+    4300514: Mesh176 ks3 Group18 Group16 Group1 Walle1 Model.001
+    4300516: Mesh275 zub54 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300518: Mesh74 zub30 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300520: Mesh168 gusenica38 Group17 Group16 Group1 Walle1 Model.001
+    4300522: Mesh205 gusenica52 Group22 Group16 Group1 Walle1 Model.001
+    4300524: Mesh108 gusenica8 Group17 Group16 Group1 Walle1 Model.001
+    4300526: Mesh262 gusenica81 Group22 Group16 Group1 Walle1 Model.001
+    4300528: Mesh261 gusenica80 Group22 Group16 Group1 Walle1 Model.001
+    4300530: Mesh46 zub3 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300532: Mesh268 km4 Group16 Group1 Walle1 Model.001
+    4300534: Mesh198 gusenica49 Group22 Group16 Group1 Walle1 Model.001
+    4300536: Mesh264 gusenica82 Group22 Group16 Group1 Walle1 Model.001
+    4300538: Mesh67 zub24 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300540: Mesh21 Group8 Group2 Group1 Walle1 Model.001
+    4300542: Mesh103 gusenica5 Group17 Group16 Group1 Walle1 Model.001
+    4300544: Mesh64 zub21 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300546: Mesh274 zub53 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300548: Mesh80 zub36 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300550: Mesh302 zub80 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300552: Mesh255 gusenica77 Group22 Group16 Group1 Walle1 Model.001
+    4300554: Mesh85 zub41 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300556: Mesh171 gusenica39 Group17 Group16 Group1 Walle1 Model.001
+    4300558: Mesh86 zub42 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300560: Mesh65 zub22 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300562: Mesh208 gusenica54 Group22 Group16 Group1 Walle1 Model.001
+    4300564: Mesh134 gusenica21 Group17 Group16 Group1 Walle1 Model.001
+    4300566: Mesh287 zub66 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300568: Mesh48 zub5 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300570: Mesh105 gusenica6 Group17 Group16 Group1 Walle1 Model.001
+    4300572: Mesh222 gusenica61 Group22 Group16 Group1 Walle1 Model.001
+    4300574: Mesh122 gusenica15 Group17 Group16 Group1 Walle1 Model.001
+    4300576: Mesh236 gusenica68 Group22 Group16 Group1 Walle1 Model.001
+    4300578: Mesh37 Group12 Group11 Group9 Group1 Walle1 Model.001
+    4300580: Mesh146 gusenica27 Group17 Group16 Group1 Walle1 Model.001
+    4300582: Mesh293 zub72 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300584: Mesh99 gusenica3 Group17 Group16 Group1 Walle1 Model.001
+    4300586: Mesh145 gusenica26 Group17 Group16 Group1 Walle1 Model.001
+    4300588: Mesh62 zub19 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300590: Mesh215 gusenica57 Group22 Group16 Group1 Walle1 Model.001
+    4300592: Mesh93 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300594: Mesh109 gusenica8 Group17 Group16 Group1 Walle1 Model.001
+    4300596: Mesh254 gusenica77 Group22 Group16 Group1 Walle1 Model.001
+    4300598: Mesh63 zub20 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300600: Mesh106 gusenica7 Group17 Group16 Group1 Walle1 Model.001
+    4300602: Mesh224 gusenica62 Group22 Group16 Group1 Walle1 Model.001
+    4300604: Mesh7 Group7 Group2 Group1 Walle1 Model.001
+    4300606: Mesh203 gusenica51 Group22 Group16 Group1 Walle1 Model.001
+    4300608: Mesh289 zub68 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300610: Mesh25 Group8 Group2 Group1 Walle1 Model.001
+    4300612: Mesh250 gusenica75 Group22 Group16 Group1 Walle1 Model.001
+    4300614: Mesh47 zub4 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300616: Mesh61 zub18 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300618: Mesh249 gusenica74 Group22 Group16 Group1 Walle1 Model.001
+    4300620: Mesh164 gusenica36 Group17 Group16 Group1 Walle1 Model.001
+    4300622: Mesh276 zub55 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300624: Mesh52 zub9 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300626: Mesh305 zub83 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300628: Mesh115 gusenica11 Group17 Group16 Group1 Walle1 Model.001
+    4300630: Mesh246 gusenica73 Group22 Group16 Group1 Walle1 Model.001
+    4300632: Mesh111 gusenica9 Group17 Group16 Group1 Walle1 Model.001
+    4300634: Mesh44 zub1 Group14 bk1_1 Group9 Group1 Walle1 Model.001
+    4300636: Mesh240 gusenica70 Group22 Group16 Group1 Walle1 Model.001
+    4300638: Mesh234 gusenica67 Group22 Group16 Group1 Walle1 Model.001
+    4300640: Mesh319 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300642: Mesh128 gusenica18 Group17 Group16 Group1 Walle1 Model.001
+    4300644: Mesh130 gusenica19 Group17 Group16 Group1 Walle1 Model.001
+    4300646: Mesh291 zub70 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300648: Mesh247 gusenica73 Group22 Group16 Group1 Walle1 Model.001
+    4300650: Mesh90 zub46 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300652: Mesh243 gusenica71 Group22 Group16 Group1 Walle1 Model.001
+    4300654: Mesh290 zub69 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300656: Mesh307 zub85 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300658: Mesh8 Group7 Group2 Group1 Walle1 Model.001
+    4300660: Mesh149 gusenica28 Group17 Group16 Group1 Walle1 Model.001
+    4300662: Mesh183 Group19 Group16 Group1 Walle1 Model.001
+    4300664: Mesh24 Group8 Group2 Group1 Walle1 Model.001
+    4300666: Mesh232 gusenica66 Group22 Group16 Group1 Walle1 Model.001
+    4300668: Mesh118 gusenica13 Group17 Group16 Group1 Walle1 Model.001
+    4300670: Mesh30 Group2 Group1 Walle1 Model.001
+    4300672: Mesh342 hend2 Group1 Walle1 Model.001
+    4300674: Mesh9 Group7 Group2 Group1 Walle1 Model.001
+    4300676: Mesh347 _ALL_E1 Group1 Walle1 Model.001
+    4300678: Mesh28 Group8 Group2 Group1 Walle1 Model.001
+    4300680: Mesh337 Group35 Group33 Group1 Walle1 Model.001
+    4300682: Mesh310 zub88 Group24 bk1_2 Group16 Group1 Walle1 Model.001
+    4300684: Mesh281 zub60 Group23 bk1_2 Group16 Group1 Walle1 Model.001
+    4300686: Mesh18 Group8 Group2 Group1 Walle1 Model.001
+    4300688: Mesh19 Group8 Group2 Group1 Walle1 Model.001
+    4300690: Mesh127 gusenica17 Group17 Group16 Group1 Walle1 Model.001
+    4300692: Mesh71 zub27 Group15 bk1_1 Group9 Group1 Walle1 Model.001
+    4300694: Mesh189 gusenica44 Group22 Group16 Group1 Walle1 Model.001
+    4300696: Mesh177 ks4 Group18 Group16 Group1 Walle1 Model.001
+    4300698: Mesh143 gusenica25 Group17 Group16 Group1 Walle1 Model.001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_001.003
+    second: {fileID: 2100000, guid: 718aa750420951942a711aedc04bc283, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_002.003
+    second: {fileID: 2100000, guid: 1b6d4deb8b3e4ad479d67fa120858cbb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_007.003
+    second: {fileID: 2100000, guid: 1b471abf2f5213b4da32324ff869dd59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_009.003
+    second: {fileID: 2100000, guid: 096bd1a3e3c7cd749adcacb594b2d307, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_A01.003
+    second: {fileID: 2100000, guid: c984f93fc6da7d34aae4fa26d012ec86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_A12.003
+    second: {fileID: 2100000, guid: f72ea6582bbbca641ae3916613db68de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_B13.003
+    second: {fileID: 2100000, guid: ccd3ef58f78e6b0498c9e52762a7c8d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_D01.003
+    second: {fileID: 2100000, guid: 98c624332bdbe4d47a0022503b142c4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_F01.003
+    second: {fileID: 2100000, guid: 4c46e1a8861fcaf438b64aeff6bbef37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Groundcover_Sand_Smooth.003
+    second: {fileID: 2100000, guid: 2cb4869c96e0f444cbc499214155063a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Aluminum_Anodized.003
+    second: {fileID: 2100000, guid: e68783085fc5fdc4c8ccddc7d4a9cc79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Corrogated_Shiny.003
+    second: {fileID: 2100000, guid: 5fac71e9b0a5807458cc631df284fd4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Translucent_Glass_Tinted.003
+    second: {fileID: 2100000, guid: 5cefca184e22a1e40b1249f0844cfde2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _1.001
+    second: {fileID: 2100000, guid: 48f257ccc3f615d45a2a2846f2fc66ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _2.001
+    second: {fileID: 2100000, guid: c8db6d839d9120d43b3b1e3a62cfaad8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _3.001
+    second: {fileID: 2100000, guid: 3f782b044c34fdb4ebed6fee67b28721, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _4.001
+    second: {fileID: 2100000, guid: e47769fc3a1504447abcec74ce57f285, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -15,15 +15,16 @@ public class FloatingBarVariableController : MonoBehaviour
 	public FloatVariable RegenRate;
 
 	private bool regenerating = false;
-
-	// Use this for initialization
-	void Start()
+	
+	void Awake()
 	{
+		// instantiate the ScriptableObject to have a unique reference
+		currentValue = Instantiate(currentValue);
+
 		if (resetValue)
 			currentValue.SetValue(startingValue);
 	}
-
-	// Update is called once per frame
+	
 	void Update()
 	{
 		if (currentValue.Value < startingValue.Value && !regenerating) {
