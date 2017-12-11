@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 114483588625600078}
   - component: {fileID: 114427095762501606}
   - component: {fileID: 114670783123562428}
+  - component: {fileID: 114113782528240942}
   m_Layer: 9
   m_Name: Small Enemy
   m_TagString: Interactable
@@ -1041,7 +1042,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 32
   m_CollisionDetection: 0
@@ -1118,6 +1119,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114113782528240942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367186728973666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35eb92f42aa8e748b44bbb32d543931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableType: 0
 --- !u!114 &114427095762501606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1144,7 +1157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24077ad062ae80c4ab85d7aab9198089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableType: 0
   movingNavMeshAgent: {fileID: 0}
 --- !u!114 &114530054143952242
 MonoBehaviour:
