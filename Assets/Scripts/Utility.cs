@@ -1,6 +1,20 @@
-﻿public enum Layer
+﻿using UnityEngine.AI;
+
+namespace Utility
 {
-	Walkable = 8,
-	Enemy = 9,
-	RaycastEndStop = -1
+	public enum Layer
+	{
+		Enemy = 9,
+		RbotsWalkable = 10,
+		RaycastEndStop = -1
+	}
+
+	public enum Interactables
+	{
+		Player,
+		GroundEnemy,
+		FlyingEnemy,
+		Object,
+		NPC
+	}
 }

@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using Utility;
 
 public class CursorController : MonoBehaviour
 {
@@ -20,11 +19,12 @@ public class CursorController : MonoBehaviour
 	// Called by GameEvent
 	public void OnLayerChange()
 	{
+		Debug.Log(raycaster.LayerHit);
 		switch (raycaster.LayerHit) {
 			case Layer.Enemy:
 				Cursor.SetCursor(combatCursor, cursorHotspot, CursorMode.Auto);
 				break;
-			case Layer.Walkable:
+			case Layer.RbotsWalkable:
 				Cursor.SetCursor(null, cursorHotspot, CursorMode.Auto);
 				break;
 			default:

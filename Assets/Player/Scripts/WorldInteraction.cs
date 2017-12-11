@@ -29,17 +29,16 @@ public class WorldInteraction : MonoBehaviour
 			GameObject interactedObject = interactionHit.collider.gameObject;
 			if (interactedObject.tag == "Interactable") {
 				interactedObject.GetComponent<Interactable>().MoveToInteract(playerNavMeshAgent);
-				// playerNavMeshAgent.destination = interactionHit.point;
 			} else {
 				playerNavMeshAgent.destination = interactionHit.point;
 			}
 		}
 	}
 
-	private void OnDrawGizmos()
-	{
-		Gizmos.color = Color.red;
-		Gizmos.DrawLine(playerNavMeshAgent.transform.position, playerNavMeshAgent.destination);
-		Gizmos.DrawSphere(interactionHit.point, .1f);
-	}
+	//private void OnDrawGizmos()
+	//{
+	//	Gizmos.color = Color.red;
+	//	Gizmos.DrawLine(playerNavMeshAgent.transform.position, playerNavMeshAgent.destination);
+	//	Gizmos.DrawSphere(interactionHit.point, .1f);
+	//}
 }

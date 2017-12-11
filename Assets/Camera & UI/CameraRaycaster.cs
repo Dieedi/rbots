@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using Utility;
 
 public class CameraRaycaster : MonoBehaviour
 {
 	public Layer[] layerPriorities = {
+		Layer.RbotsWalkable,
 		Layer.Enemy,
-		Layer.Walkable
 	};
 
 	[SerializeField] float distanceToBackground = 100f;
@@ -35,8 +36,10 @@ public class CameraRaycaster : MonoBehaviour
 		// Look for and return priority layer hit
 		foreach (Layer layer in layerPriorities) {
 			var hit = RaycastForLayer(layer);
+
 			if (hit.HasValue) {
 				m_hit = hit.Value;
+
 				if (layerHit != layer) {
 					layerHit = layer;
 					// Raise GameEvent
@@ -54,7 +57,8 @@ public class CameraRaycaster : MonoBehaviour
 
 	RaycastHit? RaycastForLayer(Layer layer)
 	{
-		int layerMask = 1 << (int)layer; // See Unity docs for mask formation
+		// Layer is defined by an enum in Utility.cs
+		int layerMask = 1 << (int)layer; // Convert the int "layer" to his corresponding value in bitmask value which a layermask is.
 		Ray ray = viewCamera.ScreenPointToRay(Input.mousePosition);
 
 		RaycastHit hit; // used as an out parameter
