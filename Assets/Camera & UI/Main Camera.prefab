@@ -146,9 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfab12a2b449194f98cb82848c98a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerPriorities: 0900000008000000
-  distanceToBackground: 100
-  eventToRaise: {fileID: 11400000, guid: 44dac35b01bdf274fb826c0da108793f, type: 2}
+  layerPriorities: 090000000a000000
+  maxRaycastDepth: 100
+  topPriorityLayerLastFrame: -1
+  cursorLayerChange: {fileID: 11400000, guid: 44dac35b01bdf274fb826c0da108793f, type: 2}
+  clickPriority: {fileID: 11400000, guid: 04031dbf2b0ad4347a7946d8e4bb3def, type: 2}
 --- !u!114 &114347079619008028
 MonoBehaviour:
   m_ObjectHideFlags: 1

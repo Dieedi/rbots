@@ -9,6 +9,8 @@ public class MovingAgentController : MonoBehaviour
 	public Interactables interactableType;
 
 	private float movingAgentRadius;
+	private float defaultStoppingRadius;
+	private bool isMovingAgent = false;
 
 	// I AM THE MOVING AGENT !!!!
 	private NavMeshAgent myAgent;
@@ -16,20 +18,33 @@ public class MovingAgentController : MonoBehaviour
 	private void Start()
 	{
 		myAgent = GetComponent<NavMeshAgent>();
+		defaultStoppingRadius = myAgent.radius;
 	}
 
 	private void Update()
 	{
-		if (!myAgent.pathPending) {
+		if (isMovingAgent && !myAgent.pathPending) {
+			Debug.Log("should appen if agent move to destination");
 			// get the true remaining distance
 			float remainingDistance = myAgent.remainingDistance - myAgent.radius;
 
 			if (remainingDistance <= GetStoppingDistance()) {
-				// Reset path stops the movement
-				myAgent.ResetPath();
-				Interactable.hasInteracted = true;
+				if (interactableType == Interactables.GroundEnemy) {
+					// don't reset values, continue chasing until die ! 
+				} else {
+					ResetAgentValues();
+					isMovingAgent = false;
+					Interactable.movingNavMeshAgent = myAgent;
+					Interactable.hasInteracted = true;
+				}
 			}
 		}
+	}
+
+	public void MoveToInteract(GameObject target)
+	{
+		isMovingAgent = true;
+		myAgent.destination = target.transform.position;
 	}
 
 	public float GetStoppingDistance()
@@ -51,11 +66,18 @@ public class MovingAgentController : MonoBehaviour
 				additionalStoppingDistance = 0.5f;
 				break;
 			default:
-				additionalStoppingDistance = 0;
-				break;
+				return 0;
 		}
 
 		// return updated radius depending on target type ?
 		return myAgent.stoppingDistance = movingAgentRadius * 3 + myAgent.radius * 3 + additionalStoppingDistance;
+	}
+
+	public void ResetAgentValues()
+	{
+		// Reset path stops the movement
+		isMovingAgent = false;
+		myAgent.ResetPath();
+		myAgent.stoppingDistance = defaultStoppingRadius;
 	}
 }

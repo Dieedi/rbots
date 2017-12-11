@@ -6,32 +6,22 @@ using UnityEngine.AI;
 public class Interactable : MonoBehaviour
 {
 	[HideInInspector]
-	public NavMeshAgent movingNavMeshAgent;
+	public static NavMeshAgent movingNavMeshAgent;
 
 	[HideInInspector]
 	public static bool hasInteracted;
 
-	private float deffaultStoppingRadius;
 	private float movingAgentRadius;
 
 	private void Start()
 	{
-		deffaultStoppingRadius = GetComponent<NavMeshAgent>().radius;
 	}
 
 	void Update()
 	{
-		// TODO Calculate stopping distance or remaining distance depending on target object
 		if (hasInteracted) { 
 			Interact();
 		}
-	}
-
-	public virtual void MoveToInteract(NavMeshAgent movingAgent)
-	{
-		movingNavMeshAgent = movingAgent;
-		movingAgentRadius = movingNavMeshAgent.radius;
-		movingNavMeshAgent.destination = transform.position;
 	}
 
 	public void Interact()
@@ -47,5 +37,6 @@ public class Interactable : MonoBehaviour
 
 		print("interaction done.");
 		hasInteracted = false;
+		movingNavMeshAgent.GetComponent<MovingAgentController>().ResetAgentValues();
 	}
 }

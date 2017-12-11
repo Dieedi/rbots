@@ -8,6 +8,9 @@ public class CursorController : MonoBehaviour
 	[SerializeField] Texture2D otherCursor = null;
 	[SerializeField] Vector2 cursorHotspot = new Vector2(0, 0);
 
+	[SerializeField] const int walkableLayerNumber = 10;
+	[SerializeField] const int enemyLayerNumber = 9;
+
 	private CameraRaycaster raycaster;
 
 	// Use this for initialization
@@ -19,17 +22,17 @@ public class CursorController : MonoBehaviour
 	// Called by GameEvent
 	public void OnLayerChange()
 	{
-		Debug.Log(raycaster.LayerHit);
-		switch (raycaster.LayerHit) {
-			case Layer.Enemy:
+		int layer = GetComponent<CameraRaycaster>().topPriorityLayerLastFrame;
+		switch (layer) {
+			case enemyLayerNumber:
 				Cursor.SetCursor(combatCursor, cursorHotspot, CursorMode.Auto);
 				break;
-			case Layer.RbotsWalkable:
+			case walkableLayerNumber:
 				Cursor.SetCursor(null, cursorHotspot, CursorMode.Auto);
 				break;
 			default:
 				//Cursor.SetCursor(otherCursor, cursorHotspot, CursorMode.Auto);
 				return;
-		}		
+		}
 	}
 }
