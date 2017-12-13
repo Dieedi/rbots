@@ -1,0 +1,150 @@
+fileFormatVersion: 2
+guid: 3d28669ccb120f84cb8d128dac6e325e
+timeCreated: 1513091785
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Shroom_Mesh_01_LOD0
+    100004: Shroom_Mesh_01_LOD0.001
+    100006: Empty
+    100008: Armature
+    100010: Bone
+    100012: Bone.001
+    100014: Bone.001_end
+    100016: Bone.002
+    100018: chest
+    100020: foot
+    100022: head
+    100024: head_end
+    100026: Shroom_Mesh_01_LOD2
+    100028: Chest
+    100030: Foot
+    100032: Head
+    100034: Head_end
+    100036: Shroom1
+    100038: ShroomBones
+    400000: //RootNode
+    400002: Shroom_Mesh_01_LOD0
+    400004: Shroom_Mesh_01_LOD0.001
+    400006: Empty
+    400008: Armature
+    400010: Bone
+    400012: Bone.001
+    400014: Bone.001_end
+    400016: Bone.002
+    400018: chest
+    400020: foot
+    400022: head
+    400024: head_end
+    400026: Shroom_Mesh_01_LOD2
+    400028: Chest
+    400030: Foot
+    400032: Head
+    400034: Head_end
+    400036: Shroom1
+    400038: ShroomBones
+    2300000: Shroom_Mesh_01_LOD0
+    2300002: Shroom_Mesh_01_LOD0.001
+    3300000: Shroom_Mesh_01_LOD0
+    3300002: Shroom_Mesh_01_LOD0.001
+    4300000: Shroom_Mesh_01_LOD0.001
+    4300002: Shroom_Mesh_01_LOD0
+    4300004: Shroom_Mesh_01_LOD2
+    4300006: Shroom1
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Shroom_Mesh_01_LOD0
+    13700002: Shroom_Mesh_01_LOD0.001
+    13700004: Shroom_Mesh_01_LOD2
+    13700006: Shroom1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 65788d3fa3df4f24398cfb10cad6d095, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default.001
+    second: {fileID: 2100000, guid: 7e572747ca1dc4b46b95fa43101f2463, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Avatar creation failed:\n\tCannot find root motion transform
+      'Armature'.\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Armature
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

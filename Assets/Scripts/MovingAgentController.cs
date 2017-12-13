@@ -14,11 +14,17 @@ public class MovingAgentController : MonoBehaviour
 
 	// I AM THE MOVING AGENT !!!!
 	private NavMeshAgent myAgent;
+	private GameObject targetAgent;
+	private Player player;
+	private EnemyController enemy;
 
 	private void Start()
 	{
 		myAgent = GetComponent<NavMeshAgent>();
 		defaultStoppingRadius = myAgent.radius;
+
+		player = myAgent.GetComponent<Player>();
+		enemy = myAgent.GetComponent<EnemyController>();
 	}
 
 	private void Update()
@@ -37,6 +43,14 @@ public class MovingAgentController : MonoBehaviour
 					Interactable.movingNavMeshAgent = myAgent;
 					Interactable.hasInteracted = true;
 				}
+
+				if (player) {
+					player.HandleInteraction(targetAgent);
+				}
+
+				if (enemy) {
+					enemy.HandleInteraction(targetAgent);
+				}
 			}
 		}
 	}
@@ -45,6 +59,7 @@ public class MovingAgentController : MonoBehaviour
 	{
 		isMovingAgent = true;
 		myAgent.destination = target.transform.position;
+		targetAgent = target;
 	}
 
 	public float GetStoppingDistance()

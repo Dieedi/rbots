@@ -24,9 +24,15 @@ public class Interactable : MonoBehaviour
 		}
 	}
 
+	public void HandleInteraction(GameObject target)
+	{
+
+	}
+
 	public void Interact()
 	{
 		print("Interacting with base class.");
+
 		// TODO Maybe wait to user or game action before resetting...
 		StartCoroutine("WaitInteractionEnd");
 	}
