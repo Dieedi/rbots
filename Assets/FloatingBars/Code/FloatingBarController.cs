@@ -15,8 +15,8 @@ public class FloatingBarController : MonoBehaviour {
 
 	private void Start()
 	{
-		fbv_controller = GetComponentInParent<FloatingBarVariableController>();
-		resource = fbv_controller.currentValue;
+		//fbv_controller = GetComponentInParent<FloatingBarVariableController>();
+		resource = Instantiate(resource);
 		mainCam = Camera.main;
 		damageFiller = GetComponentsInChildren<Image>()[1]; // the foreground bar
 	}

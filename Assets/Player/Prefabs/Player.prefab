@@ -117,7 +117,6 @@ GameObject:
   - component: {fileID: 95022614184808940}
   - component: {fileID: 114249048315460972}
   - component: {fileID: 114567692921441958}
-  - component: {fileID: 114001639097022496}
   - component: {fileID: 114895403292846206}
   m_Layer: 0
   m_Name: Player
@@ -649,7 +648,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268661932239292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.24, y: 159.37, z: 233.09}
+  m_LocalPosition: {x: 9.4, y: 14.6, z: 121.1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4871248271342482}
@@ -774,21 +773,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114001639097022496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1268661932239292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3faffe619f4f21c459f62bdb50bf9c24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentValue: {fileID: 11400000, guid: d569b308f76b9114e9438a9791231f32, type: 2}
-  resetValue: 0
-  startingValue: {fileID: 11400000, guid: bd3237868ca48f14aa0b7bbbf6766314, type: 2}
-  RegenRate: {fileID: 11400000, guid: 1f551d5827eeeb349b2afbcbd44aa862, type: 2}
 --- !u!114 &114145249801503868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -800,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e7329bdefd31e42b5b4af945c49872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resource: {fileID: 0}
+  resource: {fileID: 11400000, guid: e17071a04e4b7534ca26a54a394b185d, type: 2}
   Min: {fileID: 11400000, guid: 7b58c5aa77440334ba8c0a35f4dac323, type: 2}
   Max: {fileID: 11400000, guid: bd3237868ca48f14aa0b7bbbf6766314, type: 2}
 --- !u!114 &114249048315460972
@@ -815,9 +799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEye: {fileID: 114562245725500734}
-  HP: {fileID: 11400000, guid: e17071a04e4b7534ca26a54a394b185d, type: 2}
   ResetHP: 1
-  StartingHP: {fileID: 11400000, guid: 53291f5915c8188428085d7b3676a8b9, type: 2}
   RegenRate: {fileID: 11400000, guid: d76bc4b19a41d52458d427644b926dac, type: 2}
 --- !u!114 &114279084114148094
 MonoBehaviour:

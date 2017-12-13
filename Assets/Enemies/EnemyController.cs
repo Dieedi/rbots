@@ -2,9 +2,16 @@
 using UnityEngine.AI;
 using System.Collections;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : MonoBehaviour, IDamageable
 {
 	[SerializeField] FieldOfViewController myEye;
+
+	public bool ResetHP;
+	public FloatVariable RegenRate;
+
+	private FloatVariable HP;
+	private FloatVariable StartingHP;
+	private FloatVariable MinHP;
 
 	// TODO chasing target
 	private bool isChasingTarget = false;
@@ -15,6 +22,14 @@ public class EnemyController : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		FloatingBarController fbc = GetComponentInChildren<FloatingBarController>();
+		HP = fbc.resource;
+		StartingHP = fbc.Max;
+		MinHP = fbc.Min;
+
+		if (ResetHP)
+			HP.SetValue(StartingHP);
+
 		anim = GetComponent<Animator>();
 		agent = GetComponent<NavMeshAgent>();
 	}
@@ -42,5 +57,11 @@ public class EnemyController : MonoBehaviour
 	{
 		transform.LookAt(target.transform);
 		anim.SetBool("IsAttacking", true);
+	}
+
+	public void TakeDamage(float amount)
+	{
+		float newValue = HP.Value - amount;
+		HP.ApplyChange(-amount);
 	}
 }

@@ -20,11 +20,13 @@ public class FloatVariable : ScriptableObject {
 
 	public void ApplyChange(float amount)
 	{
+		Debug.Log(amount);
 		Value += amount;
 	}
 
 	public void ApplyChange(FloatVariable amount)
 	{
+		Debug.Log(amount);
 		Value += amount.Value;
 	}
 }

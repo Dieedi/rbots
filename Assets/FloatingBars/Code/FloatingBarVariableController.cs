@@ -15,6 +15,7 @@ public class FloatingBarVariableController : MonoBehaviour
 	public FloatVariable RegenRate;
 
 	private bool regenerating = false;
+	private Player Player;
 	
 	void Awake()
 	{

@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour, IDamageable {
 
 	[SerializeField] FieldOfViewController myEye;
 
-	public FloatVariable HP;
 	public bool ResetHP;
-	public FloatVariable StartingHP;
 	public FloatVariable RegenRate;
+
+	private FloatVariable HP;
+	private FloatVariable StartingHP;
+	private FloatVariable MinHP;
 
 	private bool regenerating = false;
 	private Animator anim;
@@ -21,6 +23,11 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		FloatingBarController fbc = GetComponentInChildren<FloatingBarController>();
+		HP = fbc.resource;
+		StartingHP = fbc.Max;
+		MinHP = fbc.Min;
+
 		if (ResetHP)
 			HP.SetValue(StartingHP);
 
@@ -69,5 +76,11 @@ public class Player : MonoBehaviour {
 			else
 				HP.ApplyChange(RegenRate.Value);
 		}
+	}
+
+	public void TakeDamage(float amount)
+	{
+		float newValue = HP.Value - amount;
+		HP.ApplyChange(-amount);
 	}
 }

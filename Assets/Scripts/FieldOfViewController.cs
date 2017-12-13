@@ -6,7 +6,6 @@ public class FieldOfViewController : MonoBehaviour {
 	[SerializeField] float fieldOfView = 120; // Angle
 	
 	public bool CanSeeTarget () {
-		Debug.Log("I see you");
 		// reset z position of target to avoid bad angle return
 		Vector3 newTargetPos = new Vector3(Target.transform.position.x, transform.position.y, Target.transform.position.z);
 		// get the direction of the target
