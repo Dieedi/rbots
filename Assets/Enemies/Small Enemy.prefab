@@ -630,8 +630,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1367186728973666}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -75.38, y: 156.25, z: 238.79}
+  m_LocalRotation: {x: -0, y: 0.9946903, z: -0, w: 0.10291382}
+  m_LocalPosition: {x: 16.01, y: 13.73, z: 96.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4377144754812590}
@@ -1157,7 +1157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24077ad062ae80c4ab85d7aab9198089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingNavMeshAgent: {fileID: 0}
 --- !u!114 &114530054143952242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1338,7 +1337,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.5
-  m_BaseOffset: 0
+  m_BaseOffset: -0.1
   m_WalkableMask: 16
   m_ObstacleAvoidanceType: 4
 --- !u!222 &222363315685741608
