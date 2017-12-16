@@ -28,9 +28,9 @@ public class WorldInteraction : MonoBehaviour
 		if (Physics.Raycast(interactionRay, out interactionHit)) {
 			GameObject interactedObject = interactionHit.collider.gameObject;
 			if (interactedObject.tag == "Interactable") {
-				playerNavMeshAgent.GetComponent<MovingAgentController>().MoveToInteract(interactedObject);
+				// playerNavMeshAgent.GetComponent<MovingAgentController>().MoveToInteract(interactedObject);
 			} else {
-				playerNavMeshAgent.destination = interactionHit.point;
+				playerNavMeshAgent.GetComponent<MovingAgentController>().MoveToInteract(interactionHit.point);
 			}
 		}
 	}

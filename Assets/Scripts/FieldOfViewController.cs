@@ -25,6 +25,7 @@ public class FieldOfViewController : MonoBehaviour {
 
 		// get the correct direction
 		Vector3 direction = Target.transform.position - transform.position + Vector3.up;
+		Debug.DrawRay(transform.position, direction, Color.red);
 		// 'cast a ray' from eye to player direction
 		if (angle < fieldOfView / 2 && Physics.Raycast(transform.position, direction, out hit, chaseRange)) {
 			// check collider to avoid return true on hitting ground (could use Layer too, should ? TODO)

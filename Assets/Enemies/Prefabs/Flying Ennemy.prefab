@@ -160,7 +160,6 @@ GameObject:
   - component: {fileID: 195861455785846308}
   - component: {fileID: 114535034214855520}
   - component: {fileID: 114653050653399334}
-  - component: {fileID: 114431299741631458}
   m_Layer: 11
   m_Name: Flying Ennemy
   m_TagString: Interactable
@@ -307,9 +306,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1686799182908078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.75, y: 13.48, z: 105.07}
-  m_LocalScale: {x: 1.0000006, y: 1, z: 1.0000006}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.75, y: 13.48, z: 92.67}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4318959010434902}
   - {fileID: 224764867524849934}
@@ -608,18 +607,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 1
---- !u!114 &114431299741631458
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1686799182908078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c35eb92f42aa8e748b44bbb32d543931, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableType: 2
 --- !u!114 &114535034214855520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -663,6 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83d16baed0c6fa4fab34bd9f16f57d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactableType: 2
   myEye: {fileID: 114934848498542288}
   ResetHP: 1
   RegenRate: {fileID: 0}
@@ -672,7 +660,8 @@ MonoBehaviour:
   Projectile: {fileID: 1775295473570100, guid: b0a97b8735210504b9b559f97a8b9123, type: 2}
   ProjectileSpawner: {fileID: 1029614724871018}
   damagePerShot: 5
-  shotPerSeconds: 0.5
+  secondsPerShot: 1
+  isAttacking: 0
   moveRadius: 15
   attackRadiusMultiplicator: 2
   chaseRange: 0

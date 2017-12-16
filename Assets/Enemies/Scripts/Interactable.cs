@@ -34,7 +34,7 @@ public class Interactable : MonoBehaviour
 		print("Interacting with base class.");
 
 		// TODO Maybe wait to user or game action before resetting...
-		StartCoroutine("WaitInteractionEnd");
+		//StartCoroutine("WaitInteractionEnd");
 	}
 
 	IEnumerator WaitInteractionEnd()
@@ -43,6 +43,6 @@ public class Interactable : MonoBehaviour
 
 		print("interaction done.");
 		hasInteracted = false;
-		movingNavMeshAgent.GetComponent<MovingAgentController>().ResetAgentValues();
+		movingNavMeshAgent.GetComponent<EnemyController>().ResetAgentValues();
 	}
 }

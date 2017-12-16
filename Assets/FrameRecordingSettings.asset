@@ -35,7 +35,7 @@ MonoBehaviour:
   m_Verbose: 0
   m_SynchFrameRate: 1
   m_BaseFileName:
-    m_Pattern: <prj><dt><res>.<ext>
+    m_Pattern: <prj><dt><ts><res>.<ext>
   m_DestinationPath:
     m_root: 1
     m_leaf: /Videos

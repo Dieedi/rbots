@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-using System.Collections;
 using Utility;
 
 [RequireComponent(typeof(Animator))]
 public class EnemyController : MonoBehaviour, IDamageable
 {
+	public Interactables interactableType;
 
 	[SerializeField] FieldOfViewController myEye;
 
@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour, IDamageable
 	[SerializeField] float secondsPerShot = 1f;
 	[HideInInspector]
 	public bool isAttacking = false;
+	bool isMovingAgent = false;
 
 	[Tooltip("Max aggro distance within view angle")]
 	[SerializeField] float moveRadius = 3;
@@ -40,6 +41,7 @@ public class EnemyController : MonoBehaviour, IDamageable
 	private GameObject CurrentTarget;
 	private Animator anim;
 	private NavMeshAgent agent;
+	private float defaultStoppingRadius;
 
 	// Utilities
 	private AttackTypeController atc = new AttackTypeController();
@@ -77,6 +79,7 @@ public class EnemyController : MonoBehaviour, IDamageable
 
 		anim = GetComponent<Animator>();
 		agent = GetComponent<NavMeshAgent>();
+		defaultStoppingRadius = agent.radius;
 	}
 
 	// Update is called once per frame
@@ -89,17 +92,49 @@ public class EnemyController : MonoBehaviour, IDamageable
 		if (CurrentTarget) {
 			float distanceToTarget = Vector3.Distance(agent.transform.position, CurrentTarget.transform.position);
 
-			if (myEye.CanSeeTarget() && isAttacking && distanceToTarget <= attackRadius) {
+			if (myEye.CanSeeTarget() && isAttacking && distanceToTarget <= chaseRange) {
 				gameObject.transform.LookAt(CurrentTarget.transform);
 			} else if (myEye.CanSeeTarget()) {
-				if (isAttacking)
-					StopInteraction(CurrentTarget);
-
 				// if I see target, I begin chasing and move
 				isChasingTarget = true;
-				GetComponent<MovingAgentController>().MoveToInteract(CurrentTarget);
+				MoveToInteract(CurrentTarget);
+			} else if (!myEye.CanSeeTarget()) {
+				if (isAttacking)
+					StopInteraction(CurrentTarget);
+				// TODO and go back ?
 			}
 		}
+
+		if (isMovingAgent && !agent.pathPending) {
+			// get the true remaining distance
+			float remainingDistance = agent.remainingDistance > 0 ? Mathf.Abs(agent.remainingDistance - agent.radius) : 0;
+
+			if (remainingDistance <= GetStoppingDistance()) {
+				if (!isAttacking) {
+					// launch interaction and stop movements
+					ResetAgentValues();
+					Interactable.movingNavMeshAgent = agent;
+					Interactable.hasInteracted = true;
+					HandleInteraction(CurrentTarget);
+				}
+			}
+		}
+	}
+
+	//=================
+	//  MOVEMENT
+	//=================
+	public void MoveToInteract(GameObject target)
+	{
+		isMovingAgent = true;
+		agent.destination = target.transform.position;
+		CurrentTarget = target;
+	}
+	public void MoveToInteract(Vector3 interactionPoint)
+	{
+		isMovingAgent = true;
+		agent.destination = interactionPoint;
+		CurrentTarget = null;
 	}
 
 	// Called by animation
@@ -114,7 +149,6 @@ public class EnemyController : MonoBehaviour, IDamageable
 
 	public void StopCasting()
 	{
-		isAttacking = false;
 		if (CurrentCast)
 			Destroy(CurrentCast);
 	}
@@ -159,7 +193,7 @@ public class EnemyController : MonoBehaviour, IDamageable
 				anim.SetBool("IsAttacking", false);
 				StopCasting();
 			}
-	}
+		}
 	}
 
 	public void IsAttackedBy(GameObject target)
@@ -172,6 +206,42 @@ public class EnemyController : MonoBehaviour, IDamageable
 	{
 		float newValue = HP.Value - amount;
 		HP.ApplyChange(-amount);
+	}
+
+	public float GetStoppingDistance()
+	{
+		float additionalStoppingDistance;
+
+		switch (interactableType) {
+			case Interactables.Player:
+				additionalStoppingDistance = 0;
+				break;
+			case Interactables.GroundEnemy:
+				additionalStoppingDistance = attackRadius;
+				break;
+			case Interactables.FlyingEnemy:
+				additionalStoppingDistance = attackRadius - 1;
+				break;
+			case Interactables.Object:
+				additionalStoppingDistance = 0.5f;
+				break;
+			case Interactables.NPC:
+				additionalStoppingDistance = 0.5f;
+				break;
+			default:
+				return 0;
+		}
+
+		// return updated radius depending on target type ?
+		return agent.stoppingDistance = agent.radius + additionalStoppingDistance;
+	}
+
+	public void ResetAgentValues()
+	{
+		// Reset path stops the movement
+		isMovingAgent = false;
+		agent.ResetPath();
+		agent.stoppingDistance = defaultStoppingRadius;
 	}
 
 	private void OnDrawGizmos()

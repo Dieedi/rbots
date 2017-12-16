@@ -35,14 +35,19 @@ public class MovingAgentController : MonoBehaviour
 			
 			if (remainingDistance <= GetStoppingDistance()) {
 				if (player) {
-					player.HandleInteraction(targetAgent);
+					if (!player.isAttacking && targetAgent != null) {
+						// launch interaction and stop movements
+						ResetAgentValues();
+						Interactable.movingNavMeshAgent = myAgent;
+						Interactable.hasInteracted = true;
+						player.HandleInteraction(targetAgent);
+					}
 				}
 
 				if (enemy) {
 					if (!enemy.isAttacking) {
 						// launch interaction and stop movements
 						ResetAgentValues();
-						isMovingAgent = false;
 						Interactable.movingNavMeshAgent = myAgent;
 						Interactable.hasInteracted = true;
 						enemy.HandleInteraction(targetAgent);
@@ -51,6 +56,13 @@ public class MovingAgentController : MonoBehaviour
 					if (isMovingAgent)
 						enemy.StopInteraction(targetAgent);
 				}
+			} else {
+				if (targetAgent != null)
+					myAgent.destination = targetAgent.transform.position;
+			}
+
+			if (player && isMovingAgent) {
+				player.StopInteraction(targetAgent);
 			}
 		}
 		//else {
@@ -58,12 +70,18 @@ public class MovingAgentController : MonoBehaviour
 		//		enemy.StopInteraction(targetAgent);
 		//}
 	}
-
+	
 	public void MoveToInteract(GameObject target)
 	{
 		isMovingAgent = true;
 		myAgent.destination = target.transform.position;
 		targetAgent = target;
+	}
+	public void MoveToInteract(Vector3 interactionPoint)
+	{
+		isMovingAgent = true;
+		myAgent.destination = interactionPoint;
+		targetAgent = null;
 	}
 
 	public float GetStoppingDistance()
@@ -76,7 +94,7 @@ public class MovingAgentController : MonoBehaviour
 				break;
 			case Interactables.GroundEnemy:
 			case Interactables.FlyingEnemy:
-				additionalStoppingDistance = enemy.attackRadius - 1;
+				additionalStoppingDistance = enemy.attackRadius;
 				break;
 			case Interactables.Object:
 				additionalStoppingDistance = 0.5f;
