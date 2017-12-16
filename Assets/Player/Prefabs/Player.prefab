@@ -111,7 +111,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4802702760007592}
-  - component: {fileID: 136662805574258138}
+  - component: {fileID: 65960020253936410}
   - component: {fileID: 54346925263974906}
   - component: {fileID: 195432003657230392}
   - component: {fileID: 95022614184808940}
@@ -648,7 +648,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1268661932239292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.4, y: 14.6, z: 121.1}
+  m_LocalPosition: {x: 16.26, y: 13.805, z: 94.613}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4871248271342482}
@@ -756,6 +756,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65960020253936410
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1268661932239292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.9728127, z: 1.2371521}
+  m_Center: {x: 0, y: 1.5237427, z: 0.11857605}
 --- !u!95 &95022614184808940
 Animator:
   serializedVersion: 3
@@ -928,19 +940,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 1
---- !u!136 &136662805574258138
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1268661932239292}
-  m_Material: {fileID: 13400000, guid: 6f6d5414101a9ad41bcc2e3adcc6b158, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.7529373
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.7892957, z: -0.0009803772}
 --- !u!137 &137676362877948708
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

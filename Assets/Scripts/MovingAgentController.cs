@@ -30,29 +30,33 @@ public class MovingAgentController : MonoBehaviour
 	private void Update()
 	{
 		if (isMovingAgent && !myAgent.pathPending) {
-			Debug.Log("should appen if agent move to destination");
 			// get the true remaining distance
-			float remainingDistance = myAgent.remainingDistance - myAgent.radius;
-
+			float remainingDistance = myAgent.remainingDistance > 0 ? Mathf.Abs(myAgent.remainingDistance - myAgent.radius) : 0;
+			
 			if (remainingDistance <= GetStoppingDistance()) {
-				if (interactableType == Interactables.GroundEnemy) {
-					// don't reset values, continue chasing until die ! 
-				} else {
-					ResetAgentValues();
-					isMovingAgent = false;
-					Interactable.movingNavMeshAgent = myAgent;
-					Interactable.hasInteracted = true;
-				}
-
 				if (player) {
 					player.HandleInteraction(targetAgent);
 				}
 
 				if (enemy) {
-					enemy.HandleInteraction(targetAgent);
+					if (!enemy.isAttacking) {
+						// launch interaction and stop movements
+						ResetAgentValues();
+						isMovingAgent = false;
+						Interactable.movingNavMeshAgent = myAgent;
+						Interactable.hasInteracted = true;
+						enemy.HandleInteraction(targetAgent);
+					}
+
+					if (isMovingAgent)
+						enemy.StopInteraction(targetAgent);
 				}
 			}
 		}
+		//else {
+		//	if (enemy)
+		//		enemy.StopInteraction(targetAgent);
+		//}
 	}
 
 	public void MoveToInteract(GameObject target)
@@ -67,12 +71,12 @@ public class MovingAgentController : MonoBehaviour
 		float additionalStoppingDistance;
 
 		switch (interactableType) {
-			case Interactables.GroundEnemy:
 			case Interactables.Player:
 				additionalStoppingDistance = 0;
 				break;
+			case Interactables.GroundEnemy:
 			case Interactables.FlyingEnemy:
-				additionalStoppingDistance = 0.5f;
+				additionalStoppingDistance = enemy.attackRadius - 1;
 				break;
 			case Interactables.Object:
 				additionalStoppingDistance = 0.5f;
@@ -85,7 +89,7 @@ public class MovingAgentController : MonoBehaviour
 		}
 
 		// return updated radius depending on target type ?
-		return myAgent.stoppingDistance = movingAgentRadius * 3 + myAgent.radius * 3 + additionalStoppingDistance;
+		return myAgent.stoppingDistance = movingAgentRadius + myAgent.radius + additionalStoppingDistance;
 	}
 
 	public void ResetAgentValues()
