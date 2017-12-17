@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.AI;
 using Utility;
 
@@ -21,8 +22,7 @@ public class EnemyController : MonoBehaviour, IDamageable
 	[SerializeField] GameObject ProjectileSpawner;
 	[SerializeField] float damagePerShot = 5f;
 	[SerializeField] float secondsPerShot = 1f;
-	[HideInInspector]
-	public bool isAttacking = false;
+	bool isAttacking = false;
 	bool isMovingAgent = false;
 
 	[Tooltip("Max aggro distance within view angle")]
@@ -35,6 +35,8 @@ public class EnemyController : MonoBehaviour, IDamageable
 	private FloatVariable HP;
 	private FloatVariable StartingHP;
 	private FloatVariable MinHP;
+	FloatingBarController fbc;
+	bool isDead = false;
 
 	// TODO chasing target
 	private bool isChasingTarget = false;
@@ -69,7 +71,7 @@ public class EnemyController : MonoBehaviour, IDamageable
 	// Use this for initialization
 	void Start()
 	{
-		FloatingBarController fbc = GetComponentInChildren<FloatingBarController>();
+		fbc = GetComponentInChildren<FloatingBarController>();
 		HP = fbc.resource;
 		StartingHP = fbc.Max;
 		MinHP = fbc.Min;
@@ -85,37 +87,39 @@ public class EnemyController : MonoBehaviour, IDamageable
 	// Update is called once per frame
 	void Update()
 	{
-		// Run animation blend tree
-		anim.SetFloat("EnemyVelocity", Mathf.Abs(agent.velocity.x));
-		CurrentTarget = myEye.Target;
+		if (!isDead) {
+			// Run animation blend tree
+			anim.SetFloat("EnemyVelocity", Mathf.Abs(agent.velocity.x));
+			CurrentTarget = myEye.Target;
 
-		if (CurrentTarget) {
-			float distanceToTarget = Vector3.Distance(agent.transform.position, CurrentTarget.transform.position);
+			if (CurrentTarget) {
+				float distanceToTarget = Vector3.Distance(agent.transform.position, CurrentTarget.transform.position);
 
-			if (myEye.CanSeeTarget() && isAttacking && distanceToTarget <= chaseRange) {
-				gameObject.transform.LookAt(CurrentTarget.transform);
-			} else if (myEye.CanSeeTarget()) {
-				// if I see target, I begin chasing and move
-				isChasingTarget = true;
-				MoveToInteract(CurrentTarget);
-			} else if (!myEye.CanSeeTarget()) {
-				if (isAttacking)
-					StopInteraction(CurrentTarget);
-				// TODO and go back ?
+				if (isAttacking && distanceToTarget <= chaseRange) {
+					gameObject.transform.LookAt(CurrentTarget.transform);
+				} else if (myEye.CanSeeTarget()) {
+					// if I see target, I begin chasing and move
+					isChasingTarget = true;
+					MoveToInteract(CurrentTarget);
+				} else if (!myEye.CanSeeTarget()) {
+					if (isAttacking)
+						StopInteraction(CurrentTarget);
+					// TODO and go back ?
+				}
 			}
-		}
 
-		if (isMovingAgent && !agent.pathPending) {
-			// get the true remaining distance
-			float remainingDistance = agent.remainingDistance > 0 ? Mathf.Abs(agent.remainingDistance - agent.radius) : 0;
+			if (isMovingAgent && !agent.pathPending) {
+				// get the true remaining distance
+				float remainingDistance = agent.remainingDistance > 0 ? Mathf.Abs(agent.remainingDistance - agent.radius) : 0;
 
-			if (remainingDistance <= GetStoppingDistance()) {
-				if (!isAttacking) {
-					// launch interaction and stop movements
-					ResetAgentValues();
-					Interactable.movingNavMeshAgent = agent;
-					Interactable.hasInteracted = true;
-					HandleInteraction(CurrentTarget);
+				if (remainingDistance <= GetStoppingDistance()) {
+					if (!isAttacking) {
+						// launch interaction and stop movements
+						ResetAgentValues();
+						Interactable.movingNavMeshAgent = agent;
+						Interactable.hasInteracted = true;
+						HandleInteraction(CurrentTarget);
+					}
 				}
 			}
 		}
@@ -174,8 +178,11 @@ public class EnemyController : MonoBehaviour, IDamageable
 	{
 		if (target.name == "Player" && !isAttacking) {
 			isAttacking = true;
-
-			if (attackType == AttackTypeController.AttackType.ranged)
+			
+			if (attackType == AttackTypeController.AttackType.ranged && CastSpawner != null) {
+				InvokeRepeating("LaunchProjectile", secondsPerShot, secondsPerShot);
+				anim.SetBool("IsAttacking", true);
+			} else if (attackType == AttackTypeController.AttackType.ranged)
 				InvokeRepeating("LaunchProjectile", secondsPerShot, secondsPerShot);
 			else if (attackType == AttackTypeController.AttackType.closed)
 				anim.SetBool("IsAttacking", true);
@@ -204,9 +211,35 @@ public class EnemyController : MonoBehaviour, IDamageable
 
 	public void TakeDamage(float amount)
 	{
-		float newValue = HP.Value - amount;
+		if (!isAttacking)
+			HandleInteraction(CurrentTarget);
+
 		HP.ApplyChange(-amount);
+		if (HP.Value <= 0) {
+			Die();
+		}
 	}
+
+	void Die()
+	{
+		isDead = true;
+		Player.targetIsDead = true;
+		StopInteraction(CurrentTarget);
+		anim.SetBool("IsDead", true);
+		Destroy(fbc.gameObject);
+	}
+
+	public void CallDestroy()
+	{
+		StartCoroutine("EraseMe");
+	}
+
+	IEnumerator EraseMe ()
+	{
+		yield return new WaitForSeconds(5f);
+
+		Destroy(gameObject);
+	} 
 
 	public float GetStoppingDistance()
 	{

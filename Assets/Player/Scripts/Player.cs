@@ -7,42 +7,40 @@ public class Player : MonoBehaviour, IDamageable {
 
 	[SerializeField] FieldOfViewController myEye;
 
-	public bool ResetHP;
-	public FloatVariable RegenRate;
-
 	[HideInInspector]
 	public bool isAttacking = false;
 
-	private FloatVariable HP;
-	private FloatVariable StartingHP;
-	private FloatVariable MinHP;
+	//=============================
+	// HEALTH
+	//=============================
+	[SerializeField] bool ResetHP;
 
-	private bool regenerating = false;
-	private Animator anim;
+	FloatVariable HP;
+	FloatVariable StartingHP;
+	FloatVariable MinHP;
+
+	Animator anim;
 	NavMeshAgent playerNavMeshAgent;
-	private GameObject myTarget;
-	private GameObject enemyTarget;
-	private float attackRadius = 3;
+	GameObject myTarget;
+	GameObject enemyTarget;
+	[HideInInspector]
+	public static bool targetIsDead = false;
 
 	//=============================
 	// MOVEMENTS
 	//=============================
-	public Interactables interactableType;
-	
-	private float defaultStoppingRadius;
-	private bool isMovingAgent = false;
+	[SerializeField] Interactables interactableType;
 
-	// I AM THE MOVING AGENT !!!!
-	private GameObject targetAgent;
-	private Player player;
-	private EnemyController enemy;
+	float defaultStoppingRadius;
+	float attackRadius = 3;
+	bool isMovingAgent = false;
 
 	//=============================
 	// INTERACTIONS
 	//=============================
 	RaycastHit interactionHit;
+	[SerializeField] float damageAmount = 25f;
 
-	
 	void Start () {
 		FloatingBarController fbc = GetComponentInChildren<FloatingBarController>();
 		HP = fbc.resource;
@@ -55,25 +53,26 @@ public class Player : MonoBehaviour, IDamageable {
 		anim = GetComponent<Animator>();
 		playerNavMeshAgent = GetComponent<NavMeshAgent>();
 		defaultStoppingRadius = playerNavMeshAgent.radius;
-
-		//=============================
-		// INTERACTIONS
-		//=============================
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		if (targetIsDead) {
+			StopInteraction(enemyTarget);
+			ResetAgentValues();
+		}
+		//=============================
+		// INTERACTIONS - listen click
+		//=============================
 		if (Input.GetMouseButtonDown(0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) {
 			GetInteraction();
 		}
+
+		//=============================
+		// MOVEMENTS
+		//=============================
 		anim.SetFloat("PlayerVelocityX", Mathf.Abs(playerNavMeshAgent.velocity.x));
-
-		if (HP.Value < StartingHP.Value && !regenerating) {
-			regenerating = true;
-			StartCoroutine("RegenHP");
-		}
-
 		myEye.Target = myTarget;
 
 		if (myTarget != null) {
@@ -95,20 +94,20 @@ public class Player : MonoBehaviour, IDamageable {
 			float remainingDistance = playerNavMeshAgent.remainingDistance > 0 ? Mathf.Abs(playerNavMeshAgent.remainingDistance - playerNavMeshAgent.radius) : 0;
 
 			if (remainingDistance <= GetStoppingDistance()) {
-				if (!isAttacking && targetAgent != null) {
+				if (!isAttacking && myTarget != null) {
 					// launch interaction and stop movements
 					ResetAgentValues();
 					Interactable.movingNavMeshAgent = playerNavMeshAgent;
 					Interactable.hasInteracted = true;
-					HandleInteraction(targetAgent);
+					HandleInteraction(myTarget);
 				}
 			} else {
-				if (targetAgent != null)
-					playerNavMeshAgent.destination = targetAgent.transform.position;
+				if (myTarget != null)
+					playerNavMeshAgent.destination = myTarget.transform.position;
 			}
 
 			if (isMovingAgent) {
-				StopInteraction(targetAgent);
+				StopInteraction(myTarget);
 			}
 		}
 	}
@@ -118,6 +117,9 @@ public class Player : MonoBehaviour, IDamageable {
 	//=============================
 	void GetInteraction()
 	{
+		if (targetIsDead)
+			targetIsDead = false;
+
 		Ray interactionRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
 		if (Physics.Raycast(interactionRay, out interactionHit)) {
@@ -134,18 +136,17 @@ public class Player : MonoBehaviour, IDamageable {
 	{
 		isMovingAgent = true;
 		playerNavMeshAgent.destination = target.transform.position;
-		targetAgent = target;
+		myTarget = target;
 	}
 	public void MoveToInteract(Vector3 interactionPoint)
 	{
 		isMovingAgent = true;
 		playerNavMeshAgent.destination = interactionPoint;
-		targetAgent = null;
+		myTarget = null;
 	}
 
 	public void HandleInteraction(GameObject target)
 	{
-		Debug.Log("handle interact");
 		myTarget = target;
 		myEye.Target = myTarget;
 
@@ -163,27 +164,27 @@ public class Player : MonoBehaviour, IDamageable {
 		anim.SetBool("IsAttacking", isAttacking);
 	}
 
-	IEnumerator RegenHP ()
+	void DealDamage()
 	{
-		while (HP.Value < StartingHP.Value) {
-			yield return new WaitForSeconds(1f);
+		Component damageableComponent = myTarget.GetComponent(typeof(IDamageable));
 
-			if (HP.Value >= StartingHP.Value)
-				regenerating = false;
-			else
-				HP.ApplyChange(RegenRate.Value);
+		if (damageableComponent) {
+			(damageableComponent as IDamageable).TakeDamage(damageAmount);
 		}
 	}
 
+	//=============================
+	// HEALTH - Damages
+	//=============================
 	public void TakeDamage(float amount)
 	{
-		float newValue = HP.Value - amount;
 		HP.ApplyChange(-amount);
 	}
 
 	//=====================
 	// MOVEMENT
 	//=====================
+	// TODO Extract this !
 	public float GetStoppingDistance()
 	{
 		float additionalStoppingDistance;
@@ -194,7 +195,7 @@ public class Player : MonoBehaviour, IDamageable {
 				break;
 			case Interactables.GroundEnemy:
 			case Interactables.FlyingEnemy:
-				additionalStoppingDistance = enemy.attackRadius;
+				additionalStoppingDistance = 0;
 				break;
 			case Interactables.Object:
 				additionalStoppingDistance = 0.5f;
@@ -207,7 +208,10 @@ public class Player : MonoBehaviour, IDamageable {
 		}
 
 		// return updated radius depending on target type ?
-		return playerNavMeshAgent.stoppingDistance = playerNavMeshAgent.radius + additionalStoppingDistance;
+		if (myTarget != null)
+			return playerNavMeshAgent.stoppingDistance = playerNavMeshAgent.radius + myTarget.GetComponent<NavMeshAgent>().radius + additionalStoppingDistance;
+		else
+			return 0;
 	}
 
 	public void ResetAgentValues()

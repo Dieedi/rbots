@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: RegenRate
   m_EditorClassIdentifier: 
   DeveloperDescription: Amount of HP regenerating each seconds
-  Value: 0.1
+  Value: 5

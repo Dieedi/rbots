@@ -9,9 +9,9 @@ public class FloatingBarController : MonoBehaviour {
 	public FloatVariable Min;
 	public FloatVariable Max;
 
-	private Camera mainCam;
-	private Image damageFiller;
-	private FloatingBarVariableController fbv_controller;
+	Camera mainCam;
+	Image damageFiller;
+	FloatingBarVariableController fbv_controller;
 
 	private void Start()
 	{

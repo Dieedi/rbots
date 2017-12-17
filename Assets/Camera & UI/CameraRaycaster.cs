@@ -10,17 +10,11 @@ public class CameraRaycaster : MonoBehaviour
 
 	[SerializeField] float maxRaycastDepth = 100f;
 	public int topPriorityLayerLastFrame = -1; // So get ? from start with Default layer terrain
-	Camera viewCamera;
 
 	// Setup GameEvents for broadcasting layer changes to other classes
 	public GameEvent cursorLayerChange;
 	public GameEvent clickPriority;
-
-	void Start() // TODO Awake?
-	{
-		viewCamera = Camera.main;
-	}
-
+	
 	void Update()
 	{
 		// Check if pointer is over an interactable UI element

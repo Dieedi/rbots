@@ -75,8 +75,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DisplayName: Pixels
   source: 4
-  m_RenderSize: 0
-  m_RenderAspect: 3
+  m_RenderSize: 720
+  m_RenderAspect: 0
   m_CameraTag: 
   m_FlipVertical: 0
   m_ForceEvenSize: 1
