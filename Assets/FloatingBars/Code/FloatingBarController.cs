@@ -1,32 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class FloatingBarController : MonoBehaviour {
-
-	public FloatVariable resource;
-	public FloatVariable Min;
-	public FloatVariable Max;
-
-	Camera mainCam;
-	Image damageFiller;
-	FloatingBarVariableController fbv_controller;
-
-	private void Start()
+namespace FloatingBars
+{
+	public class FloatingBarController : MonoBehaviour
 	{
-		//fbv_controller = GetComponentInParent<FloatingBarVariableController>();
-		resource = Instantiate(resource);
-		mainCam = Camera.main;
-		damageFiller = GetComponentsInChildren<Image>()[1]; // the foreground bar
-	}
 
-	// Update is called once per frame
-	void Update () {
-		// Always view the bar
-		transform.LookAt(mainCam.transform);
+		public FloatVariable resource;
+		public FloatVariable Min;
+		public FloatVariable Max;
 
-		// I don't remind where I found that but it works ...
-		damageFiller.fillAmount = Mathf.Clamp01(Mathf.InverseLerp(Min.Value, Max.Value, resource.Value));
+		Camera mainCam;
+		Image damageFiller;
+		FloatingBarVariableController fbv_controller;
+
+		private void Start()
+		{
+			//fbv_controller = GetComponentInParent<FloatingBarVariableController>();
+			resource = Instantiate(resource);
+			mainCam = Camera.main;
+			damageFiller = GetComponentsInChildren<Image>()[1]; // the foreground bar
+		}
+
+		// Update is called once per frame
+		void Update()
+		{
+			// Always view the bar
+			transform.LookAt(mainCam.transform);
+
+			// I don't remind where I found that but it works ...
+			damageFiller.fillAmount = Mathf.Clamp01(Mathf.InverseLerp(Min.Value, Max.Value, resource.Value));
+		}
 	}
 }

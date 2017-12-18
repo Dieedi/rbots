@@ -1,38 +1,40 @@
 ﻿using UnityEngine;
-using Utility;
 
-public class CursorController : MonoBehaviour
+namespace Rbots.CameraUI
 {
-	[SerializeField] Texture2D walkCursor = null;
-	[SerializeField] Texture2D combatCursor = null;
-	[SerializeField] Texture2D otherCursor = null;
-	[SerializeField] Vector2 cursorHotspot = new Vector2(0, 0);
-
-	[SerializeField] const int walkableLayerNumber = 10;
-	[SerializeField] const int enemyLayerNumber = 9;
-
-	private CameraRaycaster raycaster;
-
-	// Use this for initialization
-	void Start()
+	public class CursorController : MonoBehaviour
 	{
-		raycaster = GetComponent<CameraRaycaster>();
-	}
+		[SerializeField] Texture2D walkCursor = null;
+		[SerializeField] Texture2D combatCursor = null;
+		[SerializeField] Texture2D otherCursor = null;
+		[SerializeField] Vector2 cursorHotspot = new Vector2(0, 0);
 
-	// Called by GameEvent
-	public void OnLayerChange()
-	{
-		int layer = GetComponent<CameraRaycaster>().topPriorityLayerLastFrame;
-		switch (layer) {
-			case enemyLayerNumber:
-				Cursor.SetCursor(combatCursor, cursorHotspot, CursorMode.Auto);
-				break;
-			case walkableLayerNumber:
-				Cursor.SetCursor(null, cursorHotspot, CursorMode.Auto);
-				break;
-			default:
-				//Cursor.SetCursor(otherCursor, cursorHotspot, CursorMode.Auto);
-				return;
+		[SerializeField] const int walkableLayerNumber = 10;
+		[SerializeField] const int enemyLayerNumber = 9;
+
+		private CameraRaycaster raycaster;
+
+		// Use this for initialization
+		void Start()
+		{
+			raycaster = GetComponent<CameraRaycaster>();
+		}
+
+		// Called by GameEvent
+		public void OnLayerChange()
+		{
+			int layer = GetComponent<CameraRaycaster>().topPriorityLayerLastFrame;
+			switch (layer) {
+				case enemyLayerNumber:
+					Cursor.SetCursor(combatCursor, cursorHotspot, CursorMode.Auto);
+					break;
+				case walkableLayerNumber:
+					Cursor.SetCursor(null, cursorHotspot, CursorMode.Auto);
+					break;
+				default:
+					//Cursor.SetCursor(otherCursor, cursorHotspot, CursorMode.Auto);
+					return;
+			}
 		}
 	}
 }

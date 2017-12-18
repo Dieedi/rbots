@@ -2,286 +2,294 @@
 using UnityEngine;
 using UnityEngine.AI;
 using Utility;
+using FloatingBars;
+using Rbots.Core;
 
-[RequireComponent(typeof(Animator))]
-public class EnemyController : MonoBehaviour, IDamageable
+namespace Rbots.Characters
 {
-	public Interactables interactableType;
-
-	[SerializeField] FieldOfViewController myEye;
-
-	[SerializeField] bool ResetHP;
-	[SerializeField] FloatVariable RegenRate;
-
-	[SerializeField] AttackTypeController.AttackType attackType; // determine attack distance (H2H / ranged)
-	[SerializeField] GameObject LightningCast;
-	[SerializeField] GameObject CastSpawner;
-	GameObject CurrentCast;
-
-	[SerializeField] GameObject Projectile;
-	[SerializeField] GameObject ProjectileSpawner;
-	[SerializeField] float damagePerShot = 5f;
-	[SerializeField] float secondsPerShot = 1f;
-	bool isAttacking = false;
-	bool isMovingAgent = false;
-
-	[Tooltip("Max aggro distance within view angle")]
-	[SerializeField] float moveRadius = 3;
-	[Tooltip("Determine the chasing range depending on attackRadius")]
-	[SerializeField] float attackRadiusMultiplicator = 2;
-	[HideInInspector]
-	public float chaseRange;
-
-	private FloatVariable HP;
-	private FloatVariable StartingHP;
-	private FloatVariable MinHP;
-	FloatingBarController fbc;
-	bool isDead = false;
-
-	// TODO chasing target
-	private bool isChasingTarget = false;
-	private GameObject CurrentTarget;
-	private Animator anim;
-	private NavMeshAgent agent;
-	private float defaultStoppingRadius;
-
-	// Utilities
-	private AttackTypeController atc = new AttackTypeController();
-	// private GetAgentCenter gac = new GetAgentCenter();
-
-	[HideInInspector]
-	public float attackRadius { 
-		get {
-			switch (attackType) {
-				case AttackTypeController.AttackType.closed:
-					return atc.CloseRadius;
-				case AttackTypeController.AttackType.ranged:
-					return atc.RangeRadius;
-				default:
-					return atc.CloseRadius;
-			}
-		}
-	}
-
-	private void Awake()
+	[RequireComponent(typeof(Animator))]
+	public class EnemyController : MonoBehaviour, IDamageable
 	{
-		chaseRange = attackRadius * attackRadiusMultiplicator;
-	}
+		public Interactables interactableType;
 
-	// Use this for initialization
-	void Start()
-	{
-		fbc = GetComponentInChildren<FloatingBarController>();
-		HP = fbc.resource;
-		StartingHP = fbc.Max;
-		MinHP = fbc.Min;
+		[SerializeField] FieldOfViewController myEye;
 
-		if (ResetHP)
-			HP.SetValue(StartingHP);
+		[SerializeField] bool ResetHP;
+		[SerializeField] FloatVariable RegenRate;
 
-		anim = GetComponent<Animator>();
-		agent = GetComponent<NavMeshAgent>();
-		defaultStoppingRadius = agent.radius;
-	}
+		[SerializeField] AttackTypeController.AttackType attackType; // determine attack distance (H2H / ranged)
+		[SerializeField] GameObject LightningCast;
+		[SerializeField] GameObject CastSpawner;
+		GameObject CurrentCast;
 
-	// Update is called once per frame
-	void Update()
-	{
-		if (!isDead) {
-			// Run animation blend tree
-			anim.SetFloat("EnemyVelocity", Mathf.Abs(agent.velocity.x));
-			CurrentTarget = myEye.Target;
+		[SerializeField] GameObject Projectile;
+		[SerializeField] GameObject ProjectileSpawner;
+		[SerializeField] float damagePerShot = 5f;
+		[SerializeField] float secondsPerShot = 1f;
+		bool isAttacking = false;
+		bool isMovingAgent = false;
 
-			if (CurrentTarget) {
-				float distanceToTarget = Vector3.Distance(agent.transform.position, CurrentTarget.transform.position);
+		[Tooltip("Max aggro distance within view angle")]
+		[SerializeField]
+		float moveRadius = 3;
+		[Tooltip("Determine the chasing range depending on attackRadius")]
+		[SerializeField]
+		float attackRadiusMultiplicator = 2;
+		[HideInInspector]
+		public float chaseRange;
 
-				if (isAttacking && distanceToTarget <= chaseRange) {
-					gameObject.transform.LookAt(CurrentTarget.transform);
-				} else if (myEye.CanSeeTarget()) {
-					// if I see target, I begin chasing and move
-					isChasingTarget = true;
-					MoveToInteract(CurrentTarget);
-				} else if (!myEye.CanSeeTarget()) {
-					if (isAttacking)
-						StopInteraction(CurrentTarget);
-					// TODO and go back ?
+		private FloatVariable HP;
+		private FloatVariable StartingHP;
+		private FloatVariable MinHP;
+		FloatingBarController fbc;
+		bool isDead = false;
+
+		// TODO chasing target
+		private bool isChasingTarget = false;
+		private GameObject CurrentTarget;
+		private Animator anim;
+		private NavMeshAgent agent;
+		private float defaultStoppingRadius;
+
+		// Utilities
+		private AttackTypeController atc = new AttackTypeController();
+		// private GetAgentCenter gac = new GetAgentCenter();
+
+		[HideInInspector]
+		public float attackRadius
+		{
+			get {
+				switch (attackType) {
+					case AttackTypeController.AttackType.closed:
+						return atc.CloseRadius;
+					case AttackTypeController.AttackType.ranged:
+						return atc.RangeRadius;
+					default:
+						return atc.CloseRadius;
 				}
 			}
+		}
 
-			if (isMovingAgent && !agent.pathPending) {
-				// get the true remaining distance
-				float remainingDistance = agent.remainingDistance > 0 ? Mathf.Abs(agent.remainingDistance - agent.radius) : 0;
+		private void Awake()
+		{
+			chaseRange = attackRadius * attackRadiusMultiplicator;
+		}
 
-				if (remainingDistance <= GetStoppingDistance()) {
-					if (!isAttacking) {
-						// launch interaction and stop movements
-						ResetAgentValues();
-						Interactable.movingNavMeshAgent = agent;
-						Interactable.hasInteracted = true;
-						HandleInteraction(CurrentTarget);
+		// Use this for initialization
+		void Start()
+		{
+			fbc = GetComponentInChildren<FloatingBarController>();
+			HP = fbc.resource;
+			StartingHP = fbc.Max;
+			MinHP = fbc.Min;
+
+			if (ResetHP)
+				HP.SetValue(StartingHP);
+
+			anim = GetComponent<Animator>();
+			agent = GetComponent<NavMeshAgent>();
+			defaultStoppingRadius = agent.radius;
+		}
+
+		// Update is called once per frame
+		void Update()
+		{
+			if (!isDead) {
+				// Run animation blend tree
+				anim.SetFloat("EnemyVelocity", Mathf.Abs(agent.velocity.x));
+				CurrentTarget = myEye.Target;
+
+				if (CurrentTarget) {
+					float distanceToTarget = Vector3.Distance(agent.transform.position, CurrentTarget.transform.position);
+
+					if (isAttacking && distanceToTarget <= chaseRange) {
+						gameObject.transform.LookAt(CurrentTarget.transform);
+					} else if (myEye.CanSeeTarget()) {
+						// if I see target, I begin chasing and move
+						isChasingTarget = true;
+						MoveToInteract(CurrentTarget);
+					} else if (!myEye.CanSeeTarget()) {
+						if (isAttacking)
+							StopInteraction(CurrentTarget);
+						// TODO and go back ?
+					}
+				}
+
+				if (isMovingAgent && !agent.pathPending) {
+					// get the true remaining distance
+					float remainingDistance = agent.remainingDistance > 0 ? Mathf.Abs(agent.remainingDistance - agent.radius) : 0;
+
+					if (remainingDistance <= GetStoppingDistance()) {
+						if (!isAttacking) {
+							// launch interaction and stop movements
+							ResetAgentValues();
+							Interactable.movingNavMeshAgent = agent;
+							Interactable.hasInteracted = true;
+							HandleInteraction(CurrentTarget);
+						}
 					}
 				}
 			}
 		}
-	}
 
-	//=================
-	//  MOVEMENT
-	//=================
-	public void MoveToInteract(GameObject target)
-	{
-		isMovingAgent = true;
-		agent.destination = target.transform.position;
-		CurrentTarget = target;
-	}
-	public void MoveToInteract(Vector3 interactionPoint)
-	{
-		isMovingAgent = true;
-		agent.destination = interactionPoint;
-		CurrentTarget = null;
-	}
-
-	// Called by animation
-	public void CastParticle()
-	{
-		isAttacking = true;
-		CurrentCast = Instantiate(
-			LightningCast,
-			CastSpawner.transform
-		);
-	}
-
-	public void StopCasting()
-	{
-		if (CurrentCast)
-			Destroy(CurrentCast);
-	}
-
-	private void LaunchProjectile()
-	{
-		GameObject newProjectile = Instantiate(
-			Projectile,
-			ProjectileSpawner.transform.position,
-			Quaternion.identity,
-			ProjectileSpawner.transform
-		);
-		Projectile c_Projectile = newProjectile.GetComponent<Projectile>();
-		c_Projectile.damageAmount = damagePerShot;
-
-		//Vector3 targetTopPos = gac[CurrentTarget];
-		Vector3 direction = (CurrentTarget.transform.position - ProjectileSpawner.transform.position) + Vector3.up;
-		float projectileSpeed = c_Projectile.projectileSpeed;
-		newProjectile.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;
-	}
-
-	public void HandleInteraction(GameObject target)
-	{
-		if (target.name == "Player" && !isAttacking) {
-			isAttacking = true;
-			
-			if (attackType == AttackTypeController.AttackType.ranged && CastSpawner != null) {
-				InvokeRepeating("LaunchProjectile", secondsPerShot, secondsPerShot);
-				anim.SetBool("IsAttacking", true);
-			} else if (attackType == AttackTypeController.AttackType.ranged)
-				InvokeRepeating("LaunchProjectile", secondsPerShot, secondsPerShot);
-			else if (attackType == AttackTypeController.AttackType.closed)
-				anim.SetBool("IsAttacking", true);
+		//=================
+		//  MOVEMENT
+		//=================
+		public void MoveToInteract(GameObject target)
+		{
+			isMovingAgent = true;
+			agent.destination = target.transform.position;
+			CurrentTarget = target;
 		}
-	}
+		public void MoveToInteract(Vector3 interactionPoint)
+		{
+			isMovingAgent = true;
+			agent.destination = interactionPoint;
+			CurrentTarget = null;
+		}
 
-	public void StopInteraction(GameObject target)
-	{
-		if (target.name == "Player") {
-			isAttacking = false;
+		// Called by animation
+		public void CastParticle()
+		{
+			isAttacking = true;
+			CurrentCast = Instantiate(
+				LightningCast,
+				CastSpawner.transform
+			);
+		}
 
-			if (attackType == AttackTypeController.AttackType.ranged)
-				CancelInvoke();
-			else if (attackType == AttackTypeController.AttackType.closed) {
-				anim.SetBool("IsAttacking", false);
-				StopCasting();
+		public void StopCasting()
+		{
+			if (CurrentCast)
+				Destroy(CurrentCast);
+		}
+
+		private void LaunchProjectile()
+		{
+			GameObject newProjectile = Instantiate(
+				Projectile,
+				ProjectileSpawner.transform.position,
+				Quaternion.identity,
+				ProjectileSpawner.transform
+			);
+			Projectile c_Projectile = newProjectile.GetComponent<Projectile>();
+			c_Projectile.damageAmount = damagePerShot;
+
+			//Vector3 targetTopPos = gac[CurrentTarget];
+			Vector3 direction = (CurrentTarget.transform.position - ProjectileSpawner.transform.position) + Vector3.up;
+			float projectileSpeed = c_Projectile.projectileSpeed;
+			newProjectile.GetComponent<Rigidbody>().velocity = direction * projectileSpeed;
+		}
+
+		public void HandleInteraction(GameObject target)
+		{
+			if (target.name == "Player" && !isAttacking) {
+				isAttacking = true;
+
+				if (attackType == AttackTypeController.AttackType.ranged && CastSpawner != null) {
+					InvokeRepeating("LaunchProjectile", secondsPerShot, secondsPerShot);
+					anim.SetBool("IsAttacking", true);
+				} else if (attackType == AttackTypeController.AttackType.ranged)
+					InvokeRepeating("LaunchProjectile", secondsPerShot, secondsPerShot);
+				else if (attackType == AttackTypeController.AttackType.closed)
+					anim.SetBool("IsAttacking", true);
 			}
 		}
-	}
 
-	public void IsAttackedBy(GameObject target)
-	{
-		transform.LookAt(target.transform);
-		anim.SetBool("IsAttacking", true);
-	}
+		public void StopInteraction(GameObject target)
+		{
+			if (target.name == "Player") {
+				isAttacking = false;
 
-	public void TakeDamage(float amount)
-	{
-		if (!isAttacking)
-			HandleInteraction(CurrentTarget);
-
-		HP.ApplyChange(-amount);
-		if (HP.Value <= 0) {
-			Die();
-		}
-	}
-
-	void Die()
-	{
-		isDead = true;
-		Player.targetIsDead = true;
-		StopInteraction(CurrentTarget);
-		anim.SetBool("IsDead", true);
-		Destroy(fbc.gameObject);
-	}
-
-	public void CallDestroy()
-	{
-		StartCoroutine("EraseMe");
-	}
-
-	IEnumerator EraseMe ()
-	{
-		yield return new WaitForSeconds(5f);
-
-		Destroy(gameObject);
-	} 
-
-	public float GetStoppingDistance()
-	{
-		float additionalStoppingDistance;
-
-		switch (interactableType) {
-			case Interactables.Player:
-				additionalStoppingDistance = 0;
-				break;
-			case Interactables.GroundEnemy:
-				additionalStoppingDistance = attackRadius;
-				break;
-			case Interactables.FlyingEnemy:
-				additionalStoppingDistance = attackRadius - 1;
-				break;
-			case Interactables.Object:
-				additionalStoppingDistance = 0.5f;
-				break;
-			case Interactables.NPC:
-				additionalStoppingDistance = 0.5f;
-				break;
-			default:
-				return 0;
+				if (attackType == AttackTypeController.AttackType.ranged)
+					CancelInvoke();
+				else if (attackType == AttackTypeController.AttackType.closed) {
+					anim.SetBool("IsAttacking", false);
+					StopCasting();
+				}
+			}
 		}
 
-		// return updated radius depending on target type ?
-		return agent.stoppingDistance = agent.radius + additionalStoppingDistance;
-	}
+		public void IsAttackedBy(GameObject target)
+		{
+			transform.LookAt(target.transform);
+			anim.SetBool("IsAttacking", true);
+		}
 
-	public void ResetAgentValues()
-	{
-		// Reset path stops the movement
-		isMovingAgent = false;
-		agent.ResetPath();
-		agent.stoppingDistance = defaultStoppingRadius;
-	}
+		public void TakeDamage(float amount)
+		{
+			if (!isAttacking)
+				HandleInteraction(CurrentTarget);
 
-	private void OnDrawGizmos()
-	{
-		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere(transform.position, attackRadius);
-		Gizmos.color = Color.blue;
-		Gizmos.DrawWireSphere(transform.position, chaseRange);
+			HP.ApplyChange(-amount);
+			if (HP.Value <= 0) {
+				Die();
+			}
+		}
+
+		void Die()
+		{
+			isDead = true;
+			Player.targetIsDead = true;
+			StopInteraction(CurrentTarget);
+			anim.SetBool("IsDead", true);
+			Destroy(fbc.gameObject);
+		}
+
+		public void CallDestroy()
+		{
+			StartCoroutine("EraseMe");
+		}
+
+		IEnumerator EraseMe()
+		{
+			yield return new WaitForSeconds(5f);
+
+			Destroy(gameObject);
+		}
+
+		public float GetStoppingDistance()
+		{
+			float additionalStoppingDistance;
+
+			switch (interactableType) {
+				case Interactables.Player:
+					additionalStoppingDistance = 0;
+					break;
+				case Interactables.GroundEnemy:
+					additionalStoppingDistance = attackRadius;
+					break;
+				case Interactables.FlyingEnemy:
+					additionalStoppingDistance = attackRadius - 1;
+					break;
+				case Interactables.Object:
+					additionalStoppingDistance = 0.5f;
+					break;
+				case Interactables.NPC:
+					additionalStoppingDistance = 0.5f;
+					break;
+				default:
+					return 0;
+			}
+
+			// return updated radius depending on target type ?
+			return agent.stoppingDistance = agent.radius + additionalStoppingDistance;
+		}
+
+		public void ResetAgentValues()
+		{
+			// Reset path stops the movement
+			isMovingAgent = false;
+			agent.ResetPath();
+			agent.stoppingDistance = defaultStoppingRadius;
+		}
+
+		private void OnDrawGizmos()
+		{
+			Gizmos.color = Color.red;
+			Gizmos.DrawWireSphere(transform.position, attackRadius);
+			Gizmos.color = Color.blue;
+			Gizmos.DrawWireSphere(transform.position, chaseRange);
+		}
 	}
 }

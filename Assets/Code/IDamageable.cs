@@ -1,4 +1,7 @@
-﻿public interface IDamageable
+﻿namespace Rbots.Core
 {
-	void TakeDamage(float amount);
+	public interface IDamageable
+	{
+		void TakeDamage(float amount);
+	}
 }

@@ -35,16 +35,4 @@ namespace Utility
 
 
 	};
-	
-	//public class GetAgentCenter
-	//{
-	//	public Vector3 this[GameObject agent] {
-	//		get {
-	//			NavMeshAgent navMeshAgent = agent.GetComponent<NavMeshAgent>();
-	//			Vector3 topPos = (agent.gameObject.transform.position + new Vector3(0f, navMeshAgent.height, 0f)).normalized;
-	//			Debug.Log(topPos + "agent.gameObject.transform.position");
-	//			return topPos;
-	//		}
-	//	}
-	//}
 }
