@@ -11,15 +11,7 @@ namespace Rbots.CameraUI
 
 		[SerializeField] const int walkableLayerNumber = 10;
 		[SerializeField] const int enemyLayerNumber = 9;
-
-		private CameraRaycaster raycaster;
-
-		// Use this for initialization
-		void Start()
-		{
-			raycaster = GetComponent<CameraRaycaster>();
-		}
-
+		
 		// Called by GameEvent
 		public void OnLayerChange()
 		{

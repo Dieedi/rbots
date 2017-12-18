@@ -24,7 +24,6 @@ public class StandController : MonoBehaviour {
 		fbc = Player.GetComponentInChildren<FloatingBarController>();
 		HP = fbc.resource;
 		StartingHP = fbc.Max;
-		MinHP = fbc.Min;
 
 		//=============================
 		// HEALTH - Regeneration Start

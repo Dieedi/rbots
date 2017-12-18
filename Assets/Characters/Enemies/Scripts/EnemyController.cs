@@ -29,9 +29,6 @@ namespace Rbots.Characters
 		bool isAttacking = false;
 		bool isMovingAgent = false;
 
-		[Tooltip("Max aggro distance within view angle")]
-		[SerializeField]
-		float moveRadius = 3;
 		[Tooltip("Determine the chasing range depending on attackRadius")]
 		[SerializeField]
 		float attackRadiusMultiplicator = 2;
@@ -43,9 +40,7 @@ namespace Rbots.Characters
 		private FloatVariable MinHP;
 		FloatingBarController fbc;
 		bool isDead = false;
-
-		// TODO chasing target
-		private bool isChasingTarget = false;
+		
 		private GameObject CurrentTarget;
 		private Animator anim;
 		private NavMeshAgent agent;
@@ -106,7 +101,6 @@ namespace Rbots.Characters
 						gameObject.transform.LookAt(CurrentTarget.transform);
 					} else if (myEye.CanSeeTarget()) {
 						// if I see target, I begin chasing and move
-						isChasingTarget = true;
 						MoveToInteract(CurrentTarget);
 					} else if (!myEye.CanSeeTarget()) {
 						if (isAttacking)
@@ -222,7 +216,7 @@ namespace Rbots.Characters
 				HandleInteraction(CurrentTarget);
 
 			HP.ApplyChange(-amount);
-			if (HP.Value <= 0) {
+			if (HP.Value <= MinHP.Value) {
 				Die();
 			}
 		}

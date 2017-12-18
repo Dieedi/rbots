@@ -184,6 +184,10 @@ namespace Rbots.Characters
 		public void TakeDamage(float amount)
 		{
 			HP.ApplyChange(-amount);
+
+			if (HP.Value <= MinHP.Value) {
+				//TODO Die()
+			}
 		}
 
 		//=====================

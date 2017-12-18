@@ -5,7 +5,6 @@ namespace Rbots.Characters
 {
 	public class Projectile : MonoBehaviour
 	{
-
 		public float projectileSpeed;
 		public float damageAmount = 10f;
 
