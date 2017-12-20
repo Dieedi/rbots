@@ -80,41 +80,41 @@ namespace Rbots.Characters
 			anim.SetFloat("PlayerVelocityX", Mathf.Abs(playerNavMeshAgent.velocity.x));
 			myEye.Target = myTarget;
 
-			if (myTarget != null) {
-				float distanceToTarget = Vector3.Distance(playerNavMeshAgent.transform.position, myTarget.transform.position);
+			//if (myTarget != null) {
+			//	float distanceToTarget = Vector3.Distance(playerNavMeshAgent.transform.position, myTarget.transform.position);
 
-				if (!myEye.CanSeeTarget() && isAttacking && distanceToTarget <= attackRadius) {
-					gameObject.transform.LookAt(myTarget.transform);
-				} else if (myEye.CanSeeTarget()) {
-					if (isAttacking)
-						StopInteraction(myTarget);
+			//	if (!myEye.CanSeeTarget() && isAttacking && distanceToTarget <= attackRadius) {
+			//		gameObject.transform.LookAt(myTarget.transform);
+			//	} else if (myEye.CanSeeTarget()) {
+			//		if (isAttacking)
+			//			StopInteraction(myTarget);
 
-					// if I see target, I begin chasing and move
-					MoveToInteract(myTarget);
-				}
-			}
+			//		// if I see target, I begin chasing and move
+			//		MoveToInteract(myTarget);
+			//	}
+			//}
 
-			if (isMovingAgent && !playerNavMeshAgent.pathPending) {
-				// get the true remaining distance
-				float remainingDistance = playerNavMeshAgent.remainingDistance > 0 ? Mathf.Abs(playerNavMeshAgent.remainingDistance - playerNavMeshAgent.radius) : 0;
+			//if (isMovingAgent && !playerNavMeshAgent.pathPending) {
+			//	// get the true remaining distance
+			//	float remainingDistance = playerNavMeshAgent.remainingDistance > 0 ? Mathf.Abs(playerNavMeshAgent.remainingDistance - playerNavMeshAgent.radius) : 0;
 
-				if (remainingDistance <= GetStoppingDistance()) {
-					if (!isAttacking && myTarget != null) {
-						// launch interaction and stop movements
-						ResetAgentValues();
-						Interactable.movingNavMeshAgent = playerNavMeshAgent;
-						Interactable.hasInteracted = true;
-						HandleInteraction(myTarget);
-					}
-				} else {
-					if (myTarget != null)
-						playerNavMeshAgent.destination = myTarget.transform.position;
-				}
+			//	if (remainingDistance <= GetStoppingDistance()) {
+			//		if (!isAttacking && myTarget != null) {
+			//			// launch interaction and stop movements
+			//			ResetAgentValues();
+			//			Interactable.movingNavMeshAgent = playerNavMeshAgent;
+			//			Interactable.hasInteracted = true;
+			//			HandleInteraction(myTarget);
+			//		}
+			//	} else {
+			//		if (myTarget != null)
+			//			playerNavMeshAgent.destination = myTarget.transform.position;
+			//	}
 
-				if (isMovingAgent) {
-					StopInteraction(myTarget);
-				}
-			}
+			//	if (isMovingAgent) {
+			//		StopInteraction(myTarget);
+			//	}
+			//}
 		}
 
 		//=============================

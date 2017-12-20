@@ -25,6 +25,8 @@ public class FollowController : MonoBehaviour {
 	private float oldDistance = 0f;
 	private bool distanceSaved = false;
 
+	bool isJoystickActivated = false;
+
 	private Vector3 playerPos;
 	private Quaternion cameraRotation;
 
@@ -47,12 +49,20 @@ public class FollowController : MonoBehaviour {
 			Player.position.y + playerTopOffset,
 			Player.position.z
 		);
-
+		
 		if (Input.GetMouseButton(1)) 
 		{
 			// Rotate around
 			x += Input.GetAxis("Mouse X") * camXSpeed;
 			y -= Input.GetAxis("Mouse Y") * camYSpeed;
+
+			y = ClampAngle(y, yMinLimit, yMaxLimit);
+
+			cameraRotation = Quaternion.Euler(y, x, 0);
+		} else if (Input.GetJoystickNames().Length > 0) {
+			// Rotate around
+			x += Input.GetAxis("RightstickHorizontal") * camXSpeed;
+			y -= Input.GetAxis("RightstickVertical") * camYSpeed;
 
 			y = ClampAngle(y, yMinLimit, yMaxLimit);
 
