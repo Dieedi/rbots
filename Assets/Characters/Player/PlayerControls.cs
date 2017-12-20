@@ -41,8 +41,8 @@ namespace Rbots.Characters
 
 		void ApplyMoves()
 		{
-			horizontalInput = Input.GetAxis("Horizontal");
-			verticalInput = Input.GetAxis("Vertical");
+			horizontalInput = Input.GetAxisRaw("Horizontal");
+			verticalInput = Input.GetAxisRaw("Vertical");
 
 			if (_controller.isGrounded) {
 				forward = Camera.main.transform.TransformDirection(Vector3.forward);
@@ -72,14 +72,19 @@ namespace Rbots.Characters
 			currentSpeed = lookDirection.magnitude;
 
 			if (moveDirection.x != 0 && moveDirection.z != 0)
-				transform.rotation = Quaternion.LookRotation(lookDirection);
+				LookTo(lookDirection);
 
 			playerAnim.SetMoveSpeed(currentSpeed);
 		}
 
+		public void LookTo(Vector3 lookDirection)
+		{
+			transform.rotation = Quaternion.LookRotation(lookDirection);
+		}
+
 		void ApplyActions()
 		{
-			if(Input.GetButton("Fire1")) {
+			if (Input.GetButton("Fire1")) {
 				playerAnim.ApplyBaseAttack();
 			}
 			if (Input.GetButtonUp("Fire1")) {

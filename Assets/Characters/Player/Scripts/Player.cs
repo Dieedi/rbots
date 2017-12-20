@@ -24,9 +24,7 @@ namespace Rbots.Characters
 		FloatVariable MinHP;
 
 		Animator anim;
-		NavMeshAgent playerNavMeshAgent;
 		GameObject myTarget;
-		GameObject enemyTarget;
 		[HideInInspector]
 		public static bool targetIsDead = false;
 
@@ -34,15 +32,13 @@ namespace Rbots.Characters
 		// MOVEMENTS
 		//=============================
 		[SerializeField] Interactables interactableType;
-
-		float defaultStoppingRadius;
-		float attackRadius = 3;
-		bool isMovingAgent = false;
-
+		
 		//=============================
 		// INTERACTIONS
 		//=============================
-		RaycastHit interactionHit;
+		Transform lastVisibleTarget;
+		public Material outlineMaterial;
+		
 		[SerializeField] float damageAmount = 25f;
 
 		void Start()
@@ -56,65 +52,28 @@ namespace Rbots.Characters
 				HP.SetValue(StartingHP);
 
 			anim = GetComponent<Animator>();
-			playerNavMeshAgent = GetComponent<NavMeshAgent>();
-			defaultStoppingRadius = playerNavMeshAgent.radius;
 		}
 
 		// Update is called once per frame
 		void Update()
 		{
-			if (targetIsDead) {
-				StopInteraction(enemyTarget);
-				ResetAgentValues();
-			}
 			//=============================
-			// INTERACTIONS - listen click
+			// INTERACTIONS
 			//=============================
-			if (Input.GetMouseButtonDown(0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) {
-				GetInteraction();
+			if (myEye.visibleTargets.Count > 0 && !myTarget) {
+				myTarget = myEye.visibleTargets[0].gameObject;
 			}
 
-			//=============================
-			// MOVEMENTS
-			//=============================
-			anim.SetFloat("PlayerVelocityX", Mathf.Abs(playerNavMeshAgent.velocity.x));
+			if (Input.GetButtonDown("Fire2")) {
+				// tab targetting ?
+				int index = myEye.visibleTargets.IndexOf(lastVisibleTarget);
+				myTarget = myEye.visibleTargets[index == -1 ? 0 : index % myEye.visibleTargets.Count].gameObject;
+				Material baseMaterial = myTarget.GetComponentInChildren<Renderer>().material;
+				myTarget.GetComponentInChildren<Renderer>().materials = new Material[2] { baseMaterial, outlineMaterial };
+				Debug.Log("acquiring target : " + myTarget);
+			}
+
 			myEye.Target = myTarget;
-
-			//if (myTarget != null) {
-			//	float distanceToTarget = Vector3.Distance(playerNavMeshAgent.transform.position, myTarget.transform.position);
-
-			//	if (!myEye.CanSeeTarget() && isAttacking && distanceToTarget <= attackRadius) {
-			//		gameObject.transform.LookAt(myTarget.transform);
-			//	} else if (myEye.CanSeeTarget()) {
-			//		if (isAttacking)
-			//			StopInteraction(myTarget);
-
-			//		// if I see target, I begin chasing and move
-			//		MoveToInteract(myTarget);
-			//	}
-			//}
-
-			//if (isMovingAgent && !playerNavMeshAgent.pathPending) {
-			//	// get the true remaining distance
-			//	float remainingDistance = playerNavMeshAgent.remainingDistance > 0 ? Mathf.Abs(playerNavMeshAgent.remainingDistance - playerNavMeshAgent.radius) : 0;
-
-			//	if (remainingDistance <= GetStoppingDistance()) {
-			//		if (!isAttacking && myTarget != null) {
-			//			// launch interaction and stop movements
-			//			ResetAgentValues();
-			//			Interactable.movingNavMeshAgent = playerNavMeshAgent;
-			//			Interactable.hasInteracted = true;
-			//			HandleInteraction(myTarget);
-			//		}
-			//	} else {
-			//		if (myTarget != null)
-			//			playerNavMeshAgent.destination = myTarget.transform.position;
-			//	}
-
-			//	if (isMovingAgent) {
-			//		StopInteraction(myTarget);
-			//	}
-			//}
 		}
 
 		//=============================
@@ -124,30 +83,6 @@ namespace Rbots.Characters
 		{
 			if (targetIsDead)
 				targetIsDead = false;
-
-			Ray interactionRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-			if (Physics.Raycast(interactionRay, out interactionHit)) {
-				GameObject interactedObject = interactionHit.collider.gameObject;
-				if (interactedObject.tag == "Interactable") {
-					MoveToInteract(interactedObject);
-				} else {
-					MoveToInteract(interactionHit.point);
-				}
-			}
-		}
-
-		public void MoveToInteract(GameObject target)
-		{
-			isMovingAgent = true;
-			playerNavMeshAgent.destination = target.transform.position;
-			myTarget = target;
-		}
-		public void MoveToInteract(Vector3 interactionPoint)
-		{
-			isMovingAgent = true;
-			playerNavMeshAgent.destination = interactionPoint;
-			myTarget = null;
 		}
 
 		public void HandleInteraction(GameObject target)
@@ -156,7 +91,6 @@ namespace Rbots.Characters
 			myEye.Target = myTarget;
 
 			if (target.GetComponent<EnemyController>()) {
-				enemyTarget = target;
 				isAttacking = true;
 				anim.SetBool("IsAttacking", isAttacking);
 			}
@@ -171,10 +105,15 @@ namespace Rbots.Characters
 
 		void DealDamage()
 		{
-			Component damageableComponent = myTarget.GetComponent(typeof(IDamageable));
+			if (myTarget) {
+				Component damageableComponent = myTarget.GetComponent(typeof(IDamageable));
 
-			if (damageableComponent) {
-				(damageableComponent as IDamageable).TakeDamage(damageAmount);
+				if (damageableComponent) {
+					(damageableComponent as IDamageable).TakeDamage(damageAmount);
+				}
+
+				if (myTarget.GetComponent<EnemyController>().isDead)
+					myTarget = null;
 			}
 		}
 
@@ -188,47 +127,6 @@ namespace Rbots.Characters
 			if (HP.Value <= MinHP.Value) {
 				//TODO Die()
 			}
-		}
-
-		//=====================
-		// MOVEMENT
-		//=====================
-		// TODO Extract this !
-		public float GetStoppingDistance()
-		{
-			float additionalStoppingDistance;
-
-			switch (interactableType) {
-				case Interactables.Player:
-					additionalStoppingDistance = 0;
-					break;
-				case Interactables.GroundEnemy:
-				case Interactables.FlyingEnemy:
-					additionalStoppingDistance = 0;
-					break;
-				case Interactables.Object:
-					additionalStoppingDistance = 0.5f;
-					break;
-				case Interactables.NPC:
-					additionalStoppingDistance = 0.5f;
-					break;
-				default:
-					return 0;
-			}
-
-			// return updated radius depending on target type ?
-			if (myTarget != null)
-				return playerNavMeshAgent.stoppingDistance = playerNavMeshAgent.radius + myTarget.GetComponent<NavMeshAgent>().radius + additionalStoppingDistance;
-			else
-				return 0;
-		}
-
-		public void ResetAgentValues()
-		{
-			// Reset path stops the movement
-			isMovingAgent = false;
-			playerNavMeshAgent.ResetPath();
-			playerNavMeshAgent.stoppingDistance = defaultStoppingRadius;
 		}
 	}
 }

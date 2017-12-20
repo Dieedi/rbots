@@ -39,7 +39,8 @@ namespace Rbots.Characters
 		private FloatVariable StartingHP;
 		private FloatVariable MinHP;
 		FloatingBarController fbc;
-		bool isDead = false;
+		[HideInInspector]
+		public bool isDead = false;
 		
 		private GameObject CurrentTarget;
 		private Animator anim;
