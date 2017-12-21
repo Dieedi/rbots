@@ -9,11 +9,11 @@ namespace Rbots.Characters
 		public float Speed = 1;
 		public float GroundDistance = 0.1f;
 		public LayerMask Ground;
+		[SerializeField] float jumpForce = 10f;
 
 		PlayerAnimations playerAnim;
 		float verticalVelocity;
 		float Gravity = 14f;
-		float jumpForce = 10f;
 		float currentGravity = 0f;
 		float desiredSpeed = 0f;
 		float currentSpeed = 0f;

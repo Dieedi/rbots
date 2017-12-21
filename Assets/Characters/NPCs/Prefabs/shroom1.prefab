@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 54600093383151068}
   - component: {fileID: 136666215635424168}
   - component: {fileID: 195021153822458648}
-  - component: {fileID: 114648358257571456}
   - component: {fileID: 114148300106345054}
   - component: {fileID: 114827191497612180}
   m_Layer: 9
@@ -227,16 +226,16 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156581311193878}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59.84, y: 160.56, z: 219.38}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 388.51224, y: 31.209503, z: 58.503048}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4446139622308032}
   - {fileID: 4477061576424872}
   - {fileID: 4182814386334110}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4839153923575350
 Transform:
   m_ObjectHideFlags: 1
@@ -294,19 +293,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83d16baed0c6fa4fab34bd9f16f57d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactableType: 0
   myEye: {fileID: 114859716510775982}
---- !u!114 &114648358257571456
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1156581311193878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c35eb92f42aa8e748b44bbb32d543931, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactableType: 1
+  ResetHP: 0
+  RegenRate: {fileID: 0}
+  attackType: 0
+  LightningCast: {fileID: 0}
+  CastSpawner: {fileID: 0}
+  Projectile: {fileID: 0}
+  ProjectileSpawner: {fileID: 0}
+  damagePerShot: 5
+  secondsPerShot: 1
+  attackRadiusMultiplicator: 2
+  chaseRange: 0
+  isDead: 0
 --- !u!114 &114827191497612180
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,6 +329,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404e6110882e3cb41a053fef595123c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targettingRadius: 0
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  visibleTargets: []
   Target: {fileID: 0}
   fieldOfView: 120
 --- !u!136 &136666215635424168

@@ -75,12 +75,14 @@ namespace Rbots.Characters
 		void Start()
 		{
 			fbc = GetComponentInChildren<FloatingBarController>();
-			HP = fbc.resource;
-			StartingHP = fbc.Max;
-			MinHP = fbc.Min;
+			if (fbc) {
+				HP = fbc.resource;
+				StartingHP = fbc.Max;
+				MinHP = fbc.Min;
 
-			if (ResetHP)
-				HP.SetValue(StartingHP);
+				if (ResetHP)
+					HP.SetValue(StartingHP);
+			}
 
 			anim = GetComponent<Animator>();
 			agent = GetComponent<NavMeshAgent>();
