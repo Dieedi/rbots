@@ -39,6 +39,7 @@ namespace Rbots.Characters
 		Transform lastVisibleTarget;
 		[SerializeField] GameObject SelectProjector;
 		GameObject TargetSelectedProjector;
+		public float attackRadius;
 
 		[SerializeField] float damageAmount = 25f;
 
@@ -68,16 +69,13 @@ namespace Rbots.Characters
 			if (Input.GetButtonDown("Fire2")) {
 				if (TargetSelectedProjector) Destroy(TargetSelectedProjector);
 
-				// tab targetting ?
+				// tab targetting
 				int index = lastVisibleTarget ? myEye.visibleTargets.IndexOf(lastVisibleTarget) : -1;
-				Debug.Log(index);
+				
 				lastVisibleTarget = myEye.visibleTargets[index == -1 ? 0 : (index + 1 < myEye.visibleTargets.Count) ? index + 1 : 0];
 				myTarget = lastVisibleTarget.gameObject;
-
-
+				
 				TargetSelectedProjector = Instantiate(SelectProjector, myTarget.transform);
-
-				Debug.Log("acquiring target : " + myTarget);
 			}
 
 			myEye.Target = myTarget;
@@ -112,7 +110,7 @@ namespace Rbots.Characters
 
 		void DealDamage()
 		{
-			if (myTarget) {
+			if (myTarget && myEye.CanSeeTarget()) {
 				Component damageableComponent = myTarget.GetComponent(typeof(IDamageable));
 
 				if (damageableComponent) {

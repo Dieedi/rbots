@@ -12,6 +12,7 @@ namespace Rbots.Characters
 		//public float targettingAngle;
 		public LayerMask targetMask;
 		public LayerMask obstacleMask;
+		public Vector3 direction;
 
 		public List<Transform> visibleTargets = new List<Transform>();
 
@@ -27,6 +28,8 @@ namespace Rbots.Characters
 		{
 			if (GetComponentInParent<EnemyController>())
 				chaseRange = GetComponentInParent<EnemyController>().chaseRange;
+			if (GetComponentInParent<Player>())
+				chaseRange = GetComponentInParent<Player>().attackRadius;
 
 			StartCoroutine("FindTargetsWithDelay", .2f);
 		}
@@ -42,7 +45,8 @@ namespace Rbots.Characters
 			float angle = Mathf.Abs(Vector3.SignedAngle(transform.forward, fixedDirection, Vector3.right));
 
 			// get the correct direction
-			Vector3 direction = Target.transform.position - transform.position + Vector3.up;
+			direction = Target.transform.position - transform.position + Vector3.up;
+			
 			Debug.DrawRay(transform.position, direction, Color.red);
 			// 'cast a ray' from eye to player direction
 			if (angle < fieldOfView / 2 && Physics.Raycast(transform.position, direction, out hit, chaseRange)) {
@@ -66,7 +70,6 @@ namespace Rbots.Characters
 
 		void FindVisibleTargets()
 		{
-			Debug.Log("should happend each amount of seconds");
 			visibleTargets.Clear();
 			Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, targettingRadius, targetMask);
 

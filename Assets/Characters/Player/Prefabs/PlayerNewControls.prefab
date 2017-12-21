@@ -707,7 +707,7 @@ Transform:
   m_GameObject: {fileID: 1426474178274540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2.34, z: 0.79}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4404383956190628}
   m_RootOrder: 4
@@ -874,6 +874,7 @@ MonoBehaviour:
   interactableType: 0
   SelectProjector: {fileID: 1332030847599264, guid: 3bd98dee4b4fada4188c29e08de585b6,
     type: 2}
+  attackRadius: 1
   damageAmount: 25
 --- !u!114 &114876175789625626
 MonoBehaviour:
@@ -893,6 +894,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 1024
+  direction: {x: 0, y: 0, z: 0}
   visibleTargets: []
   Target: {fileID: 0}
   fieldOfView: 120
