@@ -403,22 +403,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1949967375947390
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4583922294585000}
-  - component: {fileID: 136054755579133524}
-  m_Layer: 0
-  m_Name: TargetChecker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1974082217415138
 GameObject:
   m_ObjectHideFlags: 1
@@ -562,7 +546,6 @@ Transform:
   - {fileID: 4277150280611072}
   - {fileID: 224401493052437616}
   - {fileID: 4784521644014440}
-  - {fileID: 4583922294585000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -647,19 +630,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4404383956190628}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4583922294585000
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949967375947390}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 1.883}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4404383956190628}
-  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4683712579499896
 Transform:
@@ -928,7 +898,8 @@ MonoBehaviour:
   isAttacking: 0
   ResetHP: 1
   interactableType: 0
-  TargetChecker: {fileID: 136054755579133524}
+  SelectProjector: {fileID: 1332030847599264, guid: 3bd98dee4b4fada4188c29e08de585b6,
+    type: 2}
   damageAmount: 25
 --- !u!114 &114834165419665256
 MonoBehaviour:
@@ -962,7 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404e6110882e3cb41a053fef595123c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targettingRadius: 2
+  targettingRadius: 15
   targetMask:
     serializedVersion: 2
     m_Bits: 512
@@ -972,19 +943,6 @@ MonoBehaviour:
   visibleTargets: []
   Target: {fileID: 0}
   fieldOfView: 120
---- !u!136 &136054755579133524
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949967375947390}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 1.2867136
-  m_Height: 3.80237
-  m_Direction: 1
-  m_Center: {x: -0.0004119873, y: 1.401185, z: 0.41380215}
 --- !u!137 &137141079253696954
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

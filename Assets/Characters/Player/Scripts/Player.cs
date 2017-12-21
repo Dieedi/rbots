@@ -37,8 +37,9 @@ namespace Rbots.Characters
 		// INTERACTIONS
 		//=============================
 		Transform lastVisibleTarget;
-		public Material outlineMaterial;
-		
+		[SerializeField] GameObject SelectProjector;
+		GameObject TargetSelectedProjector;
+
 		[SerializeField] float damageAmount = 25f;
 
 		void Start()
@@ -65,11 +66,17 @@ namespace Rbots.Characters
 			}
 
 			if (Input.GetButtonDown("Fire2")) {
+				if (TargetSelectedProjector) Destroy(TargetSelectedProjector);
+
 				// tab targetting ?
-				int index = myEye.visibleTargets.IndexOf(lastVisibleTarget);
-				myTarget = myEye.visibleTargets[index == -1 ? 0 : index % myEye.visibleTargets.Count].gameObject;
-				Material baseMaterial = myTarget.GetComponentInChildren<Renderer>().material;
-				myTarget.GetComponentInChildren<Renderer>().materials = new Material[2] { baseMaterial, outlineMaterial };
+				int index = lastVisibleTarget ? myEye.visibleTargets.IndexOf(lastVisibleTarget) : -1;
+				Debug.Log(index);
+				lastVisibleTarget = myEye.visibleTargets[index == -1 ? 0 : (index + 1 < myEye.visibleTargets.Count) ? index + 1 : 0];
+				myTarget = lastVisibleTarget.gameObject;
+
+
+				TargetSelectedProjector = Instantiate(SelectProjector, myTarget.transform);
+
 				Debug.Log("acquiring target : " + myTarget);
 			}
 
