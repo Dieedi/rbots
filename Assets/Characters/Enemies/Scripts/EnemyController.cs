@@ -15,7 +15,7 @@ namespace Rbots.Characters
 		[SerializeField] FieldOfViewController myEye;
 
 		[SerializeField] bool ResetHP;
-		[SerializeField] FloatVariable RegenRate;
+		// [SerializeField] FloatVariable RegenRate;
 
 		[SerializeField] AttackTypeController.AttackType attackType; // determine attack distance (H2H / ranged)
 		[SerializeField] GameObject LightningCast;
@@ -35,9 +35,9 @@ namespace Rbots.Characters
 		[HideInInspector]
 		public float chaseRange;
 
-		private FloatVariable HP;
-		private FloatVariable StartingHP;
-		private FloatVariable MinHP;
+		FloatVariable HP;
+		FloatVariable StartingHP;
+		FloatVariable MinHP;
 		FloatingBarController fbc;
 		[HideInInspector]
 		public bool isDead = false;
@@ -74,6 +74,15 @@ namespace Rbots.Characters
 		// Use this for initialization
 		void Start()
 		{
+			PrepareFloatingBar();
+
+			anim = GetComponent<Animator>();
+			agent = GetComponent<NavMeshAgent>();
+			defaultStoppingRadius = agent.radius;
+		}
+
+		private void PrepareFloatingBar()
+		{
 			fbc = GetComponentInChildren<FloatingBarController>();
 			if (fbc) {
 				HP = fbc.resource;
@@ -83,10 +92,12 @@ namespace Rbots.Characters
 				if (ResetHP)
 					HP.SetValue(StartingHP);
 			}
+			ChangeFbcDisplay(false);
+		}
 
-			anim = GetComponent<Animator>();
-			agent = GetComponent<NavMeshAgent>();
-			defaultStoppingRadius = agent.radius;
+		public void ChangeFbcDisplay(bool isTargetted)
+		{
+			fbc.gameObject.SetActive(isTargetted);
 		}
 
 		// Update is called once per frame

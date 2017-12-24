@@ -14,11 +14,13 @@ namespace Rbots.Characters
 
 		void OnParticleCollision(GameObject collider)
 		{
-			CurrentTarget = collider;
-			damageTimer += Time.deltaTime;
-			if (damageTimer > waitTime) {
-				DealDamage();
-				damageTimer = 0;
+			if (collider.gameObject.name == "Player") {
+				CurrentTarget = collider;
+				damageTimer += Time.deltaTime;
+				if (damageTimer > waitTime) {
+					DealDamage();
+					damageTimer = 0;
+				}
 			}
 		}
 

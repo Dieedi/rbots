@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!241 &24100000
+AudioMixerController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: StandingPads
+  m_OutputGroup: {fileID: 0}
+  m_MasterGroup: {fileID: 24300002}
+  m_Snapshots:
+  - {fileID: 24500006}
+  m_StartSnapshot: {fileID: 24500006}
+  m_SuspendThreshold: -80
+  m_EnableSuspend: 1
+  m_UpdateMode: 0
+  m_ExposedParameters: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - 4cce34f98064c6d4b85a24d7f6fec893
+    - d34927a495b886842bfa086ad9fef48f
+    name: View
+  m_CurrentViewIndex: 0
+  m_TargetSnapshot: {fileID: 24500006}
+--- !u!243 &24300002
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Master
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 4cce34f98064c6d4b85a24d7f6fec893
+  m_Children:
+  - {fileID: 243155811542348054}
+  m_Volume: 6ec8065473f126544b6097d0fea81720
+  m_Pitch: f6b1d488e87fc16479566241959f0eaf
+  m_Effects:
+  - {fileID: 24400004}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &24400004
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: a9600ca0e452e7b45b5b6fd67ccf8e60
+  m_EffectName: Attenuation
+  m_MixLevel: 74fe5a821c4ec9e4d8930b0d530f35db
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!245 &24500006
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Snapshot
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: c01d7da213034ca4c8ecb514f59249e6
+  m_FloatValues:
+    f1d69a44a95d44e46923203a224e98e3: -24.900742
+    6ec8065473f126544b6097d0fea81720: -0.0021067932
+  m_TransitionOverrides: {}
+--- !u!243 &243155811542348054
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: RegenPad
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: d34927a495b886842bfa086ad9fef48f
+  m_Children: []
+  m_Volume: f1d69a44a95d44e46923203a224e98e3
+  m_Pitch: ffb89ba012ed05845933a871a4bca4b5
+  m_Effects:
+  - {fileID: 244365673243491906}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!244 &244365673243491906
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: 3878d0387a1d0fc44865892df36eb010
+  m_EffectName: Attenuation
+  m_MixLevel: 2aaf60d4b1a7e2140a93519820c40a37
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0

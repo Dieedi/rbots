@@ -5,6 +5,10 @@ using FloatingBars;
 public class StandController : MonoBehaviour {
 
 	[SerializeField] GameObject Player;
+	[SerializeField] GameObject RegenParticle;
+	
+	AudioSource audioSource;
+
 	//=============================
 	// HEALTH
 	//=============================
@@ -16,8 +20,16 @@ public class StandController : MonoBehaviour {
 	FloatingBarController fbc;
 	bool regenerating = false;
 
+	private void Awake()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+
 	private void OnTriggerEnter(Collider other)
 	{
+		RegenParticle.SetActive(true);
+		audioSource.Play();
+		
 		// TODO Player choice ?
 		regenerating = true;
 
@@ -39,6 +51,8 @@ public class StandController : MonoBehaviour {
 
 	private void OnTriggerExit(Collider other)
 	{
+		RegenParticle.SetActive(false);
+		audioSource.Stop();
 		regenerating = false;
 	}
 

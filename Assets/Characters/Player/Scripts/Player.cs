@@ -27,6 +27,7 @@ namespace Rbots.Characters
 		GameObject myTarget;
 		[HideInInspector]
 		public static bool targetIsDead = false;
+		FloatingBarController fbc;
 
 		//=============================
 		// MOVEMENTS
@@ -45,7 +46,14 @@ namespace Rbots.Characters
 
 		void Start()
 		{
-			FloatingBarController fbc = GetComponentInChildren<FloatingBarController>();
+			PrepareFloatingBar();
+
+			anim = GetComponent<Animator>();
+		}
+
+		private void PrepareFloatingBar()
+		{
+			fbc = GetComponentInChildren<FloatingBarController>();
 			HP = fbc.resource;
 			StartingHP = fbc.Max;
 			MinHP = fbc.Min;
@@ -53,12 +61,25 @@ namespace Rbots.Characters
 			if (ResetHP)
 				HP.SetValue(StartingHP);
 
-			anim = GetComponent<Animator>();
+			ChangeFbcDisplay(false);
+		}
+
+		void ChangeFbcDisplay(bool isDamaged)
+		{
+			fbc.gameObject.SetActive(isDamaged);
 		}
 
 		// Update is called once per frame
 		void Update()
 		{
+			//=============================
+			// HEALTH
+			//=============================
+			if (HP.Value < StartingHP.Value)
+				ChangeFbcDisplay(true);
+			else
+				ChangeFbcDisplay(false);
+
 			//=============================
 			// INTERACTIONS
 			//=============================
@@ -67,18 +88,27 @@ namespace Rbots.Characters
 			}
 
 			if (Input.GetButtonDown("Fire2")) {
-				if (TargetSelectedProjector) Destroy(TargetSelectedProjector);
-
-				// tab targetting
-				int index = lastVisibleTarget ? myEye.visibleTargets.IndexOf(lastVisibleTarget) : -1;
-				
-				lastVisibleTarget = myEye.visibleTargets[index == -1 ? 0 : (index + 1 < myEye.visibleTargets.Count) ? index + 1 : 0];
-				myTarget = lastVisibleTarget.gameObject;
-				
-				TargetSelectedProjector = Instantiate(SelectProjector, myTarget.transform);
+				SwitchTarget();
 			}
 
 			myEye.Target = myTarget;
+		}
+
+		private void SwitchTarget()
+		{
+			if (TargetSelectedProjector) {
+				Destroy(TargetSelectedProjector);
+				myTarget.GetComponent<EnemyController>().ChangeFbcDisplay(false);
+			}
+
+			// tab targetting
+			int index = lastVisibleTarget ? myEye.visibleTargets.IndexOf(lastVisibleTarget) : -1;
+
+			lastVisibleTarget = myEye.visibleTargets[index == -1 ? 0 : (index + 1 < myEye.visibleTargets.Count) ? index + 1 : 0];
+			myTarget = lastVisibleTarget.gameObject;
+			myTarget.GetComponent<EnemyController>().ChangeFbcDisplay(true);
+
+			TargetSelectedProjector = Instantiate(SelectProjector, myTarget.transform);
 		}
 
 		//=============================
@@ -90,23 +120,23 @@ namespace Rbots.Characters
 				targetIsDead = false;
 		}
 
-		public void HandleInteraction(GameObject target)
-		{
-			myTarget = target;
-			myEye.Target = myTarget;
+		//public void HandleInteraction(GameObject target)
+		//{
+		//	myTarget = target;
+		//	myEye.Target = myTarget;
 
-			if (target.GetComponent<EnemyController>()) {
-				isAttacking = true;
-				anim.SetBool("IsAttacking", isAttacking);
-			}
-		}
+		//	if (target.GetComponent<EnemyController>()) {
+		//		isAttacking = true;
+		//		anim.SetBool("IsAttacking", isAttacking);
+		//	}
+		//}
 
-		public void StopInteraction(GameObject target)
-		{
-			myTarget = target;
-			isAttacking = false;
-			anim.SetBool("IsAttacking", isAttacking);
-		}
+		//public void StopInteraction(GameObject target)
+		//{
+		//	myTarget = target;
+		//	isAttacking = false;
+		//	anim.SetBool("IsAttacking", isAttacking);
+		//}
 
 		void DealDamage()
 		{
