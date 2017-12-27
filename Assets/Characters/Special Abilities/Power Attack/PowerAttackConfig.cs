@@ -10,12 +10,12 @@ namespace Rbots.Characters
 		[Header("Power Attack Specifics")]
 		[SerializeField] float damageMultiplier = 10f;
 
-		public override ISpecialAbility AttachComponentTo(GameObject gameObjectToAttachTo)
+		public override void AttachComponentTo(GameObject gameObjectToAttachTo)
 		{
 			var behaviourComponent = gameObjectToAttachTo.AddComponent<PowerAttackBehaviour>();
 			behaviourComponent.SetConfig(this);
 
-			return behaviourComponent;
+			behaviour = behaviourComponent;
 		}
 	}
 }

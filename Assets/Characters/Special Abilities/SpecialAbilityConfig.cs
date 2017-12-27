@@ -9,6 +9,13 @@ namespace Rbots.Characters
 		[Header("Special Ability General")]
 		[SerializeField] float energyCost = 10f;
 
-		abstract public ISpecialAbility AttachComponentTo(GameObject gameObjectToAttachTo);
+		protected ISpecialAbility behaviour;
+
+		abstract public void AttachComponentTo(GameObject gameObjectToAttachTo);
+
+		public void Use()
+		{
+			behaviour.Use();
+		}
 	}
 }

@@ -107,7 +107,7 @@ namespace Rbots.Characters
 				myTarget = myEye.visibleTargets[0].gameObject;
 			}
 
-			if (Input.GetButtonDown("Fire2")) {
+			if (Input.GetButtonDown("Targetting")) {
 				SwitchTarget();
 			}
 
