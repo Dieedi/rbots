@@ -39,7 +39,7 @@ namespace Rbots.Characters
 			// TODO Player choice ?
 			regenerating = true;
 
-			fbc = Player.GetComponentInChildren<FloatingBarController>();
+			fbc = Player.GetComponent<Player>().fbcHealth;
 			HP = fbc.resource;
 			StartingHP = fbc.Max;
 

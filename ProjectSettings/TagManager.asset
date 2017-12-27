@@ -7,6 +7,8 @@ TagManager:
   - interactable
   - Interactable
   - PlayerBody
+  - PlayerHealth
+  - PlayerHeat
   layers:
   - Default
   - TransparentFX

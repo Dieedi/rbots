@@ -66,7 +66,6 @@ namespace FloatingBars
 		//============================
 		// Edit Bar Window
 		//============================
-
 		[MenuItem("Tools/Floating Bars/Edit Bar (Bar has to be selected)", false, 2)]
 		private static void ShowEditWindow()
 		{
@@ -94,7 +93,6 @@ namespace FloatingBars
 		//==============================
 		// Destroy Item
 		//==============================
-
 		[MenuItem("Tools/Floating Bars/Destroy Bar (Bar has to be selected)", false, 2)]
 		private static void DestroyBar()
 		{

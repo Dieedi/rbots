@@ -3,6 +3,7 @@ using UnityEngine.AI;
 using Utility;
 using FloatingBars;
 using Rbots.Core;
+using System.Collections;
 
 namespace Rbots.Characters
 {
@@ -14,15 +15,25 @@ namespace Rbots.Characters
 		// HEALTH
 		//=============================
 		[SerializeField] bool ResetHP;
+		[HideInInspector]
+		public FloatVariable HP;
+		[HideInInspector]
+		public FloatingBarController fbcHealth;
 
-		FloatVariable HP;
 		FloatVariable StartingHP;
 		FloatVariable MinHP;
-		
-		GameObject myTarget;
-		[HideInInspector]
-		public static bool targetIsDead = false;
-		FloatingBarController fbc;
+
+		//=============================
+		// HEAT
+		//=============================
+		[SerializeField] bool ResetHeat;
+		[SerializeField] FloatVariable HeatCoolingRate;
+
+		FloatVariable Heat;
+		FloatVariable StartingHeat;
+		FloatVariable MaxHeat;
+		FloatingBarController fbcHeat;
+		bool cooling = false;
 
 		//=============================
 		// MOVEMENTS
@@ -34,9 +45,13 @@ namespace Rbots.Characters
 		//=============================
 		[SerializeField] float damageAmount = 25f;
 		[SerializeField] GameObject SelectProjector;
+		[SerializeField] SpecialAbilityConfig[] abilities; 
 		public float attackRadius;
 		[HideInInspector]
 		public bool isAttacking = false;
+		GameObject myTarget;
+		[HideInInspector]
+		public static bool targetIsDead = false;
 
 		GameObject TargetSelectedProjector;
 		Transform lastVisibleTarget;
@@ -44,36 +59,46 @@ namespace Rbots.Characters
 		void Start()
 		{
 			PrepareFloatingBar();
+			abilities[0].AttachComponentTo(gameObject);
 		}
 
 		private void PrepareFloatingBar()
 		{
-			fbc = GetComponentInChildren<FloatingBarController>();
-			HP = fbc.resource;
-			StartingHP = fbc.Max;
-			MinHP = fbc.Min;
+			fbcHeat = GameObject.FindGameObjectWithTag("PlayerHeat").GetComponent<FloatingBarController>();
+			Heat = fbcHeat.resource;
+			StartingHeat = fbcHeat.Min;
+			MaxHeat = fbcHeat.Max;
+
+			if (ResetHeat)
+				Heat.SetValue(StartingHeat);
+
+			ChangefbcHeatDisplay(false);
+
+			fbcHealth = GameObject.FindGameObjectWithTag("PlayerHealth").GetComponent<FloatingBarController>();
+			HP = fbcHealth.resource;
+			StartingHP = fbcHealth.Max;
+			MinHP = fbcHealth.Min;
 
 			if (ResetHP)
 				HP.SetValue(StartingHP);
 
-			ChangeFbcDisplay(false);
+			ChangefbcHealthDisplay(false);
 		}
 
-		void ChangeFbcDisplay(bool isDamaged)
+		void ChangefbcHealthDisplay(bool isDamaged)
 		{
-			fbc.gameObject.SetActive(isDamaged);
+			fbcHealth.gameObject.SetActive(isDamaged);
+		}
+
+		void ChangefbcHeatDisplay(bool isDamaged)
+		{
+			fbcHeat.gameObject.SetActive(isDamaged);
 		}
 
 		// Update is called once per frame
 		void Update()
 		{
-			//=============================
-			// HEALTH
-			//=============================
-			if (HP.Value < StartingHP.Value)
-				ChangeFbcDisplay(true);
-			else
-				ChangeFbcDisplay(false);
+			CheckResources();
 
 			//=============================
 			// INTERACTIONS
@@ -87,6 +112,26 @@ namespace Rbots.Characters
 			}
 
 			myEye.Target = myTarget;
+		}
+
+		private void CheckResources()
+		{
+			//=============================
+			// HEALTH
+			//=============================
+			if (HP.Value < StartingHP.Value)
+				ChangefbcHealthDisplay(true);
+			else
+				ChangefbcHealthDisplay(false);
+
+			//=============================
+			// HEAT
+			//=============================
+			if (Heat.Value > StartingHeat.Value && !cooling) {
+				cooling = true;
+				ChangefbcHeatDisplay(true);
+				StartCoroutine("CoolingHeat");
+			}
 		}
 
 		private void SwitchTarget()
@@ -118,6 +163,7 @@ namespace Rbots.Characters
 		public void DealDamage()
 		{
 			if (myTarget && myEye.CanSeeTarget()) {
+				Heat.ApplyChange(5f);
 				Component damageableComponent = myTarget.GetComponent(typeof(IDamageable));
 
 				if (damageableComponent) {
@@ -139,6 +185,24 @@ namespace Rbots.Characters
 
 			if (HP.Value <= MinHP.Value) {
 				//TODO Die()
+			}
+		}
+
+		//=============================
+		// HEAT - Cooling
+		//=============================
+		IEnumerator CoolingHeat()
+		{
+			while (Heat.Value > StartingHeat.Value) {
+				yield return new WaitForSeconds(1f);
+				
+				if (Heat.Value <= StartingHeat.Value) {
+					cooling = false;
+					ChangefbcHeatDisplay(false);
+					yield break;
+				} else {
+					Heat.ApplyChange(HeatCoolingRate);
+				}
 			}
 		}
 	}
