@@ -75,7 +75,6 @@ namespace Rbots.Characters
 		void Start()
 		{
 			PrepareFloatingBar();
-
 			anim = GetComponent<Animator>();
 			agent = GetComponent<NavMeshAgent>();
 			defaultStoppingRadius = agent.radius;

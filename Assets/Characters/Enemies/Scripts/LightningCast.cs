@@ -14,6 +14,7 @@ namespace Rbots.Characters
 
 		void OnParticleCollision(GameObject collider)
 		{
+			Debug.Log(collider.gameObject.name);
 			if (collider.gameObject.name == "Player") {
 				CurrentTarget = collider;
 				damageTimer += Time.deltaTime;

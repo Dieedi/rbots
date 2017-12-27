@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Rbots.Characters
 {
-	[RequireComponent(typeof(Animator))]
 	public class PlayerAnimations : MonoBehaviour
 	{
 		Animator anim;
+		Player Player;
 		float Speed = 0f;
 
 		private void Awake()
 		{
 			anim = GetComponent<Animator>();
+			Player = GetComponentInParent<Player>();
 		}
 
 		private void Update()
@@ -38,6 +37,11 @@ namespace Rbots.Characters
 		public void StopBaseAttack()
 		{
 			anim.SetBool("IsAttacking", false);
+		}
+
+		void DealDamage()
+		{
+			Player.DealDamage();
 		}
 	}
 }

@@ -8,12 +8,8 @@ namespace Rbots.Characters
 {
 	public class Player : MonoBehaviour, IDamageable
 	{
-
 		[SerializeField] FieldOfViewController myEye;
-
-		[HideInInspector]
-		public bool isAttacking = false;
-
+		
 		//=============================
 		// HEALTH
 		//=============================
@@ -22,8 +18,7 @@ namespace Rbots.Characters
 		FloatVariable HP;
 		FloatVariable StartingHP;
 		FloatVariable MinHP;
-
-		Animator anim;
+		
 		GameObject myTarget;
 		[HideInInspector]
 		public static bool targetIsDead = false;
@@ -37,18 +32,18 @@ namespace Rbots.Characters
 		//=============================
 		// INTERACTIONS
 		//=============================
-		Transform lastVisibleTarget;
-		[SerializeField] GameObject SelectProjector;
-		GameObject TargetSelectedProjector;
-		public float attackRadius;
-
 		[SerializeField] float damageAmount = 25f;
+		[SerializeField] GameObject SelectProjector;
+		public float attackRadius;
+		[HideInInspector]
+		public bool isAttacking = false;
+
+		GameObject TargetSelectedProjector;
+		Transform lastVisibleTarget;
 
 		void Start()
 		{
 			PrepareFloatingBar();
-
-			anim = GetComponent<Animator>();
 		}
 
 		private void PrepareFloatingBar()
@@ -120,25 +115,7 @@ namespace Rbots.Characters
 				targetIsDead = false;
 		}
 
-		//public void HandleInteraction(GameObject target)
-		//{
-		//	myTarget = target;
-		//	myEye.Target = myTarget;
-
-		//	if (target.GetComponent<EnemyController>()) {
-		//		isAttacking = true;
-		//		anim.SetBool("IsAttacking", isAttacking);
-		//	}
-		//}
-
-		//public void StopInteraction(GameObject target)
-		//{
-		//	myTarget = target;
-		//	isAttacking = false;
-		//	anim.SetBool("IsAttacking", isAttacking);
-		//}
-
-		void DealDamage()
+		public void DealDamage()
 		{
 			if (myTarget && myEye.CanSeeTarget()) {
 				Component damageableComponent = myTarget.GetComponent(typeof(IDamageable));
@@ -157,6 +134,7 @@ namespace Rbots.Characters
 		//=============================
 		public void TakeDamage(float amount)
 		{
+			Debug.Log(amount);
 			HP.ApplyChange(-amount);
 
 			if (HP.Value <= MinHP.Value) {

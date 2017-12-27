@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 114250090398242958}
   - component: {fileID: 114347079619008028}
   - component: {fileID: 114133121846567788}
+  - component: {fileID: 114608606665086384}
+  - component: {fileID: 114427000782284748}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -39,8 +41,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1058062261940512}
-  m_LocalRotation: {x: -0.20837593, y: 0.4765541, z: -0.117378265, w: -0.8459894}
-  m_LocalPosition: {x: 7, y: 5, z: -4}
+  m_LocalRotation: {x: -0.3230108, y: -0.107568614, z: 0.29728228, w: -0.89202935}
+  m_LocalPosition: {x: 5.164, y: 18.727999, z: 119.534996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,18 +57,18 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0.409, a: 0.984}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 100
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -77,6 +79,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -94,13 +97,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1058062261940512}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09f990d2fabbc9243b1a8bc9e6e1a3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  distance: 7
+  distance: 9.524927
   camXSpeed: 3
   camYSpeed: 3
   yMinLimit: 20
@@ -148,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerPriorities: 090000000a000000
   maxRaycastDepth: 100
-  topPriorityLayerLastFrame: -1
+  topPriorityLayerLastFrame: 0
   cursorLayerChange: {fileID: 11400000, guid: 44dac35b01bdf274fb826c0da108793f, type: 2}
   clickPriority: {fileID: 11400000, guid: 04031dbf2b0ad4347a7946d8e4bb3def, type: 2}
 --- !u!114 &114347079619008028
@@ -166,6 +169,48 @@ MonoBehaviour:
   combatCursor: {fileID: 2800000, guid: 60cf1e498f5610449a342228deaa1434, type: 3}
   otherCursor: {fileID: 2800000, guid: 5f807a6eb706f3c4b86aabb45c9a8918, type: 3}
   cursorHotspot: {x: 0, y: 0}
+--- !u!114 &114427000782284748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1058062261940512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+  m_CustomBlends: {fileID: 11400000, guid: 1da1a9f4335d23d4aabdc3b2fa90188f, type: 2}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Cinemachine.CinemachineBrain+BrainEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Cinemachine.CinemachineBrain+VcamEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114608606665086384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1058062261940512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: e159e5bad9cc2f04ca7f3bdb3dc953ba, type: 2}
 --- !u!124 &124260616094467210
 Behaviour:
   m_ObjectHideFlags: 1

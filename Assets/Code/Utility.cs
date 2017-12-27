@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using UnityEngine.AI;
-
-namespace Utility
+﻿namespace Utility
 {
 	public enum Layer
 	{
@@ -17,6 +14,13 @@ namespace Utility
 		FlyingEnemy,
 		Object,
 		NPC
+	}
+
+	public enum PlayerTypes
+	{
+		Red,
+		Yellow,
+		Purple
 	}
 
 	public class AttackTypeController
