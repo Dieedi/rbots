@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Rbots.Characters
 {
@@ -29,19 +29,29 @@ namespace Rbots.Characters
 			Speed = currentSpeed;
 		}
 
-		public void ApplyBaseAttack()
+		public void ApplyAttack(string attackBoolName)
 		{
-			anim.SetBool("IsAttacking", true);
+			anim.SetBool(attackBoolName, true);
 		}
 
-		public void StopBaseAttack()
+		public void StopAttack(string attackBoolName)
 		{
-			anim.SetBool("IsAttacking", false);
+			anim.SetBool(attackBoolName, false);
 		}
 
 		void DealDamage()
 		{
 			Player.DealDamage();
+		}
+
+		public void PowerOff()
+		{
+			anim.SetBool("ShutDown", true);
+		}
+
+		public void PowerOn()
+		{
+			anim.SetBool("ShutDown", false);
 		}
 	}
 }

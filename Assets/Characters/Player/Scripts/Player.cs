@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.AI;
 using Utility;
 using FloatingBars;
@@ -10,15 +10,13 @@ namespace Rbots.Characters
 	public class Player : MonoBehaviour, IDamageable
 	{
 		[SerializeField] FieldOfViewController myEye;
-		
+
 		//=============================
 		// HEALTH
 		//=============================
 		[SerializeField] bool ResetHP;
-		[HideInInspector]
-		public FloatVariable HP;
-		[HideInInspector]
-		public FloatingBarController fbcHealth;
+		[HideInInspector] public FloatVariable HP;
+		[HideInInspector] public FloatingBarController fbcHealth;
 
 		FloatVariable StartingHP;
 		FloatVariable MinHP;
@@ -39,13 +37,15 @@ namespace Rbots.Characters
 		// MOVEMENTS
 		//=============================
 		[SerializeField] Interactables interactableType;
-		
+
 		//=============================
 		// INTERACTIONS
 		//=============================
-		[SerializeField] float damageAmount = 25f;
+		public float baseDamageAmount = 25f;
+		float calculatedDamage;
+		public float CalculatedDamage { get { return this.calculatedDamage; } set { this.calculatedDamage = value; } }
+
 		[SerializeField] GameObject SelectProjector;
-		[SerializeField] SpecialAbilityConfig[] abilities; 
 		public float attackRadius;
 		[HideInInspector]
 		public bool isAttacking = false;
@@ -56,10 +56,9 @@ namespace Rbots.Characters
 		GameObject TargetSelectedProjector;
 		Transform lastVisibleTarget;
 
-		void Start()
+		void Awake()
 		{
 			PrepareFloatingBar();
-			abilities[0].AttachComponentTo(gameObject);
 		}
 
 		private void PrepareFloatingBar()
@@ -160,6 +159,16 @@ namespace Rbots.Characters
 				targetIsDead = false;
 		}
 
+		public bool CanAttack(float heatCost)
+		{
+			return Heat.Value + heatCost <= MaxHeat.Value;
+		}
+
+		public void CalculateDamage(float multiplier)
+		{
+			calculatedDamage = baseDamageAmount * multiplier;
+		}
+
 		public void DealDamage()
 		{
 			if (myTarget && myEye.CanSeeTarget()) {
@@ -167,7 +176,7 @@ namespace Rbots.Characters
 				Component damageableComponent = myTarget.GetComponent(typeof(IDamageable));
 
 				if (damageableComponent) {
-					(damageableComponent as IDamageable).TakeDamage(damageAmount);
+					(damageableComponent as IDamageable).TakeDamage(calculatedDamage);
 				}
 
 				if (myTarget.GetComponent<EnemyController>().isDead)

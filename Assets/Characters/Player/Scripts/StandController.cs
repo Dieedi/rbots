@@ -1,16 +1,21 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 using FloatingBars;
 using Utility;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
+using System.Collections.Generic;
 
 namespace Rbots.Characters
 {
 	public class StandController : MonoBehaviour
 	{
-
 		[SerializeField] GameObject Player;
 		[SerializeField] GameObject RegenParticle;
-		[SerializeField] Cinemachine.CinemachineVirtualCamera standCam;
+		PlayableDirector playableDirector;
+		PlayerAnimations playerAnimations;
+		bool padInUse = false;
+		bool padActive = false;
 
 		AudioSource audioSource;
 
@@ -25,14 +30,30 @@ namespace Rbots.Characters
 		FloatingBarController fbc;
 		bool regenerating = false;
 
+		void UsePad()
+		{
+			// play timeline
+			playableDirector.Play();
+		}
+
+		public void ClosePad()
+		{
+			playableDirector.Stop();
+			padInUse = false;
+			playerAnimations = Player.GetComponentInChildren<PlayerAnimations>();
+			playerAnimations.PowerOn();
+		}
+
 		private void Awake()
 		{
 			audioSource = GetComponent<AudioSource>();
+			playableDirector = GetComponent<PlayableDirector>();
 		}
 
 		private void OnTriggerEnter(Collider other)
 		{
-			standCam.gameObject.SetActive(true);
+			this.padActive = true;
+			//standCam.gameObject.SetActive(true);
 			RegenParticle.SetActive(true);
 			audioSource.Play();
 
@@ -53,11 +74,17 @@ namespace Rbots.Characters
 
 		private void OnTriggerStay(Collider other)
 		{
+			if(Input.GetKey(KeyCode.E) && !padInUse && this.padActive) {
+				padInUse = true;
+				playerAnimations = Player.GetComponentInChildren<PlayerAnimations>();
+				playerAnimations.PowerOff();
+				UsePad();
+			}
 		}
 
 		private void OnTriggerExit(Collider other)
 		{
-			standCam.gameObject.SetActive(false);
+			//standCam.gameObject.SetActive(false);
 			RegenParticle.SetActive(false);
 			audioSource.Stop();
 			regenerating = false;

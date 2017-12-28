@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using Utility;
 
@@ -12,6 +12,7 @@ namespace Rbots.Characters
 		[SerializeField] float GroundDistance = 0.1f;
 		[SerializeField] LayerMask Ground;
 		[SerializeField] float jumpForce = 10f;
+		[SerializeField] Ability[] abilities = new Ability[2];
 
 		PlayerAnimations playerAnim;
 		float verticalVelocity;
@@ -26,7 +27,7 @@ namespace Rbots.Characters
 		Vector3 right;
 		Vector3 moveDirection;
 		GameObject currentPlayerType;
-		GameObject player;
+		Player c_Player;
 		bool changeInProgress = false;
 
 		private void Awake()
@@ -51,9 +52,11 @@ namespace Rbots.Characters
 		void Start()
 		{
 			_controller = GetComponent<CharacterController>();
+			c_Player = GetComponent<Player>();
 
 			// gravity value has to be absolute
 			Gravity = Mathf.Abs(Gravity);
+			playerAnim.PowerOn();
 		}
 
 		void Update()
@@ -108,17 +111,28 @@ namespace Rbots.Characters
 
 		void ApplyActions()
 		{
-			if (Input.GetButton("Fire1")) {
-				playerAnim.ApplyBaseAttack();
+			if (Input.GetButton("Fire1") && c_Player.CanAttack(abilities[0].EnergyCost)) {
+				c_Player.CalculateDamage(abilities[0].DamageMultiplier);
+				playerAnim.ApplyAttack(abilities[0].AnimatorParameter);
 			}
 			if (Input.GetButtonUp("Fire1")) {
-				playerAnim.StopBaseAttack();
+				playerAnim.StopAttack(abilities[0].AnimatorParameter);
 			}
 
-			//if(Input.GetButtonUp("Fire3") && !changeInProgress) {
-			//	changeInProgress = true;
-			//	ChangeRbot();
-			//}
+			if (Input.GetButtonDown("Fire2") && c_Player.CanAttack(abilities[1].EnergyCost)) {
+				c_Player.CalculateDamage(abilities[1].DamageMultiplier);
+				playerAnim.ApplyAttack(abilities[1].AnimatorParameter);
+			}
+			if (Input.GetButtonUp("Fire2")) {
+				playerAnim.StopAttack(abilities[1].AnimatorParameter);
+			}
+
+			if (Input.GetKey(KeyCode.P)) {
+				playerAnim.PowerOff();
+			}
+			if (Input.GetKey(KeyCode.O)) {
+				playerAnim.PowerOn();
+			}
 		}
 
 		public void ChangeRbot(PlayerTypes type)
@@ -127,5 +141,54 @@ namespace Rbots.Characters
 
 			ChangeBody();
 		}
+
+
+		// TODO remove that from here !!!
+		public CursorLockMode wantedMode;
+
+		// Apply requested cursor state
+		void SetCursorState()
+		{
+			Cursor.lockState = wantedMode;
+			// Hide cursor when locking
+			Cursor.visible = (CursorLockMode.Locked != wantedMode);
+		}
+
+		void OnGUI()
+		{
+			GUILayout.BeginVertical();
+			// Release cursor on escape keypress
+			if (Input.GetKeyDown(KeyCode.Escape))
+				Cursor.lockState = wantedMode = CursorLockMode.None;
+
+			switch (Cursor.lockState) {
+				case CursorLockMode.None:
+					GUILayout.Label("Cursor is normal");
+					if (GUILayout.Button("Lock cursor"))
+						wantedMode = CursorLockMode.Locked;
+					if (GUILayout.Button("Confine cursor"))
+						wantedMode = CursorLockMode.Confined;
+					break;
+				case CursorLockMode.Confined:
+					GUILayout.Label("Cursor is confined");
+					if (GUILayout.Button("Lock cursor"))
+						wantedMode = CursorLockMode.Locked;
+					if (GUILayout.Button("Release cursor"))
+						wantedMode = CursorLockMode.None;
+					break;
+				case CursorLockMode.Locked:
+					GUILayout.Label("Cursor is locked");
+					if (GUILayout.Button("Unlock cursor"))
+						wantedMode = CursorLockMode.None;
+					if (GUILayout.Button("Confine cursor"))
+						wantedMode = CursorLockMode.Confined;
+					break;
+			}
+
+			GUILayout.EndVertical();
+
+			SetCursorState();
+		}
+		// end todo
 	}
 }
