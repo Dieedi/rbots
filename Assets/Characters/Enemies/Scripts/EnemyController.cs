@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using Utility;
@@ -69,15 +69,15 @@ namespace Rbots.Characters
 		private void Awake()
 		{
 			chaseRange = attackRadius * attackRadiusMultiplicator;
+			anim = GetComponent<Animator>();
+			agent = GetComponent<NavMeshAgent>();
+			defaultStoppingRadius = agent.radius;
 		}
 
 		// Use this for initialization
 		void Start()
 		{
 			PrepareFloatingBar();
-			anim = GetComponent<Animator>();
-			agent = GetComponent<NavMeshAgent>();
-			defaultStoppingRadius = agent.radius;
 		}
 
 		private void PrepareFloatingBar()

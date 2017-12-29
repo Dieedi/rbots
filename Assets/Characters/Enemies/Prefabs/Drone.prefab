@@ -222,7 +222,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1182329543013608}
-  m_LocalRotation: {x: 0, y: 0.43143886, z: -0, w: -0.9021422}
+  m_LocalRotation: {x: 0, y: 0.9986242, z: -0, w: -0.05243726}
   m_LocalPosition: {x: 0.002279735, y: 0.00043473236, z: 0.00014085938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -264,7 +264,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1333349147200104}
   m_LocalRotation: {x: 0.00000007452763, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.9880768, z: 0}
+  m_LocalPosition: {x: 0, y: 1.9038172, z: 0}
   m_LocalScale: {x: 137.64975, y: 137.64964, z: 137.64981}
   m_Children:
   - {fileID: 4195361853562874}
@@ -305,8 +305,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1686799182908078}
-  m_LocalRotation: {x: -0, y: 0.62486845, z: -0, w: 0.78073007}
-  m_LocalPosition: {x: -12.31, y: 14.05, z: -14.09}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.86, y: 14.1, z: 99.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4318959010434902}
@@ -335,7 +335,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1003505184449034}
-  m_LocalRotation: {x: 0, y: 0.43569544, z: -0, w: -0.90009415}
+  m_LocalRotation: {x: 0, y: 0.99891025, z: -0, w: -0.046673387}
   m_LocalPosition: {x: -0.0022784881, y: 0.00043167913, z: 0.0001498473}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -672,7 +672,6 @@ MonoBehaviour:
   interactableType: 2
   myEye: {fileID: 114934848498542288}
   ResetHP: 1
-  RegenRate: {fileID: 0}
   attackType: 1
   LightningCast: {fileID: 0}
   CastSpawner: {fileID: 0}
@@ -722,7 +721,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 0
-  direction: {x: 0, y: 0, z: 0}
+  direction: {x: -16.666397, y: 1.3992491, z: 21.712997}
   visibleTargets: []
   Target: {fileID: 0}
   fieldOfView: 120
@@ -752,9 +751,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 3.1177406
+  m_Height: 2.4826202
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9584255, z: 0}
+  m_Center: {x: 0, y: 1.0321894, z: 0}
 --- !u!195 &195861455785846308
 NavMeshAgent:
   m_ObjectHideFlags: 1

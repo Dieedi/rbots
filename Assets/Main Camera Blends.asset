@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Name: Main Camera Blends
   m_EditorClassIdentifier: 
   m_CustomBlends:
-  - m_From: CM Main Follow
-    m_To: CM vcam1
+  - m_From: CM Start
+    m_To: CM Start (1)
     m_Blend:
       m_Style: 1
       m_Time: 1
-  - m_From: CM vcam1
-    m_To: CM Main Follow
+  - m_From: CM Start (1)
+    m_To: CM Start
     m_Blend:
       m_Style: 1
       m_Time: 0.5

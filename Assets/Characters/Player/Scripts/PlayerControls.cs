@@ -106,7 +106,11 @@ namespace Rbots.Characters
 
 		public void LookTo(Vector3 lookDirection)
 		{
-			transform.rotation = Quaternion.LookRotation(lookDirection);
+			if (c_Player.myTarget) {
+				transform.LookAt(c_Player.myTarget.transform);
+			} else {
+				transform.rotation = Quaternion.LookRotation(lookDirection);
+			}
 		}
 
 		void ApplyActions()
@@ -127,12 +131,12 @@ namespace Rbots.Characters
 				playerAnim.StopAttack(abilities[1].AnimatorParameter);
 			}
 
-			if (Input.GetKey(KeyCode.P)) {
-				playerAnim.PowerOff();
-			}
-			if (Input.GetKey(KeyCode.O)) {
-				playerAnim.PowerOn();
-			}
+			//if (Input.GetKey(KeyCode.P)) {
+			//	playerAnim.PowerOff();
+			//}
+			//if (Input.GetKey(KeyCode.O)) {
+			//	playerAnim.PowerOn();
+			//}
 		}
 
 		public void ChangeRbot(PlayerTypes type)

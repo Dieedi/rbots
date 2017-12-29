@@ -49,7 +49,8 @@ namespace Rbots.Characters
 		public float attackRadius;
 		[HideInInspector]
 		public bool isAttacking = false;
-		GameObject myTarget;
+		[HideInInspector]
+		public GameObject myTarget;
 		[HideInInspector]
 		public static bool targetIsDead = false;
 
@@ -102,15 +103,16 @@ namespace Rbots.Characters
 			//=============================
 			// INTERACTIONS
 			//=============================
-			if (myEye.visibleTargets.Count > 0 && !myTarget) {
-				myTarget = myEye.visibleTargets[0].gameObject;
-			}
+			//if (myEye.visibleTargets.Count > 0 && !myTarget) {
+			//	myTarget = myEye.visibleTargets[0].gameObject;
+			//}
 
 			if (Input.GetButtonDown("Targetting")) {
 				SwitchTarget();
 			}
 
-			myEye.Target = myTarget;
+			if(myTarget)
+				myEye.Target = myTarget;
 		}
 
 		private void CheckResources()
@@ -137,7 +139,11 @@ namespace Rbots.Characters
 		{
 			if (TargetSelectedProjector) {
 				Destroy(TargetSelectedProjector);
-				myTarget.GetComponent<EnemyController>().ChangeFbcDisplay(false);
+
+				if (myTarget)
+					myTarget.GetComponent<EnemyController>().ChangeFbcDisplay(false);
+
+				myTarget = null;
 			}
 
 			// tab targetting
@@ -189,7 +195,6 @@ namespace Rbots.Characters
 		//=============================
 		public void TakeDamage(float amount)
 		{
-			Debug.Log(amount);
 			HP.ApplyChange(-amount);
 
 			if (HP.Value <= MinHP.Value) {

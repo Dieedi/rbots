@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,7 +50,6 @@ namespace Rbots.Characters
 			Debug.DrawRay(transform.position, direction, Color.red);
 			// 'cast a ray' from eye to player direction
 			if (angle < fieldOfView / 2 && Physics.Raycast(transform.position, direction, out hit, chaseRange)) {
-				Debug.Log("should see the target");
 				// check collider to avoid return true on hitting ground (could use Layer too, should ? TODO)
 				if (hit.collider.gameObject == Target) {
 					return true;
@@ -82,15 +81,6 @@ namespace Rbots.Characters
 
 					visibleTargets.Add(target);
 				}
-
-
-				//if (Vector3.Angle (transform.forward, dirToTarget) < targettingAngle / 2) {
-				//	float distToTarget = Vector3.Distance(transform.position, target.position);
-				//	visibleTargets.Add(target);
-				//	//if (!Physics.Raycast(transform.position, dirToTarget, distToTarget, obstacleMask)) {
-				//	//	visibleTargets.Add(target);
-				//	//}
-				//}
 			}
 		}
 
