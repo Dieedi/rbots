@@ -10,11 +10,11 @@ namespace Rbots.Characters
 	{
 		[SerializeField] List<GameObject> playerTypes;
 		[SerializeField] float Speed = 1;
-		[SerializeField] float GroundDistance = 0.1f;
 		[SerializeField] LayerMask Ground;
 		[SerializeField] float jumpForce = 10f;
 		[SerializeField] Ability[] abilities = new Ability[2];
 		[SerializeField] float turnOnOffTime;
+		[SerializeField] float groundDistance = 0.2f;
 
 		PlayerAnimations playerAnim;
 		float verticalVelocity;
@@ -89,7 +89,7 @@ namespace Rbots.Characters
 				moveDirection *= Mathf.Lerp(currentSpeed, desiredSpeed, Time.deltaTime);
 
 				verticalVelocity = -Gravity * Time.deltaTime;
-				if (Input.GetButtonDown("Jump")) {
+				if (Input.GetButtonDown("Jump") && IsGrounded()) { // Use Specific is grounded to detect vertical position
 					verticalVelocity = jumpForce;
 				}
 			} else {
@@ -111,9 +111,17 @@ namespace Rbots.Characters
 			playerAnim.SetMoveSpeed(currentSpeed);
 		}
 
+		bool IsGrounded ()
+		{
+			return Physics.Raycast(transform.position, -Vector3.up, groundDistance);
+		}
+
 		public void LookTo(Vector3 lookDirection)
 		{
-			if (c_Player.myTarget) {
+			// Get My eye to check distance
+			FieldOfViewController myEye = GetComponentInChildren<FieldOfViewController>();
+			
+			if (c_Player.myTarget && myEye.CanSeeTarget()) {
 				transform.LookAt(c_Player.myTarget.transform);
 			} else {
 				transform.rotation = Quaternion.LookRotation(lookDirection);

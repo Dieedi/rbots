@@ -10,19 +10,20 @@ public class WaterController : MonoBehaviour, IDamageable {
 
 	public void TakeDamage(float amount)
 	{
-		throw new NotImplementedException();
+		Debug.LogError("should never appear, water can't be damage !");
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
-		colliderObject = other.gameObject;
-
-		StartCoroutine("DealDamage");
+		if (other.gameObject.name == "Player") {
+			colliderObject = other.gameObject;
+			StartCoroutine("DealDamage");
+		}
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
-		StopAllCoroutines();
+		StopCoroutine("DealDamage");
 	}
 
 	IEnumerator DealDamage()

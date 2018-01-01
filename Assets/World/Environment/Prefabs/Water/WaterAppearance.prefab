@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 114861512863099746}
+  - component: {fileID: 64056110233209910}
+  - component: {fileID: 114969322100307352}
   m_Layer: 0
   m_Name: WaterAppearance
   m_TagString: Untagged
@@ -101,6 +103,20 @@ Prefab:
 --- !u!1002 &100100001
 EditorExtensionImpl:
   serializedVersion: 6
+--- !u!64 &64056110233209910
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300008, guid: ce8d79c79d11b8f9d00076e98d76c639, type: 3}
 --- !u!114 &114861512863099746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,3 +132,15 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!114 &114969322100307352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a3fe0a8b7fdb1a4b8bb38edb7917217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10

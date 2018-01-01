@@ -62,7 +62,7 @@ namespace Rbots.Characters
 
 		public GameEvent TargetEvent;
 
-		void Awake()
+		void Start()
 		{
 			PrepareFloatingBar();
 		}
@@ -250,7 +250,7 @@ namespace Rbots.Characters
 		//=============================
 		IEnumerator CoolingHeat()
 		{
-			while (Heat.Value > StartingHeat.Value) {
+			while (true) {
 				yield return new WaitForSeconds(1f);
 				
 				if (Heat.Value <= StartingHeat.Value) {
