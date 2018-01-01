@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f333d5a059818e4abad6f6607f70ceb, type: 3}
   m_Name: BaseAttackLvl1
   m_EditorClassIdentifier: 
-  energyCost: 5
+  energyCost: 10
   damageMultiplier: 1
   animatorParameter: IsAttacking
