@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.AI;
 using Utility;
 using FloatingBars;
 using Rbots.Core;
@@ -10,16 +9,18 @@ namespace Rbots.Characters
 	public class Player : MonoBehaviour, IDamageable
 	{
 		[SerializeField] FieldOfViewController myEye;
-
+		
 		//=============================
 		// HEALTH
 		//=============================
 		[SerializeField] bool ResetHP;
+		[SerializeField] FloatVariable HPRegenRate;
 		[HideInInspector] public FloatVariable HP;
 		[HideInInspector] public FloatingBarController fbcHealth;
 
 		FloatVariable StartingHP;
 		FloatVariable MinHP;
+		float currentHPRegenRate;
 
 		//=============================
 		// HEAT
@@ -31,7 +32,9 @@ namespace Rbots.Characters
 		FloatVariable StartingHeat;
 		FloatVariable MaxHeat;
 		FloatingBarController fbcHeat;
+		float attackHeatCost = 0f;
 		bool cooling = false;
+		float currentCoolingRate;
 
 		//=============================
 		// MOVEMENTS
@@ -57,6 +60,8 @@ namespace Rbots.Characters
 		GameObject TargetSelectedProjector;
 		Transform lastVisibleTarget;
 
+		public GameEvent TargetEvent;
+
 		void Awake()
 		{
 			PrepareFloatingBar();
@@ -68,6 +73,7 @@ namespace Rbots.Characters
 			Heat = fbcHeat.resource;
 			StartingHeat = fbcHeat.Min;
 			MaxHeat = fbcHeat.Max;
+			currentHPRegenRate = HPRegenRate.Value;
 
 			if (ResetHeat)
 				Heat.SetValue(StartingHeat);
@@ -78,6 +84,7 @@ namespace Rbots.Characters
 			HP = fbcHealth.resource;
 			StartingHP = fbcHealth.Max;
 			MinHP = fbcHealth.Min;
+			currentCoolingRate = HeatCoolingRate.Value;
 
 			if (ResetHP)
 				HP.SetValue(StartingHP);
@@ -103,9 +110,10 @@ namespace Rbots.Characters
 			//=============================
 			// INTERACTIONS
 			//=============================
-			//if (myEye.visibleTargets.Count > 0 && !myTarget) {
-			//	myTarget = myEye.visibleTargets[0].gameObject;
-			//}
+			if (myEye.visibleTargets.Count > 0 && TargetEvent != null) {
+				TargetEvent.Raise();
+				TargetEvent = null;
+			}
 
 			if (Input.GetButtonDown("Targetting")) {
 				SwitchTarget();
@@ -167,6 +175,7 @@ namespace Rbots.Characters
 
 		public bool CanAttack(float heatCost)
 		{
+			attackHeatCost = heatCost;
 			return Heat.Value + heatCost <= MaxHeat.Value;
 		}
 
@@ -178,7 +187,7 @@ namespace Rbots.Characters
 		public void DealDamage()
 		{
 			if (myTarget && myEye.CanSeeTarget()) {
-				Heat.ApplyChange(5f);
+				Heat.ApplyChange(attackHeatCost);
 				Component damageableComponent = myTarget.GetComponent(typeof(IDamageable));
 
 				if (damageableComponent) {
@@ -201,6 +210,40 @@ namespace Rbots.Characters
 				//TODO Die()
 			}
 		}
+		
+		public void ApplyRegen (float repairMultiplicator = 1f, float coolingMultiplicator = 1f)
+		{
+			currentHPRegenRate = currentHPRegenRate * repairMultiplicator;
+			currentCoolingRate = currentCoolingRate * coolingMultiplicator;
+			StartCoroutine("RegenHP");
+			StartCoroutine("CoolingHeat");
+		}
+
+		public void StopRegenerating()
+		{
+			currentHPRegenRate = HPRegenRate.Value;
+			currentCoolingRate = HeatCoolingRate.Value;
+			StopCoroutine("RegenHP");
+		}
+
+		//=============================
+		// HEALTH - Regeneration
+		//=============================
+		IEnumerator RegenHP()
+		{
+			while (HP.Value < StartingHP.Value) {
+				yield return new WaitForSeconds(1f);
+
+				HP = fbcHealth.resource;
+
+				if (HP.Value >= StartingHP.Value) {
+					HP.SetValue(StartingHP);
+					yield break;
+				} else {
+					HP.ApplyChange(currentHPRegenRate);
+				}
+			}
+		}
 
 		//=============================
 		// HEAT - Cooling
@@ -211,11 +254,12 @@ namespace Rbots.Characters
 				yield return new WaitForSeconds(1f);
 				
 				if (Heat.Value <= StartingHeat.Value) {
+					Heat.SetValue(StartingHeat);
 					cooling = false;
 					ChangefbcHeatDisplay(false);
 					yield break;
 				} else {
-					Heat.ApplyChange(HeatCoolingRate);
+					Heat.ApplyChange(currentCoolingRate);
 				}
 			}
 		}

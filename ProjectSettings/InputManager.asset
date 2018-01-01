@@ -218,7 +218,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: joystick button 0
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
@@ -253,6 +253,22 @@ InputManager:
     positiveButton: e
     altNegativeButton: 
     altPositiveButton: joystick button 4
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: TurnOnOff
+    descriptiveName: Turn off or on Rbot allowing small regen
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: x
+    altNegativeButton: 
+    altPositiveButton: joystick button 5
     gravity: 1000
     dead: 0.001
     sensitivity: 1000

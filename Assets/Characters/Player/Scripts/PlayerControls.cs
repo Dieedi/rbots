@@ -5,6 +5,7 @@ using Utility;
 namespace Rbots.Characters
 {
 	[RequireComponent(typeof(CharacterController))]
+	[RequireComponent(typeof(GameEventListener))]
 	public class PlayerControls : MonoBehaviour
 	{
 		[SerializeField] List<GameObject> playerTypes;
@@ -13,6 +14,7 @@ namespace Rbots.Characters
 		[SerializeField] LayerMask Ground;
 		[SerializeField] float jumpForce = 10f;
 		[SerializeField] Ability[] abilities = new Ability[2];
+		[SerializeField] float turnOnOffTime;
 
 		PlayerAnimations playerAnim;
 		float verticalVelocity;
@@ -29,6 +31,7 @@ namespace Rbots.Characters
 		GameObject currentPlayerType;
 		Player c_Player;
 		bool changeInProgress = false;
+		bool isTurnedOff = false;
 
 		private void Awake()
 		{
@@ -61,8 +64,12 @@ namespace Rbots.Characters
 
 		void Update()
 		{
-			ApplyMoves();
-			ApplyActions();
+			if (!isTurnedOff) {
+				ApplyMoves();
+				ApplyActions();
+			}
+
+			ApplySelfRegen();
 		}
 
 		void ApplyMoves()
@@ -115,7 +122,7 @@ namespace Rbots.Characters
 
 		void ApplyActions()
 		{
-			if (Input.GetButton("Fire1") && c_Player.CanAttack(abilities[0].EnergyCost)) {
+			if (Input.GetButtonDown("Fire1") && c_Player.CanAttack(abilities[0].EnergyCost)) {
 				c_Player.CalculateDamage(abilities[0].DamageMultiplier);
 				playerAnim.ApplyAttack(abilities[0].AnimatorParameter);
 			}
@@ -130,13 +137,25 @@ namespace Rbots.Characters
 			if (Input.GetButtonUp("Fire2")) {
 				playerAnim.StopAttack(abilities[1].AnimatorParameter);
 			}
+		}
 
-			//if (Input.GetKey(KeyCode.P)) {
-			//	playerAnim.PowerOff();
-			//}
-			//if (Input.GetKey(KeyCode.O)) {
-			//	playerAnim.PowerOn();
-			//}
+		void ApplySelfRegen ()
+		{
+			if (turnOnOffTime != Time.time && !isTurnedOff) {
+				turnOnOffTime = Time.time;
+				if (Input.GetButtonDown("TurnOnOff")) {
+					// Launch self repair
+					isTurnedOff = true;
+					playerAnim.PowerOff();
+					c_Player.ApplyRegen();
+				}
+			} else {
+				if (Input.GetButtonDown("TurnOnOff")) {
+					isTurnedOff = false;
+					playerAnim.PowerOn();
+					c_Player.StopRegenerating();
+				}
+			}
 		}
 
 		public void ChangeRbot(PlayerTypes type)

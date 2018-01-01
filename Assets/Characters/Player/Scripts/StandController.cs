@@ -1,10 +1,10 @@
-using System.Collections;
 using UnityEngine;
 using FloatingBars;
 using Utility;
 using UnityEngine.Playables;
-using UnityEngine.Timeline;
-using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using Rbots.CameraUI;
 
 namespace Rbots.Characters
 {
@@ -12,6 +12,7 @@ namespace Rbots.Characters
 	{
 		[SerializeField] GameObject Player;
 		[SerializeField] GameObject RegenParticle;
+		Player c_Player;
 		PlayableDirector playableDirector;
 		PlayerAnimations playerAnimations;
 		bool padInUse = false;
@@ -19,16 +20,25 @@ namespace Rbots.Characters
 
 		AudioSource audioSource;
 
+		[SerializeField] GameObject StandControls;
+		[SerializeField] GameObject FirstSelectedMenuItem;
+		EventSystem eventSystem; 
+
 		//=============================
 		// HEALTH
 		//=============================
-		[SerializeField] FloatVariable RegenRate;
+		[SerializeField] float HPRegenRateBooster;
+		[SerializeField] float coolingRegenRateBooster;
+		[SerializeField] Text hullStateText; 
 
 		FloatVariable HP;
 		FloatVariable StartingHP;
 		FloatVariable MinHP;
 		FloatingBarController fbc;
 		bool regenerating = false;
+
+		public GameEvent PadEnterEvent;
+		public GameEvent PadExitEvent;
 
 		void UsePad()
 		{
@@ -48,64 +58,81 @@ namespace Rbots.Characters
 		{
 			audioSource = GetComponent<AudioSource>();
 			playableDirector = GetComponent<PlayableDirector>();
+			eventSystem = FindObjectOfType<EventSystem>();
+			c_Player = Player.GetComponent<Player>();
 		}
 
 		private void OnTriggerEnter(Collider other)
 		{
-			this.padActive = true;
-			//standCam.gameObject.SetActive(true);
-			RegenParticle.SetActive(true);
-			audioSource.Play();
+			if (PadEnterEvent != null) {
+				PadEnterEvent.Raise();
+				PadEnterEvent = null;
+			}
 
-			// TODO Player choice ?
-			regenerating = true;
+
+			this.padActive = true;
 
 			fbc = Player.GetComponent<Player>().fbcHealth;
 			HP = fbc.resource;
 			StartingHP = fbc.Max;
 
-			//=============================
-			// HEALTH - Regeneration Start
-			//=============================
-			if (HP.Value < StartingHP.Value && regenerating) {
-				StartCoroutine("RegenHP");
+			if (FirstSelectedMenuItem) {
+				//eventSystem.SetSelectedGameObject = null;
+				eventSystem.SetSelectedGameObject(FirstSelectedMenuItem);
 			}
 		}
 
 		private void OnTriggerStay(Collider other)
 		{
-			if(Input.GetKey(KeyCode.E) && !padInUse && this.padActive) {
+			if(Input.GetButton("Use") && !padInUse && this.padActive) {
 				padInUse = true;
 				playerAnimations = Player.GetComponentInChildren<PlayerAnimations>();
 				playerAnimations.PowerOff();
 				UsePad();
 			}
+
+
+			float hullPercentage = (HP.Value / StartingHP.Value) * 100;
+			hullStateText.text = hullPercentage + "%";
 		}
 
 		private void OnTriggerExit(Collider other)
 		{
-			//standCam.gameObject.SetActive(false);
+			if (PadExitEvent != null) {
+				PadExitEvent.Raise();
+				PadExitEvent = null;
+			}
+
+			StopRegen();
+			padActive = false;
+		}
+
+		void LaunchRegen()
+		{
+			//standCam.gameObject.SetActive(true);
+			RegenParticle.SetActive(true);
+			audioSource.Play();
+			regenerating = true;
+
+			//=============================
+			// HEALTH - Regeneration Start
+			//=============================
+			if (HP.Value < StartingHP.Value && regenerating) {
+				c_Player.ApplyRegen(HPRegenRateBooster, coolingRegenRateBooster);
+			}
+		}
+
+		void StopRegen()
+		{
 			RegenParticle.SetActive(false);
 			audioSource.Stop();
+			c_Player.StopRegenerating();
 			regenerating = false;
 		}
 
-		//=============================
-		// HEALTH - Regeneration
-		//=============================
-		IEnumerator RegenHP()
+		public void OnClickRepairBtn()
 		{
-			while (HP.Value < StartingHP.Value) {
-				yield return new WaitForSeconds(1f);
-
-				HP = fbc.resource;
-
-				if (HP.Value >= StartingHP.Value) {
-					yield break;
-				} else {
-					HP.ApplyChange(RegenRate);
-				}
-			}
+			LaunchRegen();
 		}
 
 		public void OnClickLoadRedButton()

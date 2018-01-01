@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Rbots.Core;
 using UnityEngine;
 using System.Collections;
 
 public class WaterController : MonoBehaviour, IDamageable {
 
-	float damageAmount = 5f;
+	[SerializeField] float damageAmount = 5f;
 	GameObject colliderObject;
 
 	public void TakeDamage(float amount)

@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 114692680480287530}
   - component: {fileID: 143326753347135108}
   - component: {fileID: 114200558253239608}
-  - component: {fileID: 95388538795446646}
+  - component: {fileID: 95909858895104032}
   m_Layer: 0
   m_Name: PlayerNewControls
   m_TagString: Player
@@ -856,7 +856,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95388538795446646
+--- !u!95 &95909858895104032
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -868,7 +868,7 @@ Animator:
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1084,6 +1084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myEye: {fileID: 114876175789625626}
   ResetHP: 1
+  HPRegenRate: {fileID: 11400000, guid: d76bc4b19a41d52458d427644b926dac, type: 2}
   HP: {fileID: 0}
   fbcHealth: {fileID: 0}
   ResetHeat: 1
@@ -1094,6 +1095,7 @@ MonoBehaviour:
     type: 2}
   attackRadius: 2
   isAttacking: 0
+  myTarget: {fileID: 0}
 --- !u!114 &114876175789625626
 MonoBehaviour:
   m_ObjectHideFlags: 1
