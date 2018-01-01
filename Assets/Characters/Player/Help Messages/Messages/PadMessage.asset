@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helperMessageText: Press '<b>Use</b>' key to activate pad
   messageDisplayTime: 6
-  messageHasBeenDisplayed: 0
+  messageHasBeenDisplayed: 1

@@ -49,7 +49,6 @@ namespace Rbots.Characters
 
 		// Utilities
 		private AttackTypeController atc = new AttackTypeController();
-		// private GetAgentCenter gac = new GetAgentCenter();
 
 		[HideInInspector]
 		public float attackRadius
@@ -110,18 +109,19 @@ namespace Rbots.Characters
 				if (CurrentTarget) {
 					float distanceToTarget = Vector3.Distance(agent.transform.position, CurrentTarget.transform.position);
 
-					if (isAttacking && distanceToTarget <= chaseRange && !myEye.CanSeeTarget()) {
-						StopInteraction(CurrentTarget);
+					// myEye can see target if it's in chaseRange and angle
+					if (myEye.CanSeeTarget()) {
 						MoveToInteract(CurrentTarget);
-					} else if (isAttacking && distanceToTarget <= chaseRange) {
+						// keep looking at target
 						gameObject.transform.LookAt(CurrentTarget.transform);
-					} else if (myEye.CanSeeTarget()) {
-						// if I see target, I begin chasing and move
-						MoveToInteract(CurrentTarget);
-					} else if (!myEye.CanSeeTarget()) {
-						if (isAttacking)
+					} else {
+						if (isAttacking && distanceToTarget <= chaseRange) {
+							// stop attack
 							StopInteraction(CurrentTarget);
-						// TODO and go back ?
+							// but try to catch it
+							MoveToInteract(CurrentTarget);
+						} else
+							StopInteraction(CurrentTarget);
 					}
 				}
 
@@ -267,7 +267,7 @@ namespace Rbots.Characters
 					additionalStoppingDistance = 0;
 					break;
 				case Interactables.GroundEnemy:
-					additionalStoppingDistance = attackRadius;
+					additionalStoppingDistance = attackRadius - 1;
 					break;
 				case Interactables.FlyingEnemy:
 					additionalStoppingDistance = attackRadius - 1;
@@ -283,7 +283,7 @@ namespace Rbots.Characters
 			}
 
 			// return updated radius depending on target type ?
-			return agent.stoppingDistance = agent.radius + additionalStoppingDistance;
+			return agent.stoppingDistance = additionalStoppingDistance;
 		}
 
 		public void ResetAgentValues()

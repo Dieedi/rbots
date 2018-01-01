@@ -22,7 +22,7 @@ namespace Rbots.Characters
 
 		[SerializeField] GameObject StandControls;
 		[SerializeField] GameObject FirstSelectedMenuItem;
-		EventSystem eventSystem; 
+		EventSystem eventSystem;
 
 		//=============================
 		// HEALTH
@@ -37,6 +37,9 @@ namespace Rbots.Characters
 		FloatingBarController fbc;
 		bool regenerating = false;
 
+		//=============================
+		// MESSAGES
+		//=============================
 		public GameEvent PadEnterEvent;
 		public GameEvent PadExitEvent;
 
@@ -133,6 +136,11 @@ namespace Rbots.Characters
 		public void OnClickRepairBtn()
 		{
 			LaunchRegen();
+		}
+
+		public void OnClickChangeSpawnPoint()
+		{
+			c_Player.SpawnPoint = transform;
 		}
 
 		public void OnClickLoadRedButton()

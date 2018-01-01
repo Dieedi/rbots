@@ -16,7 +16,7 @@ namespace Rbots.Characters
 		[SerializeField] bool ResetHP;
 		[SerializeField] FloatVariable HPRegenRate;
 		[HideInInspector] public FloatVariable HP;
-		[HideInInspector] public FloatingBarController fbcHealth;
+		public FloatingBarController fbcHealth;
 
 		FloatVariable StartingHP;
 		FloatVariable MinHP;
@@ -27,11 +27,11 @@ namespace Rbots.Characters
 		//=============================
 		[SerializeField] bool ResetHeat;
 		[SerializeField] FloatVariable HeatCoolingRate;
+		[SerializeField] FloatingBarController fbcHeat;
 
 		FloatVariable Heat;
 		FloatVariable StartingHeat;
 		FloatVariable MaxHeat;
-		FloatingBarController fbcHeat;
 		float attackHeatCost = 0f;
 		bool cooling = false;
 		float currentCoolingRate;
@@ -59,8 +59,21 @@ namespace Rbots.Characters
 
 		GameObject TargetSelectedProjector;
 		Transform lastVisibleTarget;
-
+		
+		//=============================
+		// MESSAGES
+		//=============================
 		public GameEvent TargetEvent;
+
+		//=============================
+		// SPAWNER
+		//=============================
+		public Transform SpawnPoint;
+
+		private void Awake()
+		{
+			transform.position = SpawnPoint.position;
+		}
 
 		void Start()
 		{
@@ -69,7 +82,6 @@ namespace Rbots.Characters
 
 		private void PrepareFloatingBar()
 		{
-			fbcHeat = GameObject.FindGameObjectWithTag("PlayerHeat").GetComponent<FloatingBarController>();
 			Heat = fbcHeat.resource;
 			StartingHeat = fbcHeat.Min;
 			MaxHeat = fbcHeat.Max;
@@ -79,8 +91,7 @@ namespace Rbots.Characters
 				Heat.SetValue(StartingHeat);
 
 			ChangefbcHeatDisplay(false);
-
-			fbcHealth = GameObject.FindGameObjectWithTag("PlayerHealth").GetComponent<FloatingBarController>();
+			
 			HP = fbcHealth.resource;
 			StartingHP = fbcHealth.Max;
 			MinHP = fbcHealth.Min;
@@ -207,7 +218,7 @@ namespace Rbots.Characters
 			HP.ApplyChange(-amount);
 
 			if (HP.Value <= MinHP.Value) {
-				//TODO Die()
+				Die();
 			}
 		}
 		
@@ -224,6 +235,17 @@ namespace Rbots.Characters
 			currentHPRegenRate = HPRegenRate.Value;
 			currentCoolingRate = HeatCoolingRate.Value;
 			StopCoroutine("RegenHP");
+		}
+
+		void Die ()
+		{
+			PrepareFloatingBar();
+			ReSpawn();
+		}
+
+		void ReSpawn()
+		{
+			transform.position = SpawnPoint.position;
 		}
 
 		//=============================
