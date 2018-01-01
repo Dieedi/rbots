@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -33,7 +33,6 @@ namespace Rbots.Characters
 
 		public void Interact()
 		{
-			print("Interacting with base class.");
 
 			// TODO Maybe wait to user or game action before resetting...
 			//StartCoroutine("WaitInteractionEnd");

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Rbots.Core;
 
 namespace Rbots.Characters
@@ -14,7 +14,6 @@ namespace Rbots.Characters
 
 		void OnParticleCollision(GameObject collider)
 		{
-			Debug.Log(collider.gameObject.name);
 			if (collider.gameObject.name == "Player") {
 				CurrentTarget = collider;
 				damageTimer += Time.deltaTime;

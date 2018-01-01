@@ -110,7 +110,10 @@ namespace Rbots.Characters
 				if (CurrentTarget) {
 					float distanceToTarget = Vector3.Distance(agent.transform.position, CurrentTarget.transform.position);
 
-					if (isAttacking && distanceToTarget <= chaseRange) {
+					if (isAttacking && distanceToTarget <= chaseRange && !myEye.CanSeeTarget()) {
+						StopInteraction(CurrentTarget);
+						MoveToInteract(CurrentTarget);
+					} else if (isAttacking && distanceToTarget <= chaseRange) {
 						gameObject.transform.LookAt(CurrentTarget.transform);
 					} else if (myEye.CanSeeTarget()) {
 						// if I see target, I begin chasing and move
