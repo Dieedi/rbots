@@ -77,6 +77,7 @@ namespace Rbots.Characters
 			horizontalInput = Input.GetAxisRaw("Horizontal");
 			verticalInput = Input.GetAxisRaw("Vertical");
 
+			// TODO : damage if not grounded for a falling time
 			if (_controller.isGrounded) {
 				forward = Camera.main.transform.TransformDirection(Vector3.forward);
 				forward.y = 0;
@@ -89,7 +90,7 @@ namespace Rbots.Characters
 				moveDirection *= Mathf.Lerp(currentSpeed, desiredSpeed, Time.deltaTime);
 
 				verticalVelocity = -Gravity * Time.deltaTime;
-				if (Input.GetButtonDown("Jump") && IsGrounded()) { // Use Specific is grounded to detect vertical position
+				if (Input.GetButtonDown("Jump") && IsGrounded()) { // Use Specific is grounded to detect if ground under
 					verticalVelocity = jumpForce;
 				}
 			} else {
@@ -98,6 +99,7 @@ namespace Rbots.Characters
 
 			moveDirection.y = verticalVelocity;
 
+			_controller.enableOverlapRecovery = true;
 			_controller.Move(moveDirection * Time.deltaTime);
 
 			// check current movement if no move don't change rotation
@@ -120,7 +122,8 @@ namespace Rbots.Characters
 		{
 			// Get My eye to check distance
 			FieldOfViewController myEye = GetComponentInChildren<FieldOfViewController>();
-			
+			myEye.Target = c_Player.myTarget;
+
 			if (myEye.Target && myEye.CanSeeTarget()) {
 				transform.LookAt(c_Player.myTarget.transform);
 			} else {
@@ -187,36 +190,36 @@ namespace Rbots.Characters
 
 		void OnGUI()
 		{
-			GUILayout.BeginVertical();
-			// Release cursor on escape keypress
-			if (Input.GetKeyDown(KeyCode.Escape))
-				Cursor.lockState = wantedMode = CursorLockMode.None;
+			//GUILayout.BeginVertical();
+			//// Release cursor on escape keypress
+			//if (Input.GetKeyDown(KeyCode.Escape))
+			//	Cursor.lockState = wantedMode = CursorLockMode.None;
 
-			switch (Cursor.lockState) {
-				case CursorLockMode.None:
-					GUILayout.Label("Cursor is normal");
-					if (GUILayout.Button("Lock cursor"))
-						wantedMode = CursorLockMode.Locked;
-					if (GUILayout.Button("Confine cursor"))
-						wantedMode = CursorLockMode.Confined;
-					break;
-				case CursorLockMode.Confined:
-					GUILayout.Label("Cursor is confined");
-					if (GUILayout.Button("Lock cursor"))
-						wantedMode = CursorLockMode.Locked;
-					if (GUILayout.Button("Release cursor"))
-						wantedMode = CursorLockMode.None;
-					break;
-				case CursorLockMode.Locked:
-					GUILayout.Label("Cursor is locked");
-					if (GUILayout.Button("Unlock cursor"))
-						wantedMode = CursorLockMode.None;
-					if (GUILayout.Button("Confine cursor"))
-						wantedMode = CursorLockMode.Confined;
-					break;
-			}
+			//switch (Cursor.lockState) {
+			//	case CursorLockMode.None:
+			//		GUILayout.Label("Cursor is normal");
+			//		if (GUILayout.Button("Lock cursor"))
+			//			wantedMode = CursorLockMode.Locked;
+			//		if (GUILayout.Button("Confine cursor"))
+			//			wantedMode = CursorLockMode.Confined;
+			//		break;
+			//	case CursorLockMode.Confined:
+			//		GUILayout.Label("Cursor is confined");
+			//		if (GUILayout.Button("Lock cursor"))
+			//			wantedMode = CursorLockMode.Locked;
+			//		if (GUILayout.Button("Release cursor"))
+			//			wantedMode = CursorLockMode.None;
+			//		break;
+			//	case CursorLockMode.Locked:
+			//		GUILayout.Label("Cursor is locked");
+			//		if (GUILayout.Button("Unlock cursor"))
+			//			wantedMode = CursorLockMode.None;
+			//		if (GUILayout.Button("Confine cursor"))
+			//			wantedMode = CursorLockMode.Confined;
+			//		break;
+			//}
 
-			GUILayout.EndVertical();
+			//GUILayout.EndVertical();
 
 			SetCursorState();
 		}

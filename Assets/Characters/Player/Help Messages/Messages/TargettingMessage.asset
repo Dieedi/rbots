@@ -14,4 +14,4 @@ MonoBehaviour:
   helperMessageText: Before enter combat you must select a target by pressing '<b>Target</b>'
     key
   messageDisplayTime: 6
-  messageHasBeenDisplayed: 1
+  messageHasBeenDisplayed: 0

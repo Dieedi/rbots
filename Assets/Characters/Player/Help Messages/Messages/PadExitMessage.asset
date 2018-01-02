@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helperMessageText: You can also recover by pressing '<b>TurnOnOff</b>' key
   messageDisplayTime: 6
-  messageHasBeenDisplayed: 1
+  messageHasBeenDisplayed: 0

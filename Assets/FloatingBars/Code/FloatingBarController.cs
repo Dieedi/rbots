@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace FloatingBars
@@ -31,6 +31,7 @@ namespace FloatingBars
 		void Update()
 		{
 			// Always view the bar
+			
 			transform.LookAt(mainCam.transform);
 			// I don't remind where I found that but it works ...
 			damageFiller.fillAmount = Mathf.Clamp01(Mathf.InverseLerp(Min.Value, Max.Value, resource.Value));

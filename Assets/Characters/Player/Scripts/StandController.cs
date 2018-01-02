@@ -19,8 +19,7 @@ namespace Rbots.Characters
 		bool padActive = false;
 
 		AudioSource audioSource;
-
-		[SerializeField] GameObject StandControls;
+		
 		[SerializeField] GameObject FirstSelectedMenuItem;
 		EventSystem eventSystem;
 
@@ -33,7 +32,6 @@ namespace Rbots.Characters
 
 		FloatVariable HP;
 		FloatVariable StartingHP;
-		FloatVariable MinHP;
 		FloatingBarController fbc;
 		bool regenerating = false;
 
@@ -75,7 +73,7 @@ namespace Rbots.Characters
 
 			this.padActive = true;
 
-			fbc = Player.GetComponent<Player>().fbcHealth;
+			fbc = c_Player.fbcHealth;
 			HP = fbc.resource;
 			StartingHP = fbc.Max;
 

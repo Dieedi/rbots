@@ -8,7 +8,7 @@ namespace Rbots.Characters
 {
 	public class Player : MonoBehaviour, IDamageable
 	{
-		[SerializeField] FieldOfViewController myEye;
+		public FieldOfViewController myEye;
 		
 		//=============================
 		// HEALTH
@@ -27,7 +27,7 @@ namespace Rbots.Characters
 		//=============================
 		[SerializeField] bool ResetHeat;
 		[SerializeField] FloatVariable HeatCoolingRate;
-		[SerializeField] FloatingBarController fbcHeat;
+		public FloatingBarController fbcHeat;
 
 		FloatVariable Heat;
 		FloatVariable StartingHeat;
@@ -181,6 +181,7 @@ namespace Rbots.Characters
 
 		void ShowSelectedTarget()
 		{
+			myEye.Target = myTarget;
 			myTarget.GetComponent<EnemyController>().ChangeFbcDisplay(true);
 			TargetSelectedProjector = Instantiate(SelectProjector, myTarget.transform);
 		}
