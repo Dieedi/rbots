@@ -121,7 +121,7 @@ namespace Rbots.Characters
 			// Get My eye to check distance
 			FieldOfViewController myEye = GetComponentInChildren<FieldOfViewController>();
 			
-			if (c_Player.myTarget && myEye.CanSeeTarget()) {
+			if (myEye.Target && myEye.CanSeeTarget()) {
 				transform.LookAt(c_Player.myTarget.transform);
 			} else {
 				transform.rotation = Quaternion.LookRotation(lookDirection);

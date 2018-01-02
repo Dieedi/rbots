@@ -130,8 +130,13 @@ namespace Rbots.Characters
 				SwitchTarget();
 			}
 
-			if(myTarget)
-				myEye.Target = myTarget;
+			if (targetIsDead) {
+				myTarget = myEye.Target = null;
+				targetIsDead = false;
+			}
+
+			if (!TargetSelectedProjector && myTarget)
+				ShowSelectedTarget();
 		}
 
 		private void CheckResources()
@@ -169,9 +174,14 @@ namespace Rbots.Characters
 			int index = lastVisibleTarget ? myEye.visibleTargets.IndexOf(lastVisibleTarget) : -1;
 
 			lastVisibleTarget = myEye.visibleTargets[index == -1 ? 0 : (index + 1 < myEye.visibleTargets.Count) ? index + 1 : 0];
-			myTarget = lastVisibleTarget.gameObject;
-			myTarget.GetComponent<EnemyController>().ChangeFbcDisplay(true);
+			myTarget = myEye.Target = lastVisibleTarget.gameObject;
 
+			ShowSelectedTarget();
+		}
+
+		void ShowSelectedTarget()
+		{
+			myTarget.GetComponent<EnemyController>().ChangeFbcDisplay(true);
 			TargetSelectedProjector = Instantiate(SelectProjector, myTarget.transform);
 		}
 
@@ -239,6 +249,7 @@ namespace Rbots.Characters
 
 		void Die ()
 		{
+			myTarget = null;
 			PrepareFloatingBar();
 			ReSpawn();
 		}

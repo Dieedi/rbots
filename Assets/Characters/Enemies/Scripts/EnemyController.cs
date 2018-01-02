@@ -195,6 +195,9 @@ namespace Rbots.Characters
 		{
 			if (target.name == "Player" && !isAttacking) {
 				isAttacking = true;
+				if (!target.GetComponent<Player>().myTarget) {
+					target.GetComponent<Player>().myTarget = gameObject;
+				}
 
 				if (attackType == AttackTypeController.AttackType.ranged && CastSpawner != null) {
 					InvokeRepeating("LaunchProjectile", secondsPerShot, secondsPerShot);
@@ -218,12 +221,6 @@ namespace Rbots.Characters
 					StopCasting();
 				}
 			}
-		}
-
-		public void IsAttackedBy(GameObject target)
-		{
-			transform.LookAt(target.transform);
-			anim.SetBool("IsAttacking", true);
 		}
 
 		public void TakeDamage(float amount)
